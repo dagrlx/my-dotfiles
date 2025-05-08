@@ -62,7 +62,7 @@ alias ssht  = env TERM=xterm-256color ssh
 #alias chra = chezmoi re-add
 #alias chd = chezmoi destroy
 alias gp = git push origin main
-alias dots = git --git-dir=$"($nu.home-path)/.my-dotfiles" --work-tree=($nu.home-path)
+alias dots = ^git --git-dir=$"($nu.home-path)/.my-dotfiles" --work-tree=($nu.home-path)
 
 # Mata el server si existe, y luego siempre ejecuta tmux
 alias tmux-nu = do {tmux kill-server | complete; tmux}
@@ -104,7 +104,7 @@ $env.config.keybindings ++= [
     {
         name: abbr_menu
         modifier: none
-        keycode: space
+        keycode: char_-
         mode: [emacs, vi_normal, vi_insert]
         event: [
             { send: menu name: abbr_menu }
@@ -130,7 +130,7 @@ $env.config.menus ++= [
             description_text: yellow
         }
         source: { |buffer, position|
-            if $buffer in ["z", "zi", "dots"] {
+            if $buffer in ["z", "zi"] {
                 { value: $buffer }
             } else {
                 let alias_match = (scope aliases | where name == $buffer)
