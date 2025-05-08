@@ -12,3 +12,6 @@
 # Archivos historial de nushell
 history.*
 
+tmux/plugins/
+
+age.key
