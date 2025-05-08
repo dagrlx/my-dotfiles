@@ -1,0 +1,13 @@
+# Ignorar cachés y archivos temporales
+*.swp
+*.bak
+*.lock
+.DS_Store
+*log*.txt
+*.log
+
+# Ignorar archivos marcados con .nbk que son solo para mis pruebas
+*.nbk
+
+# Archivos historial de nushell
+history.*
