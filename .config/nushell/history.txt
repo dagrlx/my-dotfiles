@@ -1,0 +1,2994 @@
+
+atuin init nu | save ~/.local/share/atuin/init.nu
+
+cargo update
+
+podman machine ls
+podman machine ls | detect columns
+nvim
+
+ls -l
+alias
+podman ps
+ls | where size > 10MB | sort modified
+ls | where size > 10MB | sort size
+ls | where size > 10MB | sort
+ls | get name | where type == "file" | sort size
+ls | where size > 10MB | sort-by modified
+ls | where size > 10B | sort-by modified
+http get https://github.com/dagrlx/dotfiles/blob/main/dot_dotfiles/nushell/config.nu | get alias
+http get https://github.com/dagrlx/dotfiles/blob/main/dot_dotfiles/nushell/config.nu
+http --help
+http get --help
+
+ls | where size > 10B | sort-by modified
+cd Download
+ls me*
+open `medios de pago Guardia Vieja.xlsx` | select 'Fecha y hora' 'Código tarjeta'
+yazi
+open `medios de pago Guardia Vieja.csv` <\n>| where "Fecha y hora" =~ "02-12-2024" <\n>| select "Fecha y hora" "Código tarjeta"
+open --raw `medios de pago Guardia Vieja.csv` <\n>| where "Fecha y hora" =~ "02-12-2024" <\n>| select "Fecha y hora" "Código tarjeta"
+open --raw `medios de pago Guardia Vieja.xlsx`
+cd Download
+open --raw `medios de pago Guardia Vieja.csv`
+open --raw `medios de pago Guardia Vieja.csv` | select "Fecha y hora"
+open `medios de pago Guardia Vieja.csv` | select "Fecha y hora"
+nvim "medios de pago Guardia Vieja.csv" 
+rm `medios de pago Guardia Vieja.csv`
+open `medios de pago Guardia Vieja.csv` | select "Fecha y hora"
+cd Download
+open `medios de pago Guardia Vieja.csv` | select "Fecha y hora"
+open `medios de pago Guardia Vieja.csv` | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --delimiter ';' | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+open `medios de pago Guardia Vieja.csv` --separator ";"<\n>
+open --help
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --delimiter ';' | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ; | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+open 'medios de pago Guardia Vieja.csv' --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+open 'medios de pago Guardia Vieja.csv' --raw --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+nvim "medios de pago Guardia Vieja.csv" 
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+yazi ~/.dotfiles/
+la
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+alias
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+yazi ~/.dotfiles/
+
+sshs
+tmux
+sshp 
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/
+ssh sabaext
+yazi ~/.dotfiles/
+exec nushell
+
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/
+
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/
+
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/
+scope aliases
+yazi ~/.dotfiles/
+
+yazi ~/.dotfiles/
+lt
+yazi ~/.dotfiles/
+
+scope aliases
+yazi ~/.dotfiles/
+
+scope aliases
+yazi ~/.dotfiles/
+
+scope aliases
+yazi ~/.dotfiles/
+
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/
+
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/
+
+yazi ~/.dotfiles/
+
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/
+
+yazi ~/.dotfiles/
+config nu
+yazi ~/.dotfiles/nushell/
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/nushell/
+
+yazi ~/.dotfiles/nushell/
+
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/nushell/
+config nu --doc | nu-highlight | less -R
+yazi ~/.dotfiles/nushell/
+
+scope aliases
+yazi ~/.dotfiles/nushell/
+
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/nushell/
+
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/nushell/
+
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/nushell/
+
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/nushell/
+
+yazi ~/.dotfiles/nushell/
+
+sshp parking@10.4.90.72
+yazi ~/.dotfiles/nushell/
+scope aliases
+yazi ~/.dotfiles/nushell/
+brew upgrade
+brew upgrade --cask --greedy
+yazi ~/.dotfiles/nushell/
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+brew update
+brew upgrade --cask --greedy
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+ghostty +show-config --default --docs | nvim
+brew search gpt4all
+brew search gpt
+brew upgrade --cask --greedy
+yazi ~/.dotfiles
+brew upgrade
+yazi ~/.dotfiles/nushell/
+
+yazi ~/.dotfiles/nushell/
+brew update
+yazi ~/.dotfiles/nushell/
+
+brew update
+yazi ~/.dotfiles/nushell/
+
+brew upgrade
+yazi ~/.dotfiles/nushell/
+
+brew upgrade
+brew update
+brew upgrade --cask --greedy
+yazi ~/.dotfiles/nushell/
+
+brew upgrade --cask --greedy
+
+brew upgrade --cask --greedy
+yazi ~/.dotfiles/nushell/
+
+brew upgrade --cask --greedy
+yazi ~/.dotfiles/nushell/
+
+yazi ~/.dotfiles/nushell/
+
+brew upgrade --cask --greedy
+yazi ~/.dotfiles/nushell/
+
+brew upgrade --cask --greedy
+yazi ~/.dotfiles/nushell/
+
+brew upgrade --cask --greedy
+brew upgrade
+yazi ~/.dotfiles/nushell/
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+brew update
+
+brew update
+brew upgrade --cask --greedy
+brew upgrade
+sshp parking@10.4.90.72
+cd controladoras/ansible/
+ls -l
+ansible-playbook --become -i controladorasv2.yml actualizar_apt.yml
+chezmoi re-add
+chezmoi diff
+clear
+btop
+cargo update
+brew upgrade 
+brew upgrade --cask --greedy
+brew upgrade
+brew upgrade --cask --greedy
+
+config set edit_mode "vi"
+config get edit_mode
+
+config set edit_mode "vi"
+config nu --doc | nu-highlight | less -R
+
+config nu --doc | nu-highlight | less -R
+config
+config flatten
+config nu
+config path
+
+config path
+config
+config get path $nu.path
+version
+yazi ~/.dotfiles/nushell/
+ls -l
+yazi ~/.dotfiles/nushell/
+lt
+scope aliases
+yazi ~/.dotfiles/nushell/
+
+dsat
+config nu
+config nenv
+config env
+
+echo $NIX_CONF_DIR 
+$NIX_CONF_DIR 
+get $NIX_CONF_DIR 
+var $NIX_CONF_DIR 
+echo $NIX_CONF_DIR 
+echo $EDITOR
+$NIX_CONF_DIR 
+$EDITOR
+$env.$NIX_CONF_DIR 
+$env.$EDITOR
+config nu --doc | nu-highlight | less -R
+config env --doc | nu-highlight | less -R
+config env --doc | env-highlight | less -R
+config env --default | nu-highlight | less -R
+atuin search --delete config env --doc | env-highlight | less -R
+atuin search --delete 'config env --doc | env-highlight | less -R'
+config env --default | nu-highlight | less -R
+yazi ~/.dotfiles/nushell/
+ff
+yazi ~/.dotfiles/nushell/
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+cd Download
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+yazi ~/.dotfiles
+brew services restart sketchybar
+yazi ~/.dotfiles
+brew services restart sketchybar
+
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+cd Download
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+yazi ~/.dotfiles
+
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | detect columns
+cd Downloads/
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | detect columns
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta"
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+
+ssh sabaext
+
+nu -c "(1 + 2) * 3"
+nu -c "sqrt(16)"
+"(2*2)^4" | bc<\n>
+"(2*2)^4"
+nu -c "(2*2)^4"
+echo $"(2*2)**4"
+echo $"(2*2) ** 4"<\n>
+echo "(2*2) ** 4"<\n>
+nu -c "(2*2) ** 4"<\n>
+"(2*2)^4" | bc<\n>
+"(2*2)^4"
+nuc -"(2*2)^4"
+nu -c "(2*2)^4"
+nu -c (2*2)^4
+nu -c '(2*2)^4'
+nu -c "(1 + 2) * 3"
+nu -c (2*2)^4
+nu -c (2*2)**4
+4 * (2 * 2) | math eval
+4 * (2 * 2) | math
+4 * (2 * 2) | math --help
+4 * (2 * 2) | math eval
+math (4 * (2 * 2))
+math 4 * (2 * 2)
+math --help
+math 4 * (2 * 2)
+math "4 * (2 * 2)"
+calc math "4 * (2 * 2)"
+calc "4 * (2 * 2)"
+calc --help
+math pow 4 (2 * 2)
+nu --help
+"(2*2)^4"
+"(2*2)**4"
+(2*2)**4
+(2 * 2)**4
+math pow (2 * 2) 4
+clear
+math pow ((2 * 2) | into int) 4
+math --help
+math eval "(2 * 2) ** 4"
+math --help
+(2 * 2) ** 4
+math sqrt(16)
+math sqrt 16
+math sqrt
+math --help
+math sqrt 16
+math sqrt "16"
+(2 * 2) ** 4
+math --help
+math sqrt "16"16
+math sqrt 16
+Usage: math srt
+16 | math sqrt
+plugin list
+ps
+^ps
+^ps aux
+'foo' | if $in == 'foo' { 1 } else { 0 } | $in + 2<\n># => 3
+'foo' | if $in == 'foo' { 1 } else { 0 } | $in + 2
+brew upgrade --cask --greedy
+brew upgrade
+brew update
+version
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+
+config nu --doc | nu-highlight | less -R
+yazi ~/.dotfiles
+config nu --doc | nu-highlight | less -R
+yazi ~/.dotfiles
+config nu
+
+config nu
+
+config nu
+$nu.default-config-dir
+$env.config
+$env.config | table -e | less -R
+$env.config | table -e | bat -p
+config nu --doc | nu-highlight | bat
+
+$nu Constant
+Constant
+open -a kitty
+^open -a kitty
+$env | table -e
+$env.use_kitty_protocol | describe
+$env.conifg | describe
+$env.config | describe
+$env.TERM | describe
+$env.TERM
+ls
+^ls
+^ls -la
+config nu
+$nu.config-path
+config nu
+config env
+yazi ~/.dotfiles
+$nu.config-path
+config env
+config nu
+$nu
+echo $nu.data-dir<\n>
+config nu
+config env
+$nu.data-dir 
+config env
+config nu
+
+config nu
+q
+
+config nu
+config env
+
+config nu
+yazi
+
+$nu.data-dir 
+yazi $nu.data-dir 
+config nu
+yazi
+config nu
+yazi $nu.data-dir 
+cd tmp/felixKratz/
+ls
+cd dotfiles/
+dirs
+use std/dirs
+dirs
+dirs add ~/.dotfiles/
+dirs
+dirs goto 0
+dirs drop
+dirs
+brew update
+brew upgrade
+brew upgrade --cask --greedy
+version
+$nu.config-path
+ls | where type == "dir" | table
+yazi ~/.dotfiles
+brew upgrade --cask --greedy
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+nvim 
+yazi ~/.dotfiles
+nvim 
+yazi ~/.dotfiles
+tmux kill-server && tmux || tmux
+tmux kill-serve;  tmux || tmux
+tmux kill-serve;  tmux or tmux
+brew upgrade --cask --greedy
+brew upgrade
+tmux
+brew install aichat
+aichat 
+let personas = [<\n>    { name: "Alice", age: 30 },<\n>    { name: "Bob", age: 25 },<\n>    { name: "Charlie", age: 35 }<\n>]
+personas | insert fiction { $in | aichat provide very short fiction based on input }
+echo $personas
+$personas | insert fiction { $in | ^aichat provide very short fiction based on input }
+let personas = [<\n>    { name: "Alice", age: 30 },<\n>    { name: "Bob", age: 25 },<\n>    { name: "Charlie", age: 35 }<\n>]
+$personas | insert fiction { $in | ^aichat provide very short fiction based on input }
+clear
+cd Downloads/
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta" | to json | aichat "¿Existen patrones recurrentes en los códigos de tarjeta o algún valor anómalo?"<\n>
+aichat
+def aichat_api(query) {<\n>    http post https://chat.deepseek.com/api --data query=$query | from json<\n>}
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta" | to json | aichat "¿Existen patrones recurrentes en los códigos de tarjeta o algún valor anómalo?"<\n>
+yazi /Users/dgarciar/Library/Application Support/aichat/
+aichat
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta" | to json | aichat "¿Existen patrones recurrentes en los códigos de tarjeta o algún valor anómalo?"<\n>
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta" | to json | aichat --model deepseek "¿Existen patrones recurrentes en los códigos de tarjeta o algún valor anómalo?"<\n>
+aichat -e list ts files
+ls -l
+aichat -e list txt files
+aichet --agent %code%
+aichat -c fibonacci in js 
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta" | to json | aichat "¿Existen patrones recurrentes en los códigos de tarjeta o algún valor anómalo?"<\n>
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Fecha y hora" "Código tarjeta" | first 50 | to json | aichat "¿Existen patrones recurrentes en los códigos de tarjeta?"<\n>
+open `medios de pago Guardia Vieja.csv` --raw | from csv --separator ";" | lenght
+open `medios de pago Guardia Vieja.csv` --raw | from csv --separator ";" | length
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Terminal" | first 150 | to json | aichat "¿Cuanto registroos hay por terminal ?"<\n>
+open 'medios de pago Guardia Vieja.csv' --raw | from csv --separator ";" | where "Fecha y hora" =~ "02-12-2024" | select "Terminal" | first 150 | to json | aichat --model Groq "¿Cuanto registroos hay por terminal ?"<\n>
+yazi /Users/dgarciar/Library/Application Support/aichat/
+aichat
+yazi ~/.config/aichat/
+aichat
+systemstats | aichat --model Groq "Explica la info que genero systemtstats"
+aichat --model Groq "traduzca al inglés: esta es una prueba de traducción" | more
+aichat --model Groq "lista los archivos mas reciente del directorio Downloads"
+aichat --model Groq "muestrame los archivos mas reciente del directorio Downloads, estoy usando el shell nushell"
+aichat --model Groq -e "neceista conectar al servidor sabaext via ssh"
+aichat --model Groq lista txt files in Downloads/
+aichat --model Groq lista txt files
+aichat --model Groq lis txt files
+aichat --model Groq list txt files
+aichat list txt files
+aichat -e list txt files
+aichat -e list txt files in nushell
+ls *.txt
+.session
+clear
+aichat list txt files
+clear
+aichat -e list txt files
+aichat -e cuantos archivos txt hay en el directorio
+aichat -f dir/
+ls -l
+aichat -f `5 EL VINCULO ENTRE LA IRA Y EL DOLOR.pdf` -e hazme un resumen del archivo
+aichat
+aichat --serve
+aichat -e que modelo eres ?
+yazi ~/.config/aichat/
+aichat --help
+aichat  --list-models
+yazi ~/.config/aichat/
+brew search yamllint
+yazi ~/.dotfiles/
+yq ~/.config/aichat/config.yaml
+open ~/.config/aichat/config.yaml
+open --raw ~/.config/aichat/config.yaml
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+brew update
+brew upgrade
+brew upgrade --cask --greedy
+aichat --help
+aichat
+yazi ~/.dotfiles/
+brew install aichat
+yazi ~/.config/aichat/
+
+aichat
+ls -l
+aichat -e los archivos que empienzan con Whatsapp son archivos ejecutables ?
+ls -l | aichat -e los archivos que comienza con Whatsapp que tipo de archivo son ?
+ls -l | ^aichat -e los archivos que comienza con Whatsapp que tipo de archivo son ?
+ls -l | lines | where $it | str starts-with "Whatsapp"
+^ls -l | lines | where $it | str starts-with "Whatsapp"
+^ls -l | lines | where $it | str starts-with "WhatsApp"
+ls -l | lines | where $it | str starts-with "WhatsApp"
+ls | lines | where $it | str starts-with "WhatsApp"<\n>
+^ls | lines | where $it | str starts-with "WhatsApp"<\n>
+ls
+^ls | lines | where $it | str starts-with "WhatsApp"<\n>
+^ls | str starts-with "WhatsApp"<\n>
+^ls | lines | where $it | str starts-with "copilot"<\n>
+ls
+ls -l
+^ls | lines | where $it | str starts-with "erro"<\n>
+ls -l | each { |it| $it | aichat -e "los archivos que comienzan con Whatsapp que tipo de archivo son?" }
+ls -l | line | each { |it| $it | aichat -e "los archivos que comienzan con Whatsapp que tipo de archivo son?" }
+ls -l | lines | each { |it| $it | aichat -e "los archivos que comienzan con Whatsapp que tipo de archivo son?" }
+ls -l | each { |it| $it | aichat -e "los archivos que comienzan con Whatsapp que tipo de archivo son?" }
+
+yazi ~/.dotfiles/
+
+aitchat --info
+aichat --info
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+yazi ~/.dotfiles/
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+brew upgrade --cask --greedy
+brew upgrade
+let personas = [<\n>    { name: "Alice", age: 30 },<\n>    { name: "Bob", age: 25 },<\n>    { name: "Charlie", age: 35 }<\n>]
+echo $personas
+$personas |  ^aichat cual es el promedio de edad
+yazi ~/.dotfiles/
+brew upgrade
+brew upgrade --cask --greedy
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+brew upgrade --cask --greedy
+df -h | str replace "Mounted on" Mounted_On | from ssv --aligned-columns --minimum-spaces 1
+ssh sabaext
+df -h | str replace "Mounted on" Mounted_On | detect columns
+cargo search shells --limit 10 | lines | parse "{crate_name} = {version} #{description}" | str trim
+
+ls | sort-by size | reverse
+^ps aux
+ps | where status == Running
+ps
+ps | where status == Running
+ps | describe
+ls | sort-by size | reverse | first | get name | cp $in ~
+ls | sort-by size | reverse
+ls | sort-by size | reverse | first
+ls | sort-by size | reverse | first | get name
+ls | sort-by size | reverse | first | get name | cp $in ~
+help -f filesize
+help -f sort-by
+let data = [<\n>    [date                        temps                                   condition      ];<\n>    [2022-02-01T14:30:00+05:00,  [38.24, 38.50, 37.99, 37.98, 39.10],   'sunny'       ],<\n>    [2022-02-02T14:30:00+05:00,  [35.24, 35.94, 34.91, 35.24, 36.65],   'sunny'       ],<\n>    [2022-02-03T14:30:00+05:00,  [35.17, 36.67, 34.42, 35.76, 36.52],   'cloudy'      ],<\n>    [2022-02-04T14:30:00+05:00,  [39.24, 40.94, 39.21, 38.99, 38.80],   'rain'        ]<\n>]
+$date-3
+$date.1
+$data.1
+$data.2
+$data | aichat analiza la data y dame el promedio de temperatura por dia
+aichat los valores son de tipo float y estab lista de 5 como dices
+$data | aichat analiza la data y dame el promedio de temperatura por dia, los valores de la temperatura estan en forma de lista y su valor es de tipo float
+$data.1
+$data | get 1
+$data | select 1
+$data | enumerate | select 1
+
+yazi ~/.dotfiles/
+ssh sabaext
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+ls --du
+start file.txt
+ls
+start ejercicio.txt
+glob **/*.{rs,toml} --depth 2
+glob **/*.{rs,toml} --depth 3
+glob **/*.{rs,toml} --depth 2
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+brew upgrade --cask --greedy
+brew upgrade
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+
+curl -s https://api.github.com/repos/nushell/nushell/contributors | jq '.[].login'
+http get https://api.github.com/repos/nushell/nushell/contributors | select login contributions
+yazi ~/.dotfiles/
+y ~/.dotfiles/
+cd
+y ~/.dotfiles/
+yazi ~/.dotfiles/
+ya pack -l
+ya pack -u
+ya pack -l
+yazi ~/.dotfiles/
+nvim
+nvim ~/.dotfiles/nvim/
+brew upgrade
+clear
+nvim
+aerospace list-apps
+tccutil reset All com.lihaoyun6.QuickRecorder
+nvim
+yazi ~/.dotfiles/
+tccutil reset All com.lihaoyun6.QuickRecorder
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+
+yazi ~/.dotfiles/
+ls
+cd ~/.dotfiles/nvim/lua/plugins/
+ls
+ls | select name
+ls | select name | save lista.txt
+ls | select name
+ls | select name save lista.txt
+ls | select name | save lista.txt
+ls | select name
+nvim lista.txt
+ls -l | select name
+tree
+aichat como puede tener una lista de solo los nombre del los archivo de una directorio en nushell
+ls | get nam
+ls | get name
+aichat como puedo tener una lista de solo los nombre de los archivo de una directorio en nushell en texto plano
+ls | get name | str join "\n"
+ls lsp/ | get name | str join "\n"
+yazi
+aichat "instale el plugin snacks.nvim en neovim (https://github.com/folke/snacks.nvim), como veo que trae muchas funciones, ahora quiero saber que plugin de los que tengo instalado puedo eliminar y ser sustituido por una de las funciones de snacks. Esta es la lista de plugin que tengo actualmente: <\n>auto-pairs.lua auto-session.lua blink-cpm.lua bufferline.lua catppuccin.lua codeium.lua comment.lua dressing.lua formatting.lua fzf-lua.lua fzf-preview.lua fzf.lua indent-blankline.lua lightline.lua.disable lualine.lua maximize.lua neo-tree.lua noice.lua nui.lua nvim-lint.lua nvim-notify.lua nvim-tree.lua nvim-treesitter.lua nvim-web-devicons.lua obsidian.lua oil.lua package-lock.json plenary.lua remote-nvim.lua remote-sshfs.lua smart-splits.lua snacks.lua telescope.lua tfm.lua todo-comments.lua toggleterm.lua undotree.lua vim-floaterm.lua vim-lastplace.lua which-key.lua mason. lua lspconfig.lua"
+cd ~/.dotfiles/nvim/lua/plugins/
+yazi
+nvim
+aichat me dices que snacks tiene una función para reemplezar el plugins auto-pairs, como se llama esa funcion y como se activa en snacks ?
+aichat "instale el plugin snacks.nvim en neovim (https://github.com/folke/snacks.nvim), como veo que trae muchas funciones, ahora quiero saber que plugin de los que tengo instalado puedo eliminar y ser sustituido por una de las funciones de snacks. Esta es la lista de plugin que tengo actualmente: <\n>auto-pairs.lua auto-session.lua blink-cpm.lua bufferline.lua catppuccin.lua codeium.lua comment.lua dressing.lua formatting.lua fzf-lua.lua fzf-preview.lua fzf.lua indent-blankline.lua lightline.lua.disable lualine.lua maximize.lua neo-tree.lua noice.lua nui.lua nvim-lint.lua nvim-notify.lua nvim-tree.lua nvim-treesitter.lua nvim-web-devicons.lua obsidian.lua oil.lua package-lock.json plenary.lua remote-nvim.lua remote-sshfs.lua smart-splits.lua snacks.lua telescope.lua tfm.lua todo-comments.lua toggleterm.lua undotree.lua vim-floaterm.lua vim-lastplace.lua which-key.lua mason. lua lspconfig.lua"
+clear
+aitchat en plugin snacks para neovim y terminos informatcos que significa pickers ?
+aitchat en plugin snacks para neovim y terminos informatcos que significa pickers
+aichat en plugin snacks para neovim y terminos informatcos que significa pickers
+nvim
+brew upgrade
+yazi
+nvim
+nvim snacks.lua 
+yazi
+vim
+yazi
+brew upgrade
+brew upgrade --cask --greedy
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+nvim
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+
+
+yazi ~/.dotfiles/
+nvim
+
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+brew upgrade --cask --greedy
+brew upgrade
+nvim
+brew search chafa
+brew infdo chafa
+brew info chafa
+brew install chafa
+brew info chafa
+nvim
+chafa /Users/dgarciar/tmp/dagrlx-color.png --format symbols --passthrough auto --size 60x17 --stretch; sleep .1
+chafa /Users/dgarciar/tmp/dagrlx-color.png --format symbols --passthrough auto --size 60x17 --stretch
+chafa /Users/dgarciar/tmp/dagrlx-color.png --format symbols --passthrough auto --size 60x20 --stretch
+chafa /Users/dgarciar/tmp/dagrlx-color.png --format symbols --passthrough auto --size 60x30 --stretch
+nvim
+chafa /Users/dgarciar/tmp/dagrlx-color.png --format symbols --passthrough auto --size 60x30 --stretch
+nvim
+brew upgrade
+ascii-image-converter /Users/dgarciar/tmp/dagrlx-color.png -C -c
+ascii-image-converter /Users/dgarciar/tmp/dagrlx-color.png -C -c -b
+nvim
+ascii-image-converter /Users/dgarciar/tmp/dagrlx-color.png -C -c -b --dither
+nvim
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+brew upgrade
+brew upgrade --cask --greedy
+ssh sabaext
+nvim
+brew upgrade --cask --greedy
+brew upgrade
+yazi ~/.dotfiles/
+
+bu
+alias
+buc 
+yazi ~/.dotfiles/
+scope aliases
+help aliases
+yazi ~/.dotfiles/
+
+scope aliases
+bu
+scope aliases
+yazi ~/.dotfiles/
+
+scope aliases
+yazi ~/.dotfiles/
+
+yazi ~/.dotfiles/
+
+yazi ~/.dotfiles/
+
+yazi ~/.dotfiles/
+
+scope aliases
+brew-up
+nvim ~/.dotfiles/nushell/config.nu 
+source ~/.config/nushell/config.nu
+nvim ~/.dotfiles/nushell/config.nu 
+source ~/.config/nushell/config.nu
+brew-up
+nvim ~/.dotfiles/nushell/config.nu 
+scope aliases
+nvim ~/.dotfiles/nushell/config.nu 
+source ~/.config/nushell/config.nu
+nvim ~/.dotfiles/nushell/config.nu 
+source ~/.config/nushell/config.nu
+nvim ~/.dotfiles/nushell/config.nu 
+source ~/.config/nushell/config.nu
+scope aliases
+
+nvim ~/.dotfiles/nushell/config.nu 
+source ~/.config/nushell/config.nu
+nvim ~/.dotfiles/nushell/config.nu 
+source ~/.config/nushell/config.nu
+nvim ~/.dotfiles/nushell/config.nu 
+source ~/.config/nushell/config.nu
+scope aliases
+brew-up
+nvim ~/.dotfiles/nushell/config.nu 
+scope commands
+scope commands | where is_custom == true
+nvim ~/.dotfiles/nushell/functions.nu 
+source ~/.config/nushell/config.nu
+help commands | grep brew-up
+scope commands | where is_custom == true
+scope commands | ^grep custom
+clear
+scope commands | where category == "default" | select name
+scope aliases
+scope commands | get 0 | columns<\n>b
+scope commands | get 0 | columns
+scope commands | ^grep custom
+scope commands | ^grep custom | select name description examples extra_description
+scope commands | select name description examples extra_description | ^grep custom
+scope commands | select name description examples extra_description
+scope commands | select name description examples extra_description | ^grep ff
+cd $nu.default-config-path
+cd ~/.config/nushell
+yazi
+cd ~/.config/nushell
+cd ~/.config/
+cd nushell
+cd
+cd nushell
+cd
+cd ~/.config/nushell
+cd nushell
+lsx
+ls
+git clone git@github.com:selfagency/bru.git
+use config.nu 
+edit config.nu
+config nu
+source ~/.config/nushell/config.nu
+yazi
+brew-up
+config nu
+source ~/.config/nushell/config.nu
+config nu
+source ~/.config/nushell/config.nu
+config nu
+source ~/.config/nushell/config.nu
+config nu
+source ~/.config/nushell/config.nu
+config nu
+source ~/.config/nushell/config.nu
+help vip-greet
+help brew-up
+scope commands<\n>| where name == 'brew-up'<\n>| wrap help
+config nu
+nvim ~/.dotfiles/nushell/functions.nu 
+source ~/.config/nushell/config.nu
+config nu
+source ~/.config/nushell/config.nu
+scope commands<\n>| where name == 'brew-up'<\n>| wrap help
+help brew-up
+scope commands<\n>| where name == 'brew-up'<\n>| wrap help
+config nu
+nvim ~/.dotfiles/nushell/functions.nu 
+source ~/.config/nushell/config.nu
+scope commands<\n>| where name == 'brew-up'<\n>| wrap help
+help brew-up
+help la
+nvim ~/.dotfiles/nushell/functions.nu 
+help brew-up
+scope commands | where name == 'brew-up'
+scope commands | where name == 'ff'
+ewxit
+
+scope commands<\n>| where name == 'brew-up'<\n>| wrap help
+config nu
+source ~/.config/nushell/config.nu
+brew-upg
+config nu
+source ~/.config/nushell/config.nu
+brew-upg
+scope aliases
+nvim ~/.dotfiles/nushell/functions.nu 
+clear
+scope commands | where name == 'brew-up'<\n>
+scope commands | get 0 | columns
+scope commands | where category == "default" | select name
+scope commands | where name == 'brew-up'<\n>
+clear
+scope aliases
+do { echo "Hola"; echo "Mundo" }<\n>
+do { print "Hola"; print "Mundo" }<\n>
+clear
+config nu
+source ~/.config/nushell/config.nu
+nvim ~/.dotfiles/nushell/functions.nu 
+source ~/.config/nushell/config.nu
+brew-up
+config nu
+source ~/.config/nushell/config.nu
+brew-up
+config nu
+brew-up
+config nu
+brew upgrade
+source ~/.config/nushell/config.nu
+brew upgrade
+brew-up
+config nu
+source ~/.config/nushell/config.nu
+brew-up
+config nu
+source ~/.config/nushell/config.nu
+brew-up
+config nu
+source ~/.config/nushell/config.nu
+brew-up
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose
+config nu
+yazi ~/.dotfiles/
+scope aliases
+scope commands | get 0 | columns
+scope commands | where category == "default" | select name
+nvim ~/.dotfiles/nushell/functions.nu 
+
+nvim ~/.dotfiles/nushell/functions.nu 
+yazi ~/.dotfiles/
+source ~/.config/nushell/config.nu
+config nu
+source ~/.config/nushell/config.nu
+pssh parking@10.4.90.72
+aliases
+config nu
+
+config nu
+nvim ~/.dotfiles/nushell/functions.nu 
+source ~/.config/nushell/config.nu
+aliases
+scope aliases
+
+config nu
+source ~/.config/nushell/config.nu
+config nu
+source ~/.config/nushell/config.nu
+scope aliases
+config nu
+source ~/.config/nushell/config.nu
+
+pssh parking@10.4.90.72
+config nu
+source ~/.config/nushell/config.nu
+pssh parking@10.4.90.72
+
+pssh parking@10.4.90.72
+config nu
+source ~/.config/nushell/config.nu
+config nu
+source ~/.config/nushell/config.nu
+scope aliases
+pssh parking@10.4.90.72
+config nu
+source ~/.config/nushell/config.nu
+pssh parking@10.4.90.72
+config nu
+source ~/.config/nushell/config.nu
+scope aliases
+brew-up
+source ~/.config/nushell/config.nu
+scope aliases
+pssh parking@10.4.90.72
+
+scope aliases
+pssh parking@10.4.90.72
+ff
+^âlias
+^alias
+
+nvim ~/.dotfiles/nushell/functions.nu 
+aichat "como llevo este comando a que sea un alias en nushell: nix flake update --flake ~/.dotfiles/nix-darwin --verbosey"
+config nu
+source ~/.config/nushell/config.nu
+config nu
+q
+
+ufn
+config nu
+
+yazi ~/.dotfiles/
+t
+
+ufd
+ff
+yazi ~/.dotfiles/
+keybindings listen --mode=vi_normal --key=v --command="edit-command-line"<\n>
+
+edit
+ls | where type == "file" | sort-by size | reverse | select name size modified | first 10 | to json
+ls | where type == "file" | sort-by size | reverse | select name size modified | first 15 | to json
+clear
+ls | where type == "file" | sort-by size | reverse | select name size modified | first 15 | to json
+ls | where type == "file" | sort-by size | reverse | select name size modified | first 12 | to json
+ufn
+brew-up
+cd plugin
+brew-up
+ufn
+ufd
+aichat hay format que el alias se expanda en nushell, es decir que si por ejemplo el alias es ufn y el comando que ejecuta es nix update all al escribir ufn  se muestra comando
+expand-alias ufn<\n>
+aichat wn nushell no existe el comando expand-alias
+aichat
+aichat --info
+aichat --help
+aichat --sync-models
+aichat --list-sessions
+aichat --prompt
+aichat --prompt --help
+aichat --prompt como mantengo la continuidad de una conversaion en aichat ?
+aichat --prompt me referia usando la aplicacion aichat ?
+aichat --prompt como mantengo la continuidad de una conversaion usando la aplicacion aichat ?
+yazi ~/.dotfiles/
+source ~/.config/nushell/config.nu
+ls -l
+
+aitchat -s 
+aitchat --help
+aichat -s 
+aichat -f ~/.dotfiles/nushell/aichat.nu este archivo que integra aichat al shell debe de ser cargado a traves de config.nu ?
+config nu
+nvim ~/.dotfiles/nushell/aichat.nu 
+source ~/.config/nushell/config.nu
+nvim ~/.dotfiles/nushell/aichat.nu 
+source ~/.config/nushell/config.nu
+nvim ~/.dotfiles/nushell/aichat.nu 
+source ~/.config/nushell/config.nu
+
+source ~/.config/nushell/config.nu
+nvim ~/.dotfiles/nushell/aichat.nu 
+
+checkout pr 100
+source ~/.config/nushell/config.nu
+nvim ~/.dotfiles/nushell/aichat.nu 
+source ~/.config/nushell/config.nu
+
+nvim ~/.dotfiles/nushell/aichat.nu 
+yazi ~/.dotfiles/
+source ~/.config/nushell/config.nu
+open --raw ~/.config/aichat/config.yaml
+cd nushell
+ls -l
+open aichat_shell.nu
+def _aichat_nushell [] {<\n>    let _prev = (commandline)<\n>    if ($_prev != "") {<\n>        print '⌛'<\n>        commandline edit -r (aichat -e $_prev)<\n>    }<\n>}
+nushell edit
+_aichat_nushell
+nushell edit
+
+_aichat_nushell
+
+aichat --list-models
+aichat models
+aichat --help
+aichat --info
+aichat --list-models
+config nu
+yazi
+config nu
+yazi
+config nu
+yazi
+yazi
+config nu
+brew-up
+brew search neovim
+nvim
+brew neovin-nightly
+brew search neovin-nightly
+atuin search --delete 'config nu'
+brew search neovim-nightly
+brew tap neovim/neovim
+brew search neovim-nightly
+brew search nvm
+brew info nvm
+
+ufn 
+ufd 
+atuin search --delete 'config nu'
+atuin search --delete ';2;13'
+atuin search --delete 'pssh'
+defaults write -g NSWindowShouldDragOnGesture -bool true
+yazi ~/.dotfiles/
+
+atuin search --delete 'aitchat'
+yazi ~/.dotfiles/
+version
+ufn 
+ufd 
+brew-up
+ufd 
+yazi ~/.dotfiles/
+aerospace workspace 1
+aerospace config --get mode.main.binding --keys
+defaults write -g NSWindowShouldDragOnGesture -bool true
+brew-up
+brew doctor
+brew autoremove 
+brew clean
+brew cleanup
+
+clear
+yazi ~/.dotfiles/
+scope aliases
+source ~/.config/nushell/config.nu
+scope aliases
+brew-up
+clear
+glob **/*.{rs,toml} --depth 3
+glob **/*.{lua,toml} --depth 3
+yazi ~/.dotfiles/
+
+do {<\n>    ls<\n>    echo "Hola"<\n>    2 + 2<\n>}<\n>
+config nu
+source ~/.config/nushell/config.nu
+xp
+ls
+config nu
+xp
+do {<\n>    [ (ls) "Hola" (2 + 2) ] | each { print $it }<\n>}
+do {<\n>    print (ls)<\n>    print "Hola"<\n>    2 + 2<\n>}<\n>
+clear
+do {<\n>    let results = [<\n>        (ls)<\n>        "Hola"<\n>        (2 + 2)<\n>    ]<\n>    $results<\n>}<\n>
+do {<\n>    [ (ls) "Hola" (2 + 2) ] | each { print $it }<\n>}<\n>
+clear
+do {<\n>    [ (ls) "Hola" (2 + 2) ] | each {|x| print $x }<\n>}<\n>
+do {<\n>    print (ls)<\n>    print "Hola"<\n>    2 + 2<\n>}<\n>
+do {<\n>    [ (ls) "Hola" (2 + 2) ] | each {|x| print $x }<\n>}<\n>
+cd
+ls
+cd tmp
+mkdir lab
+cd lab
+mkdir json
+cd json/
+cd json
+open personas.json | to json
+open personas.json | to json | get nombre
+open personas.json | select nombre
+open personas.json | select intereses
+open personas.json | select nombre intereses
+open personas.json | where edad = 25 | select nombre intereses 
+open personas.json | describe 
+open personas.json | where edad == 25 | select nombre intereses 
+open personas.json<\n>| from json<\n>| get intereses<\n>| flatten<\n>| sort<\n>| uniq
+open personas.json | select intereses 
+open personas.json | get intereses 
+open personas.json | get intereses | flatten
+open personas.json | get intereses | flatten | sort 
+open personas.json | where edad == 25 | select nombre intereses 
+open personas.json | where edad == 25 | get nombre intereses 
+open personas.json | where edad == 25 | get nombre intereses | flatten
+open personas.json | where edad == 25 | select nombre intereses 
+open personas.json | where edad == 25 | get nombre intereses
+open personas.json | where edad == 25 | get nombre intereses | to csv personas.csv
+open personas.json | where edad == 25 | get nombre intereses | to csv | save personas.csv
+open personas.json | where edad == 25 | select nombre intereses | to csv | save personas.csv
+open personas.json | where edad == 25 | select nombre intereses | to csv | save -f personas.csv
+open personas.json | where edad == 25 | select nombre intereses 
+open personas.json | from json | to csv nombre edad ciudad intereses
+open personas.json | from json | to csv -f personas.csv
+open personas.json | from json | to csv personas.csv
+open personas.json | from json | to cs
+open personas.json | from json | to csv
+open personas.json | to csv
+ssht sabaext
+alias
+aichat como seria el equivalente de este alias llevado a nushell sshp='TERM=xterm-256color'
+
+ssht sabaext
+ufn
+yazi ~/.dotfiles/
+ufn 
+yazi ~/.dotfiles/
+ufn 
+ufn
+yazi ~/.dotfiles/
+ufn
+source ~/.config/nushell/config.nu
+ufn
+ufd 
+ufd
+yazi ~/.dotfiles/
+ssh sabaext
+nvim
+brew search imageimagick
+brew install imageimagick
+brew install imagemagick
+nvim
+nvim Downloads/
+nvim
+brew install pkg-config
+nvim
+tmux kill-server && tmux || tmux
+tmux kill-server && tmux || tmux
+
+ssh sabaext
+ufn
+brew-up
+clear
+yazi
+aichat listame los archivos del directorio ~/.dotfiles/nushell
+yazi ~/.dotfiles/
+
+ls ~/.dotfiles/nushell
+
+aichat --list-models
+aichat --list-models 
+aichat --info
+aichat --model openrouter:deepseek/deepseek-r1:free
+
+yazi ~/.dotfiles/
+ufn 
+ufd 
+
+ufn 
+ufd 
+brew-up
+yazi ~/.dotfiles/
+ya pack -u
+yazi ~/.dotfiles/
+aerospace list-windows
+aerospace list-windows --all
+aerospace list-windows --help
+yazi ~/.dotfiles/
+brew-up
+yazi ~/.dotfiles/
+clear
+yazi ~/.dotfiles/
+scope commands | where category == "default" | select name
+scope commands | where is_custom == true
+scope commands | select name description examples extra_description | ^grep custom
+scope aliases
+
+scope aliases
+yazi ~/.dotfiles/
+
+scope aliases
+ufn | describe
+help
+help describe
+[1 2 3] | each {|i| echo $i} | describe
+[1 2 3] | each {|i| echo $i} | describe --no-collect
+^cal
+cal
+help cal
+cal --week-start mo -3
+cal -3 --week-start mo
+cal --week-start mo
+help cal
+cal -3
+cal -m 3
+cal -m
+cal -mclear
+clear
+cal --quarter<\n>
+cal -3
+cal -q<\n>
+cal -q help<\n>
+cal -q --help<\n>
+cal --as-table
+cal --as-table --full-year 2025 
+cal --full-year 2025 
+cal --as-table --full-year 2025 | select 1 2 3
+cal --months 3
+cal --month 3
+cal -m 3
+cal {flags}
+help cal
+^cal
+^cal -3
+cal --month 1; cal --month 2; cal --month 3
+help cal
+cal -q
+cal
+cal -qm
+cal -m
+cal -m 2
+cal --month-names -m 
+cal --month-names
+cal
+brew-up
+help cal
+cal --as-table --full-year 2015 | where month == 3
+cal --as-table --full-year 2015
+cal --as-table --motnh
+cal --as-table --month
+cal --as-table --full-year 2015
+cal --full-year 2015
+cal --full-year 2015 -m 
+help cal
+cal --full-year 2015 -m --month-names
+cal --full-year 2025 -m --month-names | first 3
+cal --full-year 2025 -m --month-names -t | first 3
+cal --full-year 2025 -m --month-names -t
+cal -q
+^cal
+^cal -3
+cal
+cal -m
+cal --month-names
+cal --month-names -m 
+cal --month-nameslet current_month = (date now | format date "%m" | into int)<\n>let current_year = (date now | format date "%Y" | into int)<\n><\n># Generar los tres meses<\n>for i in [-1 0 1] {<\n>    let month = ($current_month + $i)<\n>    let year = $current_year<\n><\n>    # Ajustar el año si el mes es menor que 1 o mayor que 12<\n>    if $month < 1 {<\n>        let month = 12<\n>        let year = ($current_year - 1)<\n>    } else if $month > 12 {<\n>        let month = 1<\n>        let year = ($current_year + 1)<\n>    }<\n><\n>    print $"(cal ($month) ($year))"<\n>}<\n>
+let current_month = (date now | format date "%m" | into int)<\n>let current_year = (date now | format date "%Y" | into int)<\n><\n># Generar los tres meses<\n>for i in [-1 0 1] {<\n>    let month = ($current_month + $i)<\n>    let year = $current_year<\n><\n>    # Ajustar el año si el mes es menor que 1 o mayor que 12<\n>    if $month < 1 {<\n>        let month = 12<\n>        let year = ($current_year - 1)<\n>    } else if $month > 12 {<\n>        let month = 1<\n>        let year = ($current_year + 1)<\n>    }<\n><\n>    print $"(cal ($month) ($year))"<\n>}<\n>
+yazi ~/.dotfiles/
+ufn
+ufd
+nvim .
+tmux kill-server && tmux || tmux
+tmux kill-server && tmux || tmux
+
+sh "diff core.nix core2.nix"<\n>
+diff core.nix core2.nix 
+help diff
+ufn
+brew-up
+yazi ~/.dotfiles/
+brew-up
+chezmoi destroy ~/.dotfiles/nvim/lua/plugins/dressing.lua
+ufn 
+sudo xattr -r -d com.apple.quarantine /Applications/AYA.app
+brew search devpod
+brew install devpod
+yazi ~/.dotfiles/
+ufn 
+brew-up 
+btop
+nvim
+clear
+devpod --help
+devpod provider --help
+devpod provider list
+devpod provider add ssh --help
+devpod provider add ssh sabaext
+devpod provider add ssh sabaext --debug
+
+log stream --predicate "subsystem == 'com.raycast.macos'" --level debug --style compact >> ~/Desktop/ray.$(date +%Y%m%d_%H%M%S).log
+ufn 
+brew-up 
+nvim .
+brew-up 
+ufn 
+ufd
+yazi ~/.dotfiles/
+ufd
+nano .ssh/config 
+cd tmp
+ls 
+cd lab
+ls
+mkdir devpod
+cd devpod/
+mdkir devDebian
+mkdir debian
+cd debian/
+nvim devcontainer.json
+devpod start --option imageVariant=bookworm<\n>
+
+devpod start --option imageVariant=bookworm<\n>
+devpod --help
+devpod provider add docker
+devpod up --option imageVariant=bookworm<\n>
+devpod init
+devpod --help
+devpod build
+devpod up .
+ufn
+yazi ~/.dotfiles/
+cd debian
+ls
+ls -l
+mv devcontainer.json .devcontainer.json
+ls -l
+ls -la
+yazi ~/.dotfiles/
+
+sshp parking@10.4.90.72
+sshp parking@10.4.90.76
+sshtp parking@10.4.90.76
+yazi --version
+tmux kill-server && tmux || tmux
+
+ssh sabaext
+ufn
+ufd 
+brew-up 
+
+yazi --version
+brew-up 
+broot
+echo $EDITOR
+echo $EDIT
+echo $EDITOR
+
+http get https://raw.githubusercontent.com/TobiEiss/nushell-example/main/medium/sales.csv
+http get https://raw.githubusercontent.com/TobiEiss/nushell-example/main/medium/sales.csv | from csv --separator ';'
+http get https://raw.githubusercontent.com/TobiEiss/nushell-example/main/medium/sales.csv
+http get --raw https://raw.githubusercontent.com/TobiEiss/nushell-example/main/medium/sales.csv | from csv --separator ';'
+let sales = http get --raw https://raw.githubusercontent.com/TobiEiss/nushell-example/main/medium/sales.csv | from csv --separator ';'
+$sales
+$sales | group-by "Product Name"
+$sales | group-by "Product Name" --to-table
+$sales | group-by "Product Name" --to-table | update items { length }
+$sales | group-by "Product Name" --to-table | update items {| get Price | math sum }
+$sales | group-by "Product Name" --to-table | update items { get Price | math sum }
+$sales | group-by "Product Name" --to-table |<\n>::: update items { get Price | math sum } |<\n>::: sort-by items -r |<\n>::: rename items "Turnover"
+$sales | group-by "Product Name" --to-table | update items { get Price | math sum } | sort-by items -r | rename items "Turnover"
+$sales | group-by "Product Name" --to-table |<\n>::: update items { get Price | math sum } |<\n>::: sort-by items -r |<\n>::: rename items "Turnover"
+$sales | group-by "Product Name" --to-table | update items { get Price | math sum } | sort-by items -r | rename items "Turnover"
+$sales | group-by "Product Name" --to-table | <\n>update items { get Price | math sum } | <\n>sort-by items -r | <\n>rename items "Turnover"
+do -i {<\n>  tmux kill-server<\n>  tmux<\n>}<\n>
+do -i { tmux kill-server; tmux }<\n>
+do -i {<\n>  tmux kill-server<\n>  if ($?) {<\n>    tmux<\n>  } else {<\n>    tmux<\n>  }<\n>}<\n>
+clear
+broot
+br
+broot --set-install-state installed 
+
+br
+
+br
+br -h
+br -hsdp
+br -h
+cd nushell
+cd
+br -h
+
+br -h
+
+ufn --verbose
+ufn
+scope aliases
+ufn
+
+http get --raw https://raw.githubusercontent.com/TobiEiss/nushell-example/main/medium/sales.csv | from csv --separator ';'
+clear
+aichat --help
+aichat --info
+yazi ~/.dotfiles/
+brew-up 
+ssh sabaext
+yazi ~/.dotfiles/
+brew-up 
+sshp parking@10.4.90.76
+cd controladoras/ansible/
+ls
+yazi
+ansible-playbook --become -i controladorasv2.yml actualizar_apt.yml
+
+cd ansible
+cd nushell
+cd
+rm .zoxide.nu
+yazi ~/.dotfiles/
+chezmoi re-add ~/.dotfiles/nushell/config.nu
+yazi ~/.dotfiles/
+chezmoi add ~/.dotfiles/nushell/aichat_cmp.nu
+chezmoi add ~/.dotfiles/nushell/aichat_cmp.nu ~/.dotfiles/nushell/aichat_shell.nu
+chezmoi add ~/.dotfiles/nushell/functions.nu
+yazi ~/.dotfiles/
+chezmoi add ~/.dotfiles/nushell/zoxide.nu
+git push origin main
+
+let defaults = nu -n -c "$env.config = {}; $env.config | reject color_config keybindings menus | to nuon" | from nuon | transpose key default<\n>let current = $env.config | reject color_config keybindings menus | transpose key current<\n>$current | merge $defaults | where $it.current != $it.default
+cd nushell
+ufn --verbose
+config nu --doc | nu-highlight | less -R
+yazi
+config get history<\n>
+open $nu.history-path | schema | get tables | table -e
+> history | last 5
+history | last 5
+> history session
+history session
+history --help
+history -l
+config nu --doc | nu-highlight | less -R
+config get history.file_format<\n>
+$env.config.history<\n>
+config nu --doc | nu-highlight | less -R
+ls -la
+open history.txt
+open history.txt | table
+
+atuin search --delete 'pwe'
+
+cd nushell
+nvim history.txt 
+cd nushell
+atuin search --delete ewxit
+atuin search --delete exiy
+atuin search --delete exirt
+atuin search --delete >
+nvim history.txt 
+cd nushell
+nvim history.txt 
+$env.config.history<\n>
+$env.config.use_kitty_protocol
+config nu
+$env.config.completions.algorithm
+ls -l
+nvim prueba.txt
+$env.config.buffer_editor
+$env.config.completions.case_sensitive
+$env.config.buffer_editor
+config nu
+chezmoi re-add ~/.dotfiles/nushell/config.nu
+gp
+git push origin main
+chcd
+^chcd
+config nu --doc | nu-highlight | less -R
+env nu --doc | nu-highlight | less -R
+$env.config
+$env.config | table -e | less -R
+$env.config.history<\n>
+exit
+scope aliases
+ufn
+ufd
+brew search font-symbols-only-nerd-font
+yazi
+nvim
+ls -l
+stat package-lock.json 
+stat ejercicio.txt 
+ssh sabaext
+tmux list-sessions
+brew-up 
+ufn --verbose
+ufn
+clear
+tmux kill-server && tmux || tmux
+tmux kill-server; tmux || tmux
+tmux kill-server and tmux or tmux
+exit
+$env
+nvim $nu.env-path
+$env.APPDATA
+df -h | str replace "Mounted on" Mounted_On | from ssv --aligned-columns --minimum-spaces 1
+sshpt 10.4.90.73
+sshpt 10.4.90.72
+sshpt parking@10.4.90.72
+sshpt parking@10.4.16.72
+sshpt parking@10.4.90.72
+yazi ~/.dotfiles/
+chezmoi re-add ~/.dotfiles/tmux/tmux.conf
+cdch
+chcd
+chezmoi cd
+exit
+ls
+nvim ejercicio.txt 
+cd tmp/
+ls -l
+exit
+chezmoi diff
+exit
+podman-machine --help
+exit
+podman machine --help
+podman machine os
+podman machine start
+sudo /opt/homebrew/Cellar/podman/5.4.1/bin/podman-mac-helper install
+podman machine stop
+podman machine start
+podman machine ssh
+podman machine stop
+podman machine start
+podman machine ssh
+podman machine start --help
+podman machine set --rootful
+podman machine stop
+podman machine set --rootful
+podman machine start
+podman machine ssh
+podman machine stop
+podman machine rm
+podman machine init
+podman machine start
+podman status
+podman --help
+podman machine ssh
+podman run --name nginx -p 8080:80 nginx<\n>
+podman rm -f nginx 
+podman run --name nginx -p 8080:80 nginx<\n>
+podman rm -f nginx 
+podman pa -a
+podman ps -a
+podman ps
+podman rm -f nginx 
+podman ps
+podman ps -a
+podman --help
+podman ps -a
+podman stop nginx
+podman ps -a
+podman run --name nginx1 -p 8080:80 nginx<\n>
+podman stop nginx
+podman rm -f nginx 
+podman ps -a
+podman stop nginx
+podman stop nginx1
+podman rm -f nginx1
+podman ps -a
+podman rm -f 18f791a33307
+podman ps -a
+podman run --name nginx -d -p 8080:80 nginx<\n>
+podman ps -a
+podman ssh
+podman machine ssh
+podman machine restart
+podman machine stop
+podman machine start
+podman ps -a
+podman machine ssh
+podman run --name nginx -d -p 8082:80 nginx<\n>
+podman machine stop
+podman machine start
+podman machine --help
+podman machine stop
+podman machine start
+podman machine ssh
+podman ps
+podman machine ls
+podman machine ssh
+podman machine stop
+podman machine start
+podman machine ssh
+podman machine stop
+clear
+podman machine ls
+podman machine status
+podman machine --help
+podman machine info
+podman machine os
+podman ps
+ufn --verbose
+scope aliases
+ufn --verbose
+ufn
+ufd
+scope aliases
+brew update
+brew upgrade
+brew upgrade --cask --greedy
+exit
+http get https://api.github.com/repos/nushell/nushell/contributors | select login contributions
+exit
+version
+brew upgrade --cask --greedy
+brew upgrade
+job list
+'{00..10}' | str expand
+exit
+chezmoi diff
+brew outdated 
+exit
+nvim
+brew outdated 
+brew upgrade
+exit
+brew update
+yazi ~/.dotfiles/
+exit
+brew update
+exit
+brew update
+exit
+brew update
+brew outdate
+exit
+brew outdated
+brew upgrade
+yazi ~/.dotfiles/
+clear
+yazi ~/.dotfiles/
+chezmoi re-add ~/.dotfiles/nushell/functions.nu
+cd chezmoi cd
+chezmoi cd
+brew update
+brew upgrade
+talosctl --help
+yazi ~/.dotfiles/
+brew update
+brew upgrade
+brew upgrade --cask --greedy
+yazi ~/.dotfiles/
+exit
+brew upgrade --cask --greedy
+exit
+brew upgrade --cask --greedy
+brew --help
+yazi ~/.dotfiles/
+brew upgrade --cask
+brew upgrade
+yazi ~/.dotfiles/
+exit
+brew upgrade --cask --greedy
+yazi ~/.dotfiles/
+exit
+clear
+exit
+yazi ~/.dotfiles/
+clear
+exit
+yazi ~/.dotfiles/
+exit
+brew upgrade --cask --greedy
+exit
+brew upgrade --cask --greedy
+exit
+clear
+brew upgrade --cask --greedy
+exit
+brew upgrade --cask --greedy
+exit
+brew upgrade --cask --greedy
+exit
+^brew upgrade --cask --greedy
+^brew update
+^brew outdated
+^brew upgrade
+yazi ~/.dotfiles/
+sketchybar --trigger brew_update
+exit
+nvim
+yazi ~/.dotfiles/
+nvim
+brew upgrade --cask --greedy
+^brew upgrade --cask --greedy
+^brew outdated
+exit
+brew upgrade --cask --greedy
+exit
+brew upgrade --cask --greedy
+yazi ~/.dotfiles/
+exit
+brew upgrade --cask --greedy
+brew -- upgrade --cask --greedy
+brew --upgrade --cask --greedy
+^brew upgrade --cask --greedy
+^brew outdated
+yazi ~/.dotfiles/
+^brew upgrade
+brew outdated
+brew upgrade --cask --greedy
+brew upgrade
+yazi ~/.dotfiles/
+exit
+brew2 upgrade --cask --greedy
+brew2 update
+yazi ~/.dotfiles/
+brew -- upgrade --greedy
+brew upgrade --greedy
+brew upgrade --greedy --cask
+exit
+brew upgrade --greedy --cask
+yazi ~/.dotfiles/
+brew upgrade --cask
+yazi ~/.dotfiles/
+exit
+exitrç
+exit
+clear
+exit
+brew upgrade --cask
+exit
+brew upgrade --cask
+exitr
+exit
+clear
+brew upgrade --cask
+exit
+brew upgrade --cask
+exit
+brew upgrade --cask
+brew upgrade --cask --help
+exit
+clear
+exit
+brew upgrade --cask
+yazi ~/.dotfiles/
+exit
+brew upgrade --cask
+exit
+brew upgrade --cask
+brew outdated
+exit
+brew outdated
+exit
+brew outdated
+brew upgrade --cask
+exit
+brew upgrade --cask
+brew "upgrade --cask"
+exit
+brew "upgrade --cask"
+brew upgrade --cask
+exit
+brew upgrade --cask
+brew upgrade
+brew upgrad
+exit
+brew upgrad
+brew update
+brew outdated
+brew upgrade --cask
+exit
+brew upgrade --cask
+brew upgrade --cask --greedy
+def greet [<\n>    name: string<\n>    --age (-a): int<\n>    --twice<\n>] {<\n>    if $twice {<\n>        [$name $age $name $age]<\n>    } else {<\n>        [$name $age]<\n>    }<\n>}
+greet -a 10 --twice hello
+greet -a 10 --twice
+greet -a 10
+greet -a 10 --twice hello
+brew upgrade --cask
+exit
+brew upgrade --cask
+brewn upgrade --cask
+exit
+brewn upgrade --cask
+brew upgrade --cask
+exit
+brew upgrade --cask
+brewn upgrade --cask
+brew update
+brew ["upgrade", "--cask", "--greedy"]<\n>
+brew ["outdated", "--cask", "--greedy"]<\n>
+^brew upgrade --cask --greedy
+brew ["outdated", "--cask", "--greedy"]<\n>
+brew ["update"]<\n>
+brew ["outdated"]
+scope aliases
+ufn --verbose
+ufn
+ufd
+nix --version
+brew ["outdated", "--cask", "--greedy"]<\n>
+exit
+brew ["outdated", "--cask", "--greedy"]<\n>
+brew ["outdated"]
+exit
+brew ["outdated"]
+exit
+brew ["outdated"]
+exit
+brew upgrade --cask --greedy
+exit
+brew upgrade --cask --greedy
+exit
+brew upgrade --cask --greedy
+exit
+brew upgrade --cask --greedy
+exit
+brew ["outdated"]
+sketchybar --trigger brew_update
+brew ["outdated"]
+atuin search --delete brewn
+atuin search --delete bu
+brew upgrade --cask --greedy
+^brew upgrade --cask --greedy
+yazi ~/.dotfiles/
+brew update 
+^brew outdated
+brew outdated
+yazi ~/.dotfiles/
+brew outdated --cash
+brew outdated --cask
+brew ["outdated"]
+exit
+brew ["outdated"]
+brew ["upgrade","--cask","--greedy"]
+exit
+yazi ~/.dotfiles/
+exit 
+ufn --verbose
+ufn
+ufd
+exce zsh
+brew ["outdated"]
+brew ["upgrade"]
+t
+exit
+ssh sabaext
+nvim
+yazi
+yazi ~/.dotfiles/
+aichat --help
+aichat --info
+clear
+ls -l
+sfp ~/.dotfiles/
+spf
+spf ~/.dotfiles/
+podman --version
+yazi ~/.dotfiles/
+infocmp rio
+yazi ~/.dotfiles/
+ls -l
+exit
+brew ["update"]
+brew ["outupdate"]
+brew ["outupdates"]
+brew ["outupdated"]
+brew ["outdated"]
+nvim
+ssh sabaext
+nu --help
+exit
+brew ["outdated"]
+yazi
+exit
+brew ["outdated"]
+brew ["upgrade"]
+fastfetch 
+yazi ~/.dotfiles/
+clear
+fastfetch 
+brew ["outdated"]
+whereis nu
+exit
+config nu --doc | nu-highlight | less -R
+config path
+path
+config nu 
+config basenane
+exit
+yazi ~/.dotfiles/
+ufn
+ufd
+yazi ~/.dotfiles/
+$nu.default-config-dir
+yazi ~/.dotfiles/
+XDG_CONFIG_HOME
+$XDG_CONFIG_HOME
+exit
+echo $XDG_CONFIG_HOME
+$env,XDG_CONFIG_HOME
+$env.XDG_CONFIG_HOME
+$nu.default-config-dir
+$env.XDG_CONFIG_HOME
+yazi ~/.dotfiles/
+$nu.default-config-dir
+exit
+$env | reject config | transpose key val | each {|r| echo $"$env.($r.key) = '($r.val)'"} | str join (char nl)
+whereis nu
+ls
+yazi ~/.dotfiles/
+$env.XDG_CONFIG_HOME
+exit
+$env.XDG_CONFIG_HOME
+$nu.default-config-dir
+whereis nu
+yazi ~/.dotfiles/
+cd ~/.dotfiles/rio/
+ls
+^chmod +x start_nushell.sh 
+pwd
+yazi ~/.dotfiles/
+exit
+./start_nushell.sh
+nvim start_nushell.sh 
+$nu.default-config-dir
+$env.XDG_CONFIG_HOME
+cd rio
+$nu.env-path
+env
+yazi ~/.dotfiles/
+ls ($nu.data-dir | path join "vendor/autoload")
+ls ($nu.data-dir | path join "vendor/autoload")<\n>
+source ($nu.data-dir | path join "vendor/autoload/starship.nu")<\n>
+cd rio
+source ($nu.data-dir | path join "vendor/autoload/starship.nu")<\n>
+env
+$nu.data-dir
+$nu.env-path
+$nu.default-config-dir
+source ($nu.data-dir | path join "vendor/autoload/starship.nu")<\n>
+env
+yazi ~/.dotfiles/
+env
+$nu.default-config-dir
+$env.XDG_CONFIG_HOME
+yazi ~/.dotfiles/
+cd .
+cd ..
+cd nushell/
+nvim login.nu
+$env | reject config | transpose key val | each {|r| echo $"$env.($r.key) = '($r.val)'"} | str join (char nl)
+nvim login.nu
+spf ~/.dotfiles/
+env
+clear
+env
+sshtp parking@10.4.90.76
+^sshtp parking@10.4.90.76
+sshp parking@10.4.90.76
+sshtp parking@10.4.90.76
+sshpt parking@10.4.90.76
+sshtp parking@10.4.90.76
+chcd
+chezmoi cd
+$env.TERM
+exit
+exi
+exit
+sshpt parking@10.4.90.76
+$env.TERM
+sshpt parking@10.4.90.76
+yazi ~/.dotfiles/
+exit
+$env.TERM
+sshp parking@10.4.90.76
+exit
+zsh
+sshtp parking@10.4.90.76
+sshp parking@10.4.90.76
+ssh sabaext
+ssht sabaext
+ssh testing
+ssh testing@orb
+ssht testing@orb
+scope aliases
+exit
+infocmp rio
+yazi ~/.dotfiles/
+ssh sabaext
+brew ["outdated"]
+brew ["upgrade"]
+fastfetch 
+infocmp -x > ghostty.terminfo
+ls -la /usr/share/terminfo/3e
+ls -l
+brew ["outdated"]
+brew ["upgrade"]
+ls
+brew ["upgrade"]
+brew ["outdated"]
+brew ["upgrade", "--cask", "--greedy"]
+nvim
+spf ~/.dotfiles/
+zi nushell
+which nu
+cat /etc/shells 
+sudo echo "/opt/homebrew/bin/nu" >> /etc/shells 
+cat /etc/shells 
+sudo echo "/opt/homebrew/bin/nu" >> /etc/shells 
+cat /etc/shells 
+cat /etc/shells.before-nix-darwin 
+yazi ~/.dotfiles/
+ufd
+yazi ~/.dotfiles/
+darwin-help Applications/
+yazi ~/.dotfiles/
+ufd
+$nu.default-config-dir
+exit
+$nu.default-config-dir
+exit
+env
+which zoxide
+which atuin
+$env.$USER
+$env.USER
+zsh
+$env
+yazi
+encv
+env
+$env
+env
+$env
+which atuin
+/etc/profiles/per-user/($env.USER)/bin
+/etc/profiles/per-user/($env.USER)/bin/zoxide
+/etc/profiles/per-user/dgarciar/bin/zoxide
+ls
+ufd
+$env.PATH
+zsh
+exit
+spf ~/.dotfiles/
+ufd
+ufn
+ufd
+yazi ~/.dotfiles/
+$env:EDITOR
+$env.EDITOR
+yazi ~/.dotfiles/
+nu -c "echo $env.PATH | split row (char esep) | where $it =~ 'nix'"
+$env.PATH
+brew ["upgrade", "--cask", "--greedy"]
+brew ["upgrade"]
+ascii-image-converter /Users/dgarciar/tmp/dagrlx-color.png -C -c -b --dither
+nvim
+ascii-image-converter /Users/dgarciar/tmp/dagrlx-color.png -C -c -b --dither sleep 1
+nvim
+brew ["upgrade"]
+brew search imageimagick
+brew ["search", "imagemagick"]
+brew search imageimagick
+nvim
+yazi ~/.dotfiles/
+cd Pictures/
+ls -l
+David.jpg
+open David.jpg
+clear
+spf ~/.dotfiles/
+$nu.data-dir
+yazi ~/.dotfiles/
+$env.XDG_DATA_DIRS
+$nu
+cd  /Users/dgarciar/Library/Application Support/nushell
+ls -l
+$nu.data-dir
+$env | reject config | transpose key val | each {|r| echo $"$env.($r.key) = '($r.val)'"} | str join (char nl)
+zsh
+ls -l
+q
+yazi ~/.dotfiles/
+nvim
+yazi ~/.dotfiles/
+^open -a /Applications/WezTerm.app
+ps
+cal -3
+^cal -3
+ps | where status == Running
+ps | describe
+date | describe
+split | describe
+ls<\n>| sort-by size<\n>| reverse<\n>| first<\n>| get name<\n>| cp $in ~
+ls<\n>| sort-by size<\n>| reverse<\n>| first<\n>| get name
+ls -l
+[0 1 2] | get 1
+ls | get name.2
+ls
+ls | get 2.name
+$env | get paTH
+$env | get --sensitive Path
+$env | get Path
+$env | get OS
+$env.OS
+$env.path
+$env.CARAPACE_BRIDGES
+$env.config
+$env.LANG
+$env.HOME
+$env.NU_LIB_DIRS
+$env.NU_PLUGIN_DIRS
+$env.NU_VERSION
+$env.SHELL
+$env.PWD
+pwd
+$env.SHLVL
+$env.TERM
+$env.TERM_PROGRAM_VERSION
+$env.TERMINFO
+$env.TERM_PROGRAM
+$env.XDG_DATA_DIRS
+$env.TMPDIR
+$env.USER
+$env.XPC_FLAGS
+ls | select 0 1 2 3
+ls | select name
+help operators
+help escapes
+cal
+cal --full-year 2012
+cal --full-year 2025
+cal --full-year 2025 -m --month-names -t
+help -f fileze
+help -f filesize
+help -f select
+help -f get
+help commands | grep brew-up
+help commands | grep brew
+help commands
+help commands | explore
+yazi ~/.dotfiles/
+brew update
+brew-nu ["update"]
+brew-nu ["outupdated"]
+brew-nu ["outudated"]
+brew-nu ["outdated"]
+brew outdated --cask
+brew outdated
+help commands | explore
+$env.config | explore
+ls "[.dotfiles]"
+ls "[otfiles]"
+ls "[dotfiles]"
+ls .dotfiles/"[nussell]"
+ls .dotfiles/"[nushell]"
+ls ~/.dotfiles/"[nushell]"
+curl -s https://api.github.com/repos/nushell/nushell/contributors | jq -c '.[] | {login,contributions}'
+http get https://api.github.com/repos/nushell/nushell/contributors | select login contributions
+4 > 10
+	ls | where type == dir
+ls **/*.rs
+ls **/*.md
+echo "Hello, World"
+"Hello, World"
+def latest-file [] {<\n>    print "Returning last file"<\n>    ls | sort-by modified | last<\n>}
+latest-file
+which zsh
+cat /etc/shell
+cat /etc/shells
+-nu
+ufn
+ufd
+brew ["outdated"]
+brew-nu ["outdated"]
+brew outdated
+scope aliases
+def lsg [] { ls | sort-by type name -i | grid -c | str trim }
+lsg
+ufn 
+yazi ~/.dotfiles/
+scope aliases
+zsh
+zsh
+ssh sabaext
+scope aliases 
+yazi ~/.dotfiles/
+ufd        
+scope aliases | select alias expansion
+scope aliases 
+scope aliases | select name expansion
+yazi ~/.dotfiles/
+$env.LAST_CMD
+$env.PATH
+$env.LAST_CMD
+$env.LAST_EXIT_CODE
+history | last | get command<\n>
+scope aliases | select name expansion
+$env.aliases
+alias 
+âlias
+^âlias
+^alias 
+scope 
+scope ALIASES
+scope aliases
+$env.aliases
+scope aliases | from table
+scope aliases
+scope aliasesç
+scope aliases
+scope aliasesç
+clear
+scope aliases
+history | last | get command
+def expand-aliases [] {<\n>    let aliases = (scope aliases)<\n>    let cmd = (history | last | get command)<\n>    let alias_name = ($cmd | split row " " | get 0)<\n><\n>    let expanded_alias = ($aliases | where name == $alias_name | get expansion | default [])<\n><\n>    if ($expanded_alias | is-empty) {<\n>        return $cmd<\n>    } else {<\n>        return $"($expanded_alias) ($cmd | str replace $alias_name '')"<\n>    }<\n>}
+lt
+expand-aliases
+expand-aliases lt
+alias le = (carapace eza nushell "--tree --level=2 --long --icons --git")
+$env.PROMPT_BUFFER
+scope aliases
+alias le = do { carapace eza nushell "--tree --level=2 --long --icons --git" }
+le
+alias ly = do { carapace eza nushell "--tree --level=2 --long --icons --git" }
+ly
+carapace eza nushell "--tree --level=2 --long --icons --git"
+carapace eza "--tree --level=2 --long --icons --git"
+carapace eza nushell "--tree --level=2 --long --icons --git"
+ssh sabaext
+scope variables 
+yazi ~/.dotfiles/
+nvim
+cd nushell
+brew-nu ["outdated"]
+brew-nu ["outdated", "--cask"]
+brew update
+brew upgrade --cask --greedy
+brew-nu ["outdated"]
+zsh
+brew upgrade --cask --greedy
+ufn
+ufd
+zsh
+exit
+clear
+clear
+tmux
+yazi ~/.dotfiles/
+clear
+clear
+clear
+clear
+cd controladoras/ansible/
+ansible-playbook --become -i controladorasv2.yml actualizar_apt.yml
+ssh sabaext
+tmux-reset
+zsh
+exit
+nvim
+fg
+jobs
+fg 
+^fg 
+nvim
+fg %1
+jobs
+job list
+job unfreeze
+job list
+job unfreeze
+job list
+job unfreeze
+job unfreeze 1
+zsh
+aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
+cd nushell
+cd
+$nu.env-path
+yazi ~/.dotfiles/
+z nushel
+z
+zsh
+exit
+version
+[[name, children]; [foo, [a, b, c]], [bar [d, e, f]]] | where children has "e"
+help pipe-and-redirect
+1KiB
+ls | update modified {format date %D} | group-by modified type | table -e
+ls | update modified {format date %D} | group-by type | split-by modified | table -e
+sys net
+tools
+to
+du
+ufn
+brew-nu ["outdated"]
+brew-nu ["update"]
+brew-nu ["outdated"]
+brew-nu ["upgrade"]
+clear
+nvim
+ls | where type == "dir" | table
+ls | where type == "dir"
+ufn
+ufd
+yazi
+brew-nu ["update"]
+tmux kill-server and tmux or tmux
+tmux
+ufn
+ufd
+yazi
+talosctl --help
+nu -c "echo $env.PATH | split row (char esep) | where $it =~ 'nix'"
+nu --help
+brew-nu ["update"]
+brew-nu ["upgrade"]
+brew-nu ["upgrade", "--cask", "greddy"]
+brew-nu ["upgrade", "--cask", "greedy"]
+brew-nu ["upgrade", "--cask", "--greedy"]
+atuin search --delete brew-nu ["upgrade", "--cask", "greddy"]
+zsh
+atuin search --delete "brew-nu ["outupdated"]"
+atuin search --delete "brew-nu ["outudated"]"
+atuin search --delete "brew-nu ["upgrade", "--cask", "greedy"]"
+atuin search --delete "brew-nu ["outdated"]"
+atuin search --delete "brewd"
+ufn
+ufd
+nix --version
+ls | where type == "dir"
+exit
+nu -l
+brew-nu ["outdated"]
+brew-nu ["upgrade", "--cask", "--greedy"]
+brew-nu ["upgrade"]
+brew-nu ["outdated"]
+brew-nu ["upgrade"]
+brew search x-cmd
+brew info x-cmd
+brew install x-cmd
+whereis x-cmd
+x bat
+x
+yazi
+x-cmd --help
+x-cmd check system
+x-cmd bat
+x-cmd bat .viminfo
+bat .viminfo
+yazi
+ufn
+ufd
+yazi
+brew-nu ["outdated"]
+brew-nu ["upgrade"]
+sshtp parking@10.4.16.72
+nvim
+x-cmd bat .viminfo
+brew upgrade --cask --greedy
+nvim
+ls nixpkgs=/nix/var/nix/profiles/per-user/root/channels
+ls /nix/var/nix/profiles/per-user/root/channels/nixpkgs
+ls /nix/var/nix/profiles/per-user/root/profile
+ls /nix/var/nix/profiles/per-user/root/channels/nixpkgs
+ls /nix/var/nix/profiles/per-user/root/
+ls /nix/var/nix/profiles/default/etc/ssl/certs/
+$env
+nvim
+ngc
+nvim
+bcp0 
+nvim
+dlg
+nvim
+cat ejercicio.txt 
+bat ejercicio.txt 
+nvim
+nano -cLS ejercicio.txt 
+nano ejercicio.txt 
+nano -c ejercicio.txt 
+brew-nu ["upgrade"]
+ufn
+sshtp parking@10.4.16.72
+cargo update 
+brew search chatgpt
+brew info chatgpt
+scope alias
+scope aliases 
+brew search fzf
+yazi ~/.dotfiles/
+cdi proyectos
+cdi
+cdi nvim
+scope aliases 
+aerospace list-apps
+tccutil reset All com.apple.systempreferences
+aerospace list-apps
+tccutil reset All com.raycast.macos
+yazi ~/.dotfiles/
+config nu
+yazi ~/.dotfiles/
+config nu
+yazi ~/.dotfiles/
+config nu
+yazi ~/.dotfiles/
+config nu --doc | nu-highlight | bat
+$env | reject config | transpose key val | each {|r| echo $"$env.($r.key) = '($r.val)'"} | str join (char nl)
+$env
+[one two three] | to yaml
+date now | date to-timezone "Europe/London"
+date now | date to-timezone "America/Caracas"
+date now | date to-timezone "America/Orlando"
+date now | date to-timezone "EEUU/Orlando"
+date now | date to-timezone "America/Buenos Aires"
+date now | date to-timezone "America/Caracas"
+[[framework, language]; [Django, Python] [Laravel, PHP]]
+[{name: 'Robert' age: 34 position: 'Designer'}<\n> {name: 'Margaret' age: 30 position: 'Software Developer'}<\n> {name: 'Natalie' age: 50 position: 'Accountant'}<\n>] | select name position
+[{name: 'Robert' age: 34 position: 'Designer'}<\n> {name: 'Margaret' age: 30 position: 'Software Developer'}<\n> {name: 'Natalie' age: 50 position: 'Accountant'}<\n>] | select name age position
+let string_list = "one,two,three" | split row ","
+$string_list
+let str_list = [zero one two]
+$str_list | str join ','
+'Nushell 0.80' | parse '{shell} {version}'
+$'(ansi purple_bold)This text is a bold purple!(ansi reset)'
+[1, 2, 3, 4] | update 2 20
+let numbers = [1, 2, 3]
+$numbers | prepend 0
+[cammomile marigold rose forget-me-not] | first 1
+[cammomile marigold rose forget-me-not] | first 2
+[cammomile marigold rose forget-me-not] | first 3
+ls | sort-by size | first 5
+stat ejercicio.txt 
+ufn
+exit
+config nu
+ufd
+ufn
+ufd
+exec nushell
+'lorem ipsum ' | save file.txt
+cat file.txt 
+'lorem, ipsum ' | save file.txt
+'lorem, ipsum ' | save -f file.txt
+cat file.txt 
+'lorem ipsum ' | save -f file.txt
+'dolor sit amet' | save --append file.txt
+cat file.txt 
+{ a: 1, b: 2 } | save file.json
+cat file.json 
+glob **/*.{rs,toml} --depth 2
+def greet [name: string] {<\n>    $"hello ($name)"<\n>}
+greet luis
+ls | sort-by modified | last
+rm file.*
+ls | sort-by modified | last
+nvim
+ssh sabaext
+spf ~/.dotfiles/
+1..5
+pwd
+let simple_record = { a: 5, b: 10 }
+$simple_record.c?
+$simple_record.a?
+$simple_record.b?
+$simple_record.d?
+$simple_record.c? | describe
+$simple_record.a? | describe
+$simple_record.c? == null<\n>
+open ~/.dotfiles/nvim/lazy-lock.json
+nvim
+open ~/.dotfiles/nvim/init.lua
+open ~/.dotfiles/starship/starship.toml
+open `~/Documents/saba/margarita/Rechazados TAG(revisado).xlsx`
+open --raw `~/Documents/saba/margarita/Rechazados TAG(revisado).xlsx`
+open `~/Documents/saba/margarita/Rechazados TAG(revisado).xlsx`
+opem README.md
+ope README.md
+open README.md
+atuin search --delete "ope README.md"
+atuin search --delete "opem README.md"
+sshtp parking@10.4.13.70
+cd controladoras/ansible/
+cd ~/.dotfiles/nix-darwin/
+ls -l
+yazi ~/.dotfiles/
+open flake.lock
+open flake.lock | from json
+open ~/.dotfiles/starship/starship.toml
+http get https://api.github.com/repos/nushell/nushell/contributors | select login contributions
+http get │ https://starship.rs/config-schema.json
+ansible-playbook --become -i controladorasv2.yml actualizar_apt.yml
+http get https://starship.rs/config-schema.json
+ufn
+ufd
+cd
+yazi ~/.dotfiles/
+aicher --info
+aichat --info
+aichat --help
+aichat -m
+aichat --list-models
+yazi ~/.dotfiles/
+aicher --info
+aichat --info
+aichat --list-models
+aicher --info
+atuin search --delete "aicher"
+aichat --info
+aichat que puedes hacer ?
+aichat que puedes hacer
+aichat que modelo en openrouter son free
+yazi ~/.dotfiles/
+aichat --help
+aichat --info
+cd /Users/dgarciar/Library/Application Support/aichat/
+cd `/Users/dgarciar/Library/Application Support/aichat/`
+ls -l
+nvim config.yaml 
+yazi
+aichat --info
+aichat que modelos son free ne grop
+:q
+$env.XDG_CONFIG_HOME
+$env.config | table -e | bat -p
+$env.XDG_CONFIG_HOME = ~/.config
+$env
+$HOME
+$env.HOME
+$env.XDG_CONFIG_HOME = $env.HOME/.config
+$env.XDG_DATA_HOME
+$env.XDG_CONFIG_HOME = ([$nu.home-path, ".config"] | path join)
+$env.XDG_CONFIG_HOME
+aichat --info
+aichat que puedes hacer ? 
+nvim config.yaml 
+$env.XDG_CONFIG_HOME
+yazi ~/.dotfiles/
+aichat que puedes hacer ? 
+aichat --help
+aichat Uso macos, nix-darwin y home-manager, decide usar nushel como login shell, crees que fue buena decisión? o es emejor dejar zsh por defecto y pasarme a nushell cuando abra el terminal, o que configure el terminal para que habra nushell por defecto, en mi caso uso comunmente como termianl a ghostty y wezterm.
+$nu.config-path<\n><\n>
+$nu.env-path<\n><\n>
+yazi
+yazi /Users/dgarciar/Library/Application Support/nushell
+$env.XDG_CONFIG_HOME
+yazi /Users/dgarciar/Library/Application Support/
+aichat --help
+aichat --prompt muestra los archivos mas grande de este directorio ?
+ls -lSh | head -n 5
+uso nushell no me sirve tu ejemplo
+aichat uso nushell no me sirve tu ejemplo
+aichat --prompt uso nushell no me sirve tu ejemplo
+aichat --prompt muestra los archivos mas grande de este directorio, uso nushell?
+aichat --prompt muestra los archivos mas grande de este directorio, uso la shell nushell
+ls 
+ls | sort-size
+ls | sort-by size | last
+ls | sort-by size
+^ls -lSh | head -n 5
+aichat --prompt cual es el equivalente de esta instruccion en nushell ls -lSh | head -n 5
+aichat cual es el equivalente de esta instruccion "ls -lSh | head -n 5" en nushell
+aichat --list-models
+yazi ~/.dotfiles/
+aichat cual es el equivalente de esta instruccion "ls -lSh | head -n 5" en nushell
+ls | sort --reverse --by size | first 5
+ls | sort-by --reverse size | first 5
+aichat la respuesta correcta es ls | sort-by --reverse size | first 5
+aichat la respuesta correcta es "ls | sort-by --reverse size | first 5"
+ls | where type == "file" | sort $it.size -r | first 5
+ls | where type == "file" | sort size -r | first 5
+yazi ~/.dotfiles/
+chezmoi diff
+nvim
+aichat --help
+aichat -s p1
+brew ["outdated"]
+brew-nu ["outdated"]
+brew update
+brew upgrade --cask --greedy
+ufn
+brew-nu ["outdated"]
+brew-nu ["upgrade"]
+zsh
+$env.PATH
+yazi ~/.dotfiles/
+ufn
+ufd
+brew upgrade --cask --greedy
+brew ["outdated"]
+brew-nu ["outdated"]
+brew update
+brew upgrade
+$env.SHELL
+which nu
+yazi ~/.dotfiles/
+ufd
+ufn
+ufd
+yazi ~/.dotfiles/
+ufd
+brew-nu ["upgrade"]
+yazi ~/.dotfiles/
+aerospace list-windows --all
+aerospace list-windows --help
+aerospace list-windows --all
+nvim
+brew search lua
+brew info lua
+brew info lua-language-server
+exit
+nvim
+ssh-agent-($env.USER? | default $env.USERNAME).nuon
+$env.USERNAME
+$env.USER
+pgrep -fl ssh-agent<\n>
+echo $SSH_AUTH_SOCK<\n>
+ps aux | grep ssh-agent<\n>
+ps | where name == "ssh-agent"<\n>
+echo $env.SSH_AUTH_SOCK<\n>
+$env.SSH_AUTH_SOCK<\n>
+ssh sabaext
+eval
+zsh
+^eval
+ssh sabaext
+ssh-add -l
+ufn
+ufd
+aerospace list-windows --all
+aerospace list-appd
+aerospace list-apps
+ufd
+yazi ~/.dotfiles/
+ufn
+brew update
+brew upgrade --cask --greedy
+$env.__NIX_DARWIN_SET_ENVIRONMENT_DONE
+zsh
+$env.NIX_PATH
+echo $env.NIX_SSL_CERT_FILE
+echo $env.TERMINFO_DIRS
+echo $env.XDG_CONFIG_DIRS
+$env
+osConfig.environment.systemPath
+zsh
+yazi ~/.dotfiles/
+ufd
+$env
+nix repl<\n>
+yazi ~/.dotfiles/
+yazi ~/.dotfiles/
+ufd
+ufd
+yazi
+yazi ~/.dotfiles/
+zsh
+env
+yazi ~/.dotfiles/
+env
+zsh
+yazi ~/.dotfiles/
+env
+yazi ~/.dotfiles/
+yazi
+yazi ~/.dotfiles/
+$env.PATH
+yazi ~/.dotfiles/
+env
+env | save envnu.txt
+ls -l
+open envnu.txt
+env
+config nu --doc | nu-highlight | nvim
+config nu --doc | nu-highlight | bat
+config nu --doc | nu-highlight | nvim
+yazi ~/.dotfiles/
+ufd
+env
+yazi
+yazi ~/.dotfiles/
+env
+yazi ~/.dotfiles/
+ufd
+env
+echo env.XDG_DATA_DIRS 
+echo $env.XDG_DATA_DIRS 
+ufd
+if ($env | has XDG_DATA_DIRS)
+$env | has XDG_DATA_DIRS
+env
+$env | XDG_DATA_DIRS
+$env | has XDG_DATA_DIRS
+$env.XDG_DATA_DIRS
+$env | get XDG_DATA_DIRS | is-empty
+$env.XDG_DATA_DIRS
+$env.XDG_CONFIG_DIRS
+$env
+env
+ufd
+$env | get XDG_CONFIG_DIRS | is-empty
+$env | get XDG_CONFIG_DIRS | is true
+$env | get XDG_CONFIG_DIRS
+env
+$env.XDG_CONFIG_DIRS
+$env.XDG_DATA_DIRS
+ecev nu
+env
+$env.XDG_DATA_DIRS
+ls -l `/nix/var/nix`| where type == dir | where name == "/nix/var/nix/db" | get mode | str contains "w"
+yazi
+env
+ufn
+ufd
+yazi ~/.dotfiles/
+brew-nu ["upgrade", "--cask", "--greedy"]
+brew-nu ["outdated"]
+brew-nu ["update"]
+sshtp parking@10.4.13.70
+cd controladoras/ansible/
+ansible-playbook --become -i controladorasv2.yml actualizar_apt.yml
+cd nushell
+ls
+nvim config.nu 
+nvim env.nu q
+nvim env.nu
+yazi ~/.dotfiles/
+cd nushell
+cd
+yazi ~/.dotfiles/
+cd home
+ls  -l
+nvim default.nix 
+ls  -l
+brew-nu ["update"]
+brew-nu ["upgrade", "--cask", "--greedy"]
+yazi ~/.dotfiles/
+ufn 
+ufd
+cd
+ufn
+brew-nu ["upgrade", "--cask", "--greedy"]
+brew-nu ["upgrade"]
+brew info aom
+ufn
+nvim
+brew-nu ["upgrade"]
+zellij attach --create --force-run-commands ppal
+yazi
+yazi ~/.dotfiles/
+cd controladoras/ansible/
+brew-nu ["upgrade"]
+sfp ~/.dotfiles/
+spf ~/.dotfiles/
+atuin search --delete "sfp ~/.dotfiles/"
+ssh sabaext
+brew search zed
+ssh proxysaba
+clear
+ssh sabaext
+ssh sabaext
+cd
+nvim
+spf ~/.dotfiles/
+btop
+sys net
+sys net | where name == en0
+brew search aya
+brew update
+brew upgrade
+brew search microsoft
+microsoft-auto-update
+brew info microsoft-auto-update
+brew reinstall microsoft-auto-update
+brew upgrade --cask --greedy
+yazi ~/.dotfiles/
+cd nix-darwin
+ls
+cd stuff/
+ls -l
+cd nix-darwin-kickstarter/
+ls
+git git pull origin main<\n>
+git pull origin main<\n>
+cd nix-darwin-kickstarter/
+git fetch
+git status
+brew-nu ["upgrade"]
+brew-nu ["upgrade", "--cask", "--greedy"]
+brew-nu ["upgrade"]
+fastfetch 
+ufn
+ufd
+yazi ~/.dotfiles/
+ufd
+yazi ~/.dotfiles/
+ufd
+scutil --get LocalHostName
+darwin-rebuild build --dry-run
+$env.NIX_PATH
+yazi ~/.dotfiles/
+ufd
+brew-nu ["upgrade"]
+cat /etc/nix/nix.conf
+yazi ~/.dotfiles/
+zsh
+ufd
+yazi ~/.dotfiles/
+sudo nix-store --optimise
+scope aliases 
+yazi ~/.dotfiles/
+cd controladoras/ansible/
+sshtp parking@10.4.13.70
+ls -l
+cd ansible
+ls
+ansible-playbook --become -i controladorasv2.yml reiniciar_equipos.yml
+sshtp parking@10.4.13.70
+brew update
+brew ["update"]
+brew-nu ["update"]
+brew-nu ["upgrade"]
+clear
+yazi ~/.dotfiles/
+brew-nu ["upgrade"]
+scope aliases 
+ngc
+scope aliases 
+nix-store --optimise
+ssht testing@orb
+ssh rdpsaba 
+ssh proxysaba
+ufn
+ufd
+yazi ~/.dotfiles/
+ufd
+nvim
+cd
+sshtp parking@10.4.13.70
+nu --help
+brew search nupm
+file envnu.txt 
+file ~/Pictures/David.jpg 
+brew-nu ["upgrade"]
+brew-nu ["outdated"]
+brew-nu ["upgrade"]
+brew-nu ["upgrade", "--cask", "--greedy"]
+nix-shell 
+nvim
+$nu.default-config-dir
+ls $nu.default-config-dir
+cd $nu.default-config-dir
+nvim config.nu 
+config nu
+scope aliases 
+carapace --version<\n>
+$env.config.completions.external.completer<\n>
+carapace ls nushell<\n>
+carapace ls nushell | from json
+$env.config | from json | get completions.external<\n>
+use ~/.config/nushell/config.nu<\n>
+$nu.home-path | path join ".config"
+ls ~/.config/nushell
+config nu
+carapace ls nushell<\n>
+$env.config | to json | save env_config.json<\n>
+config nu
+use ~/.config/nushell/config.nu<\n>
+config nu
+exec nun
+use ~/.config/nushell/config.nu<\n>
+config nu
+exec nun
+config nu
+let expanded_alias = (scope aliases | where name == $spans.0 | get -i 0 | get -i expansion)
+scope aliases | where name == $spans.0
+config nu
+carapace _carapace<\n>
+yazi
+cd nushell
+yazi
+alias gs = git status<\n>
+gs
+echo $env.config.completions.external<\n>
+alias gst = git status<\n>
+config nu 
+carapace git nushell git<\n>
+config nu 
+carapace git nushell git<\n>
+config nu 
+ufn
+ufd
+scope aliases
+config nu 
+carapace git nushell help | from json
+$env.config.completions.external.enable
+config nu 
+scope aliases
+config nu 
+ssh sabaext
+config nu 
+yazi ~/.dotfiles/
+fzf
+ufn
+$nu.startup-time
+nu --no-history
+ufn
+ufd
+atuin info
+atuin history list -c
+atuin search -i
+atuin stats
+history | last | get command
+history session
+config nu --doc | nu-highlight | nvim
+config nu
+exec nun
+clear
+zsh
+brew-nu ["upgrade", "--cask", "--greedy"]
+clear
+zsh
+clear
+config nu
+help complete
+help plugin
+help plugin add
+config nu
+clear
+source ~/.config/nushell/config.nu
+scope aliases
+source ~/.config/nushell/config.nu
+brew search argc
+brew info argc
+config nu
+config env
+ls **/*.pdf
+nvim ~/.dotfiles/nushell/functions.nu
+config env
+config nu
+source ~/.config/nushell/config.nu
+ls | polars into-df | describe
+$env.NU_LIB_DIRS
+gstat 
+gstat --help
+ls -l
+gstat --help
+/opt/homebrew/bin/gstat ejercicio.txt
+gstat ejercicio.txt
+^ls -l /opt/homebrew/bin/nu
+^ls -l /opt/homebrew/bin/nu*
+ls -l /opt/homebrew/bin/nu*
+open -n /Applications/DevPod.app
+^open -n /Applications/DevPod.app
+exit
+spf 
+yazi ~/.dotfiles/
+open ~/.dotfiles/starship/starship.toml
+nvim
+yazi ~/.dotfiles/
+exit
+nvim env.nu
+atuin init nu | save ~/.dotfiles/nushell/atuin-init.nu
+source ~/.config/nushell/config.nu
+config nu
+source ~/.config/nushell/config.nu
+atuin search --delete "# ae0879ea-bd2e-4e47-85d3-1b0a410079ab<\n>with-env { ATUIN_LOG: error, ATUIN_QUERY: (commandline) } { commandline edit (run-external atuin search "--interactive"  e>| str trim) }"
+atuin search --delete "atuin gen-completions --shell nushell --out-dir $nu.config-path"
+atuin search --delete "sfp"
+spf
+atuin doctor 
+yazi ~/.dotfiles/
+nvim
+yu-nu 
+yazi ~/.dotfiles/
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose 
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose 
+brew update; sketchybar --trigger brew_update
+brew upgrade --cask --greedy; sketchybar --trigger brew_update
+brew update; sketchybar --trigger brew_update
+brew upgrade --cask --greedy; sketchybar --trigger brew_update
+nix flake update --flake ~/.dotfiles/nix-darwin --verbose 
+darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose 
+yazi ~/.dotfiles/
+nix --version
+brew upgrade; sketchybar --trigger brew_update
+btop
+cd
+table --list | each {|r| print ($r); print (ls | first 3 | table --theme $r)}
+yazi ~/.dotfiles/
