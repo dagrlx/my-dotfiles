@@ -11,3 +11,5 @@
 
 # Archivos historial de nushell
 history.*
+
+*.lock
