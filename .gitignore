@@ -1,0 +1,4 @@
+*.lock
+flake.lock
+.DS_Store
+*log*.txt
