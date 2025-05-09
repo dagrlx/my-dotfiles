@@ -104,7 +104,7 @@ $env.config.keybindings ++= [
     {
         name: abbr_menu
         modifier: none
-        keycode: char_-
+        keycode: char_ç
         mode: [emacs, vi_normal, vi_insert]
         event: [
             { send: menu name: abbr_menu }
