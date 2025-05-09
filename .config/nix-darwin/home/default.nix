@@ -39,7 +39,7 @@ in {
     #".config/nushell/env.nu".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/nushell/env.nu";
 
     #".config/tmux".source = config.lib.file.mkOutOfStoreSymlink "/Users/dgarciar/.config/nix-darwin/home/dotfiles/tmux";
-  };
+  #};
 
   # xdg.configFile = {
   #   "aerospace" = {
