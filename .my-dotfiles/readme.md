@@ -8,7 +8,7 @@ Variable $nu.home-path es el equivalente a $HOME en zsh
 
 ```sh
 # Se inicializa en repo
-git init --bare $nu.home-path/.my-dotfiles  # Se inicializa en repo
+git init --bare $nu.home-path/.my-dotfiles
 # Se crea el alias en config.nu
 alias dots = ^git --git-dir=$"($nu.home-path)/.my-dotfiles" --work-tree=($nu.home-path)
 # Define la ruta del repo a usar en github
@@ -30,14 +30,12 @@ dots remote -v
 ```
 
 ## Método 1 (Recomendado)
-
 ## Replicación sin archivo en $home
 
+```sh
 # Para usar este método se debe de asegurar de que no existe ningún
-
 # archivo/directorio en $HOME de los del repo, sino dará error.
 
-```sh
  # Clona el repo bare en una nueva máquina
 git clone --bare git@github.com:dagrlx/my-dotfiles.git $nu.home-path//.my-dotfiles
 # Se crea el alias en config.nu
@@ -53,14 +51,12 @@ dots config status.showUntrackedFiles no
 ```
 
 ## Método 2 (No establece un verdadero repo git)
-
 ## Replicacion cuando existe algun archivo en $home
 
+```sh
 # Este método evita que ocurra un error en caso de haber en $HOME
-
 # un archivo/directorio del repo que colisione
 
-```sh
 # Clona el repo bare en una nueva máquina
 git clone --separate-git-dir=$nu.home-path/.my-dotfiles git@github.com:dagrlx/my-dotfiles.git my-dotfiles-tmp
 rsync --recursive --verbose --exclude '.git' my-dotfiles-tmp/ $nu.home-path/
@@ -70,18 +66,24 @@ rm --recursive my-dotfiles-tmp
 ## Comandos de uso
 
 ```sh
-dots status  # Muestra el estado de los archivos
+# Muestra el estado de los archivos
+dots status
 dots commit -m 'Add gitignore'
 dots push origin main
-dots log --oneline --graph --decorate   # Visualiza el historial con formato gráfico
-dots diff   # Muestra diferencias con el último commit
-dots pull origin main   # Obtiene cambios desde el repo remoto
+# Visualiza el historial con formato gráfico
+dots log --oneline --graph --decorate
+# Muestra diferencias con el último commit
+dots diff
+# Obtiene cambios desde el repo remoto
+dots pull origin main
 ```
 
 ## Borrar archivos y directorio
 
 ```sh
-dots rm --cached -r name_file # Elimina el archivo del repo pero lo mantiene en local
+# Elimina el archivo del repo pero lo mantiene en local
+dots rm --cached -r name_file
 # Nota: "*.nbk" de esta forma se evita la expansión de patrón.
-dots rm -r name_directory   # Borra un directorio completamente del repositorio y localmente
+# Borra un archivo/directorio completamente del repositorio y localmente
+dots rm -r name_file/name_directory
 ```
