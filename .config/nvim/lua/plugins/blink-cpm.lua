@@ -1,6 +1,7 @@
 return {
 	{
 		"saghen/blink.cmp",
+		event = "InsertEnter",
 		dependencies = {
 			"rafamadriz/friendly-snippets",
 			{ "saghen/blink.compat", lazy = true, version = false },
@@ -17,7 +18,6 @@ return {
 
 			-- https://cmp.saghen.dev/configuration/appearance.html
 			appearance = {
-				use_nvim_cmp_as_default = true,
 				nerd_font_variant = "mono",
 			},
 
@@ -30,35 +30,40 @@ return {
 				-- https://cmp.saghen.dev/recipes.html#dynamically-picking-providers-by-treesitter-node-filetype
 				default = function(ctx)
 					local success, node = pcall(vim.treesitter.get_node)
-					if vim.bo.filetype == "lua" then
-						return { "lsp", "path" }
-					elseif
+					-- 1. Si estás en un comentario → solo usar buffer
+					if
 						success
 						and node
 						and vim.tbl_contains({ "comment", "line_comment", "block_comment" }, node:type())
 					then
 						return { "buffer" }
+
+					-- 2. Si el filetype es Lua → usar solo LSP, path y buffer
+					elseif vim.bo.filetype == "lua" then
+						return { "lsp", "path", "buffer" }
+
+					-- 3. En cualquier otro caso → usar todos los proveedores
 					else
 						return {
-							"lazydev",
+							--"lazydev",
 							"lsp",
 							"path",
 							"snippets",
 							"buffer",
-							"obsidian",
-							"obsidian_new",
-							"obsidian_tags",
+							--"obsidian",
+							--"obsidian_new",
+							--"obsidian_tags"
 						}
 					end
 				end,
 
 				providers = {
-					lazydev = {
-						name = "LazyDev",
-						module = "lazydev.integrations.blink",
-						-- make lazydev completions top priority (see `:h blink.cmp`)
-						score_offset = 100,
-					},
+					-- lazydev = {
+					-- 	name = "LazyDev",
+					-- 	module = "lazydev.integrations.blink",
+					-- 	-- make lazydev completions top priority (see `:h blink.cmp`)
+					-- 	score_offset = 100,
+					-- },
 					lsp = {
 						min_keyword_length = 2, -- Number of characters to trigger provider
 						score_offset = 0, -- Boost/penalize the score of the items
@@ -70,23 +75,23 @@ return {
 						min_keyword_length = 2,
 					},
 					buffer = {
-						min_keyword_length = 3,
-						max_items = 5,
+						min_keyword_length = 1,
+						max_items = 7,
 					},
 
 					--https://github.com/rbmarliere/dotfiles/commit/edae7c4933300faf024b6cf6585085351840bba1
-					obsidian = {
-						name = "obsidian",
-						module = "blink.compat.source",
-					},
-					obsidian_new = {
-						name = "obsidian_new",
-						module = "blink.compat.source",
-					},
-					obsidian_tags = {
-						name = "obsidian_tags",
-						module = "blink.compat.source",
-					},
+					-- obsidian = {
+					-- 	name = "obsidian",
+					-- 	module = "blink.compat.source",
+					-- },
+					-- obsidian_new = {
+					-- 	name = "obsidian_new",
+					-- 	module = "blink.compat.source",
+					-- },
+					-- obsidian_tags = {
+					-- 	name = "obsidian_tags",
+					-- 	module = "blink.compat.source",
+					-- },
 				},
 
 				-- Disable cmdline completions
