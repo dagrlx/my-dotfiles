@@ -16,9 +16,11 @@ return {
 		require("nvim-treesitter.configs").setup({
 			ensure_installed = {
 				"bash",
+				"diff",
 				"lua",
 				"luadoc",
 				"javascript",
+				"typescript",
 				"json",
 				"python",
 				"html",
@@ -28,6 +30,7 @@ return {
 				"dot",
 				"git_config",
 				"gitignore",
+				"gitcommit",
 				"markdown",
 				"markdown_inline",
 				"nu", -- nushell
