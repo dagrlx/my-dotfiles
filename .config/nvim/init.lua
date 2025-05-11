@@ -23,7 +23,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	-- Importa la configuración de plugins desde la carpeta "plugins" y "lsp"
 	{ import = "plugins" },
-	{ import = "plugins.lsp" },
+	--{ import = "plugins.lsp" },
 }, {
 	checker = {
 		enabled = true,
