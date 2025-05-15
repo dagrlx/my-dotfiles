@@ -168,7 +168,7 @@
     casks = [
 
         "firefox"
-        "zen-browser"
+        "zen"  # zen-browser
         #"google-chrome"
         #"brave-browser"
         #{
