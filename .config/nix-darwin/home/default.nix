@@ -117,6 +117,8 @@ in {
   #   #NU_CONFIG_DIRS = "$HOME/.config/nushell";
   # };
 
+    #home.enableNixpkgsReleaseCheck = false;
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

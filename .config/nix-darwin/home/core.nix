@@ -95,7 +95,7 @@
     glow # markdown previewer in terminal
 
     # K8S
-    talosctl
+    #talosctl
     kubectl
     k9s
   ];
