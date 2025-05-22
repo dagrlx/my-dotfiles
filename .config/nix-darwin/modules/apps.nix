@@ -65,17 +65,12 @@
     };
 
     taps = [
-        "homebrew/services"
         "jzelinskie/duckdns"
         "koekeishiya/formulae"
         "FelixKratz/formulae"
-        "siderolabs/tap"
         "gromgit/fuse"
-        "pkgxdev/made"
-        "localsend/localsend"
         "nikitabobko/tap"
         "netbirdio/tap"
-        "alienator88/cask"
         "olets/tap"
         "lihaoyun6/tap"
         "TheZoraiz/ascii-image-converter"
@@ -225,7 +220,7 @@
         "aerospace" # Tiling manager basado en i3wm
         "MonitorControl"
         "pearcleaner" # mac app cleaner
-        "sentinel-app" # A GUI for controlling Gatekeeper
+        "sentinel" # A GUI for controlling Gatekeeper
         #"ubersicht"
 
         #Terminales
