@@ -39,7 +39,7 @@ alias bcp0 = brew cleanup --prune=0
 alias ufn = nix flake update --flake ~/.config/nix-darwin --verbose
 
 # Actualizacion de nix-darwin
-alias ufd = darwin-rebuild switch --flake ~/.config/nix-darwin/ --verbose
+alias ufd = sudo darwin-rebuild switch --flake ~/.config/nix-darwin/ --verbose
 
 # Listado de generaciones Darwin (Rollback)
 alias dlg = darwin-rebuild --list-generations
