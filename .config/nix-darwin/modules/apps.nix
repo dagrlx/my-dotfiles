@@ -74,6 +74,7 @@
         "olets/tap"
         "lihaoyun6/tap"
         "TheZoraiz/ascii-image-converter"
+        "alienator88/cask"
     ];
 
     # `brew install`
@@ -220,7 +221,7 @@
         "aerospace" # Tiling manager basado en i3wm
         "MonitorControl"
         "pearcleaner" # mac app cleaner
-        "sentinel" # A GUI for controlling Gatekeeper
+        "sentinel-app" # A GUI for controlling Gatekeeper
         #"ubersicht"
 
         #Terminales
