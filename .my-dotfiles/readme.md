@@ -19,7 +19,7 @@ dots remote add origin git@github.com:dagrlx/my-dotfiles.git
 
 ```sh
 # Oculta archivos no rastreados en 'git status'
-dots config status.showUntrackedFiles no
+dots config --local status.showUntrackedFiles no
 # Verifica si se aplicó la config
 dots config --get status.showUntrackedFiles
 # Configurar el enlace de tu repositorio de dotfiles.
@@ -30,6 +30,7 @@ dots remote -v
 ```
 
 ## Método 1 (Recomendado)
+
 ## Replicación sin archivo en $home
 
 ```sh
@@ -43,7 +44,7 @@ alias dots = ^git --git-dir=$"($nu  .home-path)/.my-dotfiles" --work-tree=($nu.h
 # Coloca los dotfiles en el nuevo sistema en su respectiva ubicación
 dots checkout
 # Oculta archivos no rastreados
-dots config status.showUntrackedFiles no
+dots config --local status.showUntrackedFiles no
 
 # Nota:
 # Si ocurre un conflicto se puedo forzar la sobreescritura ejecutando **dots checkout -f**
@@ -51,6 +52,7 @@ dots config status.showUntrackedFiles no
 ```
 
 ## Método 2 (No establece un verdadero repo git)
+
 ## Replicacion cuando existe algun archivo en $home
 
 ```sh
