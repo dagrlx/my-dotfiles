@@ -108,10 +108,11 @@
         "luacheck"
 
         "superfile"
-        "broot"
+        #"broot"
+            
         "yazi" # file manager
         "poppler" # para PDF preview en yazi
-        "rich-cli" # for yazi plugin rich-preview
+        # "rich-cli" # for yazi plugin rich-preview
         "imagemagick"
 
         "ascii-image-converter"
@@ -156,6 +157,8 @@
         "aichat"  # all-in-one LLM CLI tool featuring Shell Assistant, CMD & REPL Mode, RAG, AI Tools & Agents, and More.
 
         "pam-reattach" # PAM module for reattaching to the user's GUI session (touchID)
+
+        "pkgxdev/made/pkgm" # package manager of pkgx
 
     ];
 
