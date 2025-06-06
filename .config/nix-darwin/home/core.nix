@@ -44,7 +44,7 @@
     has
     aria2 # A lightweight multi-protocol & multi-source command-line download utility
     socat # replacement of openbsd-netcat
-    mas # Mac App Store command-line interface
+    #mas # Mac App Store command-line interface
     nmap # A utility for network discovery and security auditing
     #httpie
 
