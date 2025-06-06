@@ -13,10 +13,6 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin' | p
 
 zoxide init nushell | save -f ~/.config/nushell/zoxide.nu
 
-#use $"($nu.home-path)/.x-cmd.root/local/data/nu/rc.nu" *; # boot up x-cmd
-
-const ___X_CMD_ROOT = '/Users/dgarciar'; source '/Users/dgarciar/.x-cmd.root/local/data/nu/rc.nu'; # boot up x-cmd
-
 ### Carapace config
 $env.CARAPACE_BRIDGES = 'zsh,bash' # optional
 #mkdir ~/.cache/carapace
