@@ -75,6 +75,7 @@
         "lihaoyun6/tap"
         "TheZoraiz/ascii-image-converter"
         "alienator88/cask"
+        "pkgxdev/made"
     ];
 
     # `brew install`
