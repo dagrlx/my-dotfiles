@@ -49,7 +49,6 @@ return {
 			"csv",
 			"dockerfile",
 			"dot",
-			"ghostty",
 			"git_config",
 			"gitignore",
 			"gitcommit",
