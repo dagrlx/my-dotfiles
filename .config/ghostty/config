@@ -20,8 +20,11 @@ window-colorspace = display-p3
 # https://github.com/hackrmomo/ghostty-shaders
 #custom-shader = shaders/inside-the-matrix.glsl
 #custom-shader = shaders/water.glsl
-#custom-shader = shaders/starfield.glsl
-#custom-shader = sparks-from-fire.glsl
+# custom-shader = shaders/starfield.glsl
+# custom-shader = shaders/sparks-from-fire.glsl
+custom-shader = shaders/cursor_smear.glsl
+# custom-shader = shaders/cursor_smear_fade.glsl
+
 
 background-opacity = 0.85
 resize-overlay = always
