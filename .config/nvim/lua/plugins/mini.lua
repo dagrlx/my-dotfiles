@@ -21,14 +21,14 @@ return {
 		-- 	},
 		-- })
 
-		require("mini.files").setup({
-			windows = {
-				preview = false,
-			},
-		})
-		vim.keymap.set("n", "<leader>me", function()
-			require("mini.files").open()
-		end, { desc = "Explorador de archivos" })
+		-- require("mini.files").setup({
+		-- 	windows = {
+		-- 		preview = false,
+		-- 	},
+		-- })
+		-- vim.keymap.set("n", "<leader>me", function()
+		-- 	require("mini.files").open()
+		-- end, { desc = "Explorador de archivos" })
 
 		require("mini.pairs").setup()
 		require("mini.surround").setup()
