@@ -105,6 +105,9 @@
         #"zsh-autosuggestions"
         "zsh-autosuggestions-abbreviations-strategy"
 
+        "nano"
+        "nanorc"
+
         "neovim"
         "luacheck"
 
@@ -137,7 +140,7 @@
         "nushell"
         "the_silver_searcher" # A code searching tool similar to ack, with a focus on speed.
          #"jq" # Se usa en yabai - Lightweight and flexible command-line JSON processor
-        "gh" # Se usa en pluing git sketchybar
+        "gh" # github cli. Se usa en pluing git sketchybar
         "btop" # monitoreo de recursos
         "sshs" # List and connect to hosts using ~/.ssh/config.
 
@@ -150,8 +153,7 @@
 
         "talosctl"
         #"ntfs-3g-mac"
-
-        #"pkgx" # Alternativa a hombrew
+        
         "thefuck" # magnificent app that corrects your previous console command
 
         "tabiew" # Lector de archvio csv con consultas sql"
@@ -159,7 +161,10 @@
 
         "pam-reattach" # PAM module for reattaching to the user's GUI session (touchID)
 
+        "pkgxdev/made/pkgx" # Alternativa a hombrew
         "pkgxdev/made/pkgm" # package manager of pkgx
+
+        "kanata" # Excelenter mapeador de teclado
 
     ];
 
@@ -195,7 +200,7 @@
         "microsoft-teams"
         "microsoft-auto-update"
         "windows-app" # new app for RDP
-        "syncthing" # file sync
+        #"syncthing" # file sync
         "raycast" # (HotKey: alt/option + space)search, caculate and run scripts(with many plugins)
         #"iglance" # beautiful system monitor
         "macfuse"
@@ -205,8 +210,8 @@
 
         #VPN
         "zerotier-one"
-        "tailscale"
-        "netbird-ui"
+        # "tailscale"
+        # "netbird-ui"
 
         # Utilities
         "localsend"
@@ -232,9 +237,9 @@
         "wezterm"
         #"warp" # terminal con AI y wrapper
         #"wave" # terminal con AI alternativa a warp y es software libre
-        "ghostty" # Ghostty is a terminal emulator that differentiates itself by being fast, feature-rich, and native.
+        #"ghostty" # Ghostty is a terminal emulator that differentiates itself by being fast, feature-rich, and native.
         "kitty"
-        "rio"
+        #"rio"
 
         "keepassxc"
         "podman-desktop"
@@ -295,7 +300,12 @@
         "lulu" # firewwall for macOS
         "freelens" # for managing Kubernetes clusters
         
-        #"fly" # Command line interface to Concourse CI
+        #"fly" # Command line interface to Concourse CLI
+
+        # OBS (Open Broadcaster Software)
+        "obs"
+        "obs-advanced-scene-switcher"
+        "obs-backgroundremoval"
     ];
   };
 }
