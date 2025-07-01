@@ -48,8 +48,8 @@
     nmap # A utility for network discovery and security auditing
     #httpie
 
-    nano
-    nanorc
+    #nano
+    #nanorc
     sshpass
     sshfs
     tealdeer # A very fast implementation of tldr in Rust
