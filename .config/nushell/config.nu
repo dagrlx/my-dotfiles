@@ -35,6 +35,12 @@ alias cat = bat
 # Limpieza de brew
 alias bcp0 = brew cleanup --prune=0
 
+# Actrualizacion de Brew
+alias bwup = do { brew update; brew upgrade; sketchybar --trigger brew_update }
+
+# Actualizacion de Brew cask greedy
+alias bwug = do { brew upgrade --cask --greedy; sketchybar --trigger brew_update }
+
 # Actualizacion de nix
 alias ufn = nix flake update --flake ~/.config/nix-darwin --verbose
 
@@ -82,12 +88,12 @@ alias k = kubectl
 
 alias devpod = zsh -ci "open -n /Applications/DevPod.app"
 
-# Expande alias o elementos en abbreviations presionando space o enter
+# Expande alias o elementos en abbreviations presionando ç o enter
 # https://github.com/nushell/nushell/issues/5552#issuecomment-2113935091
 let abbreviations = {
     "cd..": 'cd ..'
     sau: 'sudo apt update; sudo apt upgrade'
-    bwu: 'brew update; brew upgrade; sketchybar --trigger brew_update'
+    #bwu: 'brew update; brew upgrade; sketchybar --trigger brew_update'
 }
 
 $env.config.keybindings ++= [
