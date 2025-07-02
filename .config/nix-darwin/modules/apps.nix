@@ -210,7 +210,7 @@
 
         #VPN
         "zerotier-one"
-        # "tailscale"
+         "tailscale"
         # "netbird-ui"
 
         # Utilities
