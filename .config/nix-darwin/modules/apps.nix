@@ -47,7 +47,7 @@
         # You need to install all these Apps manually first so that your apple account have records for them.
         # otherwise Apple Store will refuse to install them.
         # For details, see https://github.com/mas-cli/mas
-        masApps = {
+        #masApps = {
         # TODO Feel free to add your favorite apps here.
 
         #Xcode = 497799835;
@@ -60,9 +60,9 @@
         #"Magnet" = 441258766;
         #"ScreenBrush" = 1233965871;
         #"Amphetamine" = 937984704;
-        "The Unarchiver" = 425424353;
+        #"The Unarchiver" = 425424353;
         #"You Search" = 1641136636;
-    };
+    #};
 
     taps = [
         "jzelinskie/duckdns"
@@ -76,6 +76,7 @@
         "TheZoraiz/ascii-image-converter"
         "alienator88/cask"
         "pkgxdev/made"
+        "mhaeuser/mhaeuser"  # battery-toolkit
     ];
 
     # `brew install`
@@ -210,7 +211,7 @@
 
         #VPN
         "zerotier-one"
-         "tailscale"
+        # "tailscale"
         # "netbird-ui"
 
         # Utilities
@@ -226,6 +227,10 @@
         #"tyke" # App para tomar notas rapidas temporal
         #"applite" # App grafica homebrew - https://www.thriftmac.com
         "google-drive"
+        "battery-toolkit"
+        "imageoptim" # optimizer image
+
+        "colemak-dh"  # latout colemak mod DH
 
         "aerospace" # Tiling manager basado en i3wm
         "MonitorControl"
