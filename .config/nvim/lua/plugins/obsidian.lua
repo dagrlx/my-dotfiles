@@ -1,5 +1,6 @@
 return {
-	"epwalsh/obsidian.nvim",
+	--"epwalsh/obsidian.nvim",
+	"obsidian-nvim/obsidian.nvim",
 	version = "*", -- recommended, use latest release instead of latest commit
 	lazy = true,
 	ft = "markdown",
@@ -11,12 +12,9 @@ return {
 	--   "BufReadPre path/to/my-vault/*.md",
 	--   "BufNewFile path/to/my-vault/*.md",
 	-- },
-	dependencies = {
-		-- Required.
-		"nvim-lua/plenary.nvim",
+	---@module 'obsidian'
+	---@type obsidian.config
 
-		-- see below for full list of optional dependencies 👇
-	},
 	opts = {
 		workspaces = {
 			{
@@ -33,7 +31,7 @@ return {
 
 		-- Set nvim_cpm true completation is integrate with blink.compat (https://github.com/epwalsh/obsidian.nvim/issues/770#issuecomment-2564294774)
 		completion = {
-			nvim_cmp = true,
+			blink = true,
 			min_chars = 2,
 		},
 	},
