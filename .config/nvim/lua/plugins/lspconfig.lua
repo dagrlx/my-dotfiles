@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-	event = "BufReadPost",
+	event = "BufReadPre",
 	dependencies = {
 		{ "mason-org/mason.nvim" },
 		"mason-org/mason-lspconfig.nvim",
@@ -23,7 +23,8 @@ return {
 				"ts_ls", -- JavaScript
 				"html", -- HTML
 				"cssls", -- CSS
-				"lua_ls", -- Lua
+				--"lua_ls", -- Lua
+				"emmylua_ls", -- Lua
 				"pyright", -- Python
 				"jsonls", -- JSON
 				"yamlls", -- YAML
@@ -39,18 +40,19 @@ return {
 		})
 
 		-- Config específica para Lua
-		vim.lsp.config("lua_ls", {
-			settings = {
-				Lua = {
-					runtime = { version = "LuaJIT" },
-					diagnostics = { globals = { "vim" } },
-					workspace = {
-						library = vim.api.nvim_get_runtime_file("", true),
-						checkThirdParty = false,
-					},
-					telemetry = { enable = false },
-				},
-			},
-		})
+		-- vim.lsp.config("lua_ls", {
+		-- 	settings = {
+		-- 		Lua = {
+		-- 			runtime = { version = "LuaJIT" },
+		-- 			diagnostics = { globals = { "vim" } },
+		-- 			workspace = {
+		-- 				library = vim.api.nvim_get_runtime_file("", true),
+		-- 				checkThirdParty = false,
+		-- 			},
+		-- 			telemetry = { enable = false },
+		-- 		},
+		-- 	},
+		-- })
+		vim.lsp.enable({ "emmylua_ls" })
 	end,
 }

@@ -8,10 +8,11 @@ return {
 		require("catppuccin").setup({
 			flavour = "mocha", -- O cualquier otro sabor que prefieras
 			integrations = {
-				cmp = true,
-				nvimtree = true,
-				telescope = true,
+				blink_cmp = {
+					style = "bordered",
+				},
 				treesitter = true,
+				fzf = true,
 				-- Agrega más integraciones si lo necesitas
 			},
 		})
