@@ -11,13 +11,13 @@ source ~/.config/nushell/nix-env.nu
 # Config de path para homebrew
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin' | prepend '/opt/homebrew/sbin')
 
-zoxide init nushell | save -f ~/.config/nushell/zoxide.nu
+zoxide init --cmd cd nushell | save -f ~/.config/nushell/zoxide.nu
 
 ### Carapace config
 $env.CARAPACE_BRIDGES = 'zsh,bash' # optional
 #mkdir ~/.cache/carapace
-mkdir ~/.config/nushell/carapace
+#mkdir ~/.config/nushell/carapace
 #carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
-carapace _carapace nushell | save --force ~/.config/nushell/carapace/carapace.nu
+#carapace _carapace nushell | save --force ~/.config/nushell/carapace/carapace.nu
 
 
