@@ -2,6 +2,8 @@
 
 $env.XDG_CONFIG_HOME = ($nu.home-path | path join ".config")
 
+$env.PATH = ($env.PATH | append ($nu.home-path | path join '.local/bin'))
+
 # history in format sqlite
 $env.config.history.file_format = "sqlite"
 
