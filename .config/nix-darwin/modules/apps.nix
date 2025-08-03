@@ -146,7 +146,7 @@
         "sshs" # List and connect to hosts using ~/.ssh/config.
 
         #control versiones dotfiles
-        "chezmoi"
+        #"chezmoi"
         "jj"  # jujutsu
         #"yadm"
         "age" # Is a simple, modern and secure file encryption tool, format, and Go library.
@@ -159,13 +159,16 @@
 
         "tabiew" # Lector de archvio csv con consultas sql"
         "aichat"  # all-in-one LLM CLI tool featuring Shell Assistant, CMD & REPL Mode, RAG, AI Tools & Agents, and More.
+        "gemini-cli"
 
         "pam-reattach" # PAM module for reattaching to the user's GUI session (touchID)
 
         "pkgxdev/made/pkgx" # Alternativa a hombrew
         "pkgxdev/made/pkgm" # package manager of pkgx
 
-        "kanata" # Excelenter mapeador de teclado
+        "kanata" # Excelente mapeador de teclado
+
+        "pipx"
 
     ];
 
@@ -229,6 +232,8 @@
         "google-drive"
         "battery-toolkit"
         "imageoptim" # optimizer image
+
+        "brilliant" 
 
         "colemak-dh"  # latout colemak mod DH
 
