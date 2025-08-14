@@ -128,7 +128,10 @@
         "sketchybar"
 
         "lua" # Lenguaje para config sketchybar, aerospace
+        "luarocks"
         #"lua-language-server"
+        "ghostscript"
+        "tree-sitter"
         "go"
         "rust"
         "switchaudio-osx"
@@ -168,7 +171,8 @@
 
         "kanata" # Excelente mapeador de teclado
 
-        "pipx"
+        "pipx"  # Install and Run Python Applications in Isolated Environments
+        "uv"  # An extremely fast Python package and project manager, written in Rust.
 
     ];
 
