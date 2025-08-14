@@ -33,6 +33,7 @@ return {
 				"shellcheck",
 				"yamllint",
 				"beautysh",
+				"luacheck", -- Lua linting
 			},
 			automatic_installation = true,
 		})

@@ -1,5 +1,8 @@
 -- ~/.config/nvim/init.lua
 
+-- Cargar autocomandos
+require("autocmds")
+
 -- Cargar opciones
 require("options")
 

@@ -23,9 +23,10 @@ return {
 				"ts_ls", -- JavaScript
 				"html", -- HTML
 				"cssls", -- CSS
-				--"lua_ls", -- Lua
-				"emmylua_ls", -- Lua
-				"pyright", -- Python
+				"lua_ls", -- Lua
+				--"emmylua_ls", -- Lua
+				--"pyright", -- Python
+				"ruff", -- Python
 				"jsonls", -- JSON
 				"yamlls", -- YAML
 				"marksman", -- Markdown
@@ -39,20 +40,50 @@ return {
 			},
 		})
 
+		require("lazydev").setup()
+
 		-- Config específica para Lua
-		-- vim.lsp.config("lua_ls", {
-		-- 	settings = {
-		-- 		Lua = {
-		-- 			runtime = { version = "LuaJIT" },
-		-- 			diagnostics = { globals = { "vim" } },
-		-- 			workspace = {
-		-- 				library = vim.api.nvim_get_runtime_file("", true),
-		-- 				checkThirdParty = false,
-		-- 			},
-		-- 			telemetry = { enable = false },
-		-- 		},
-		-- 	},
-		-- })
-		vim.lsp.enable({ "emmylua_ls" })
+		vim.lsp.config("lua_ls", {
+			settings = {
+				Lua = {
+					runtime = { version = "LuaJIT" },
+					diagnostics = { globals = { "vim" } },
+					workspace = {
+						library = vim.api.nvim_get_runtime_file("", true),
+						checkThirdParty = false,
+					},
+					telemetry = { enable = false },
+				},
+			},
+		})
+
+		vim.lsp.config("ruff", {
+			init_options = {
+				settings = {
+					logLevel = "info",
+				},
+			},
+		})
+
+		vim.lsp.enable({ "lua_ls", "ruff" })
+
+		vim.diagnostic.config({
+			signs = {
+				text = {
+					[vim.diagnostic.severity.ERROR] = "",
+					[vim.diagnostic.severity.WARN] = "",
+					[vim.diagnostic.severity.HINT] = "",
+					[vim.diagnostic.severity.INFO] = "",
+				},
+			},
+			virtual_text = false, -- ✅ desactiva los mensajes inline
+			underline = true,
+			update_in_insert = false,
+			severity_sort = true,
+			float = {
+				border = "rounded",
+				source = "always",
+			},
+		})
 	end,
 }

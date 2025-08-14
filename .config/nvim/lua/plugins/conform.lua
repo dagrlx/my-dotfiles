@@ -9,7 +9,7 @@ return {
 			function()
 				require("conform").format({ async = true })
 			end,
-			mode = "",
+			mode = { "n", "v" },
 			desc = "Format buffer",
 		},
 	},
@@ -20,7 +20,7 @@ return {
 		-- Define your formatters
 		formatters_by_ft = {
 			lua = { "stylua" },
-			python = { "isort", "black" },
+			python = { "ruff_format", "isort", "black" },
 			yaml = { "yamlfix" },
 			markdown = { "prettier" },
 			toml = { "taplo" },
@@ -60,6 +60,11 @@ return {
 		formatters = {
 			shfmt = {
 				prepend_args = { "-i", "2" },
+			},
+			ruff_format = {
+				command = "ruff",
+				args = { "format", "-" },
+				stdin = true,
 			},
 		},
 	},
