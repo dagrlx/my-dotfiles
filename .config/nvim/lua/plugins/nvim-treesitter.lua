@@ -3,6 +3,8 @@
 -- url  : https://github.com/nvim-treesitter/nvim-treesitter
 return {
 	"nvim-treesitter/nvim-treesitter",
+	lazy = false,
+	branch = "main",
 	build = ":TSUpdate",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
@@ -38,7 +40,8 @@ return {
 		ensure_installed = {
 			"bash",
 			"diff",
-			"lua",
+			--"lua",
+			"emmylua",
 			"luadoc",
 			"javascript",
 			"typescript",
