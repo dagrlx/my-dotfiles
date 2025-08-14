@@ -153,10 +153,10 @@ alt-cmd-x = 'close-all-windows-but-current --quit-if-last-window'
 alt-cmd-f = 'layout floating tiling' # 'floating toggle' in i3
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-ctrl-alt-h = 'focus --boundaries-action wrap-around-the-workspace left'
-ctrl-alt-j = 'focus --boundaries-action wrap-around-the-workspace down'
-ctrl-alt-k = 'focus --boundaries-action wrap-around-the-workspace up'
-ctrl-alt-l = 'focus --boundaries-action wrap-around-the-workspace right'
+ctrl-alt-j = 'focus --boundaries-action wrap-around-the-workspace left'
+ctrl-alt-k = 'focus --boundaries-action wrap-around-the-workspace down'
+ctrl-alt-l = 'focus --boundaries-action wrap-around-the-workspace up'
+ctrl-alt-ñ = 'focus --boundaries-action wrap-around-the-workspace right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 ctrl-shift-h = 'move left'
