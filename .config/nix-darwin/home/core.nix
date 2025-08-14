@@ -58,7 +58,7 @@
     tmux-xpanes
     sesh # manager for tmux session
     tree
-    tree-sitter
+    #tree-sitter
     watch
     wifi-password
     wget
@@ -253,6 +253,5 @@
         history_filter = [ "^clear" "^exit" ];
       };
     };
-
   };
 }
