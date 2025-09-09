@@ -110,7 +110,8 @@
         "nanorc"
 
         "neovim"
-        "luacheck"
+        # "luacheck"
+        "bob"  #  Neovim version manager
 
         "superfile"
         #"broot"
@@ -128,10 +129,11 @@
         "sketchybar"
 
         "lua" # Lenguaje para config sketchybar, aerospace
-        "luarocks"
+        #"luarocks"
         #"lua-language-server"
         "ghostscript"
         "tree-sitter"
+        "tree-sitter-cli"
         "go"
         "rust"
         "switchaudio-osx"
@@ -163,6 +165,7 @@
         "tabiew" # Lector de archvio csv con consultas sql"
         "aichat"  # all-in-one LLM CLI tool featuring Shell Assistant, CMD & REPL Mode, RAG, AI Tools & Agents, and More.
         "gemini-cli"
+        "opencode"
 
         "pam-reattach" # PAM module for reattaching to the user's GUI session (touchID)
 
@@ -295,6 +298,7 @@
         #"raspberry-pi-imager"
         "quickrecorder" # record screen
         "shottr"
+        "shortcat" # Permite navegar iterfaz GUI con atajos
 
         #Fonts for sketchybar, wezterm  
 
