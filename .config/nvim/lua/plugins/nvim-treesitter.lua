@@ -34,7 +34,6 @@ return {
 				},
 			},
 		},
-		"bezhermoso/tree-sitter-ghostty",
 	},
 	opts = {
 		ensure_installed = {

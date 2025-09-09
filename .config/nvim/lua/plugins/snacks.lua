@@ -535,10 +535,10 @@ return {
 				pattern = "VeryLazy",
 				callback = function()
 					-- Setup some globals for debugging (lazy-loaded)
-					_G.dd = function(...)
+					_G.dg = function(...)
 						Snacks.debug.inspect(...)
 					end
-					_G.bt = function()
+					_G.bk = function()
 						Snacks.debug.backtrace()
 					end
 					vim.print = _G.dd -- Override print to use snacks for `:=` command
