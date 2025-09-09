@@ -3,22 +3,11 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = true
-command_timeout = 2000       # Default 1000 
+command_timeout = 1000       # Default 1000 
 palette = "catppuccin_mocha"
 
-# A minimal left prompt
-#format = "$directory$character "
-
-# move the rest of the prompt to the right
-#right_format = "$all "
-# right_format = """
-# $cmd_duration\
-# $username\
-# $hostname"""
-
-
 [directory]
-format = "[$path]($style)[$read_only]($read_only_style) "
+format = "[$path]($style) "
 home_symbol = "~"
 read_only = "🔒"
 read_only_style = "red"
@@ -38,42 +27,28 @@ number_threshold = 1
 format = "[$symbol]($style)"
 
 [cmd_duration]
-#disabled = true
+#disabled = true  # Puedes desactivar si no necesitas el tiempo del comando
 format = "[$duration]($style) "
 min_time = 500
 style = "bold yellow"
 
 [hostname]
 detect_env_vars = ["HOSTNAME", "SSH_CONNECTION"]
-disabled = false
 format = "on [$ssh_symbol$hostname]($style) in "
 ssh_only = false
 ssh_symbol = " "
 style = "bold dimmed green"
-trim_at = "."
 
 [username]
-style_user = "peach bold"
-style_root = "red bold"
-format = "[$user]($style) "
-disabled = false
 show_always = true
+format = "[$user]($style) "
 
 [sudo]
 style = "bold green"
 symbol = "👩‍💻 "
-disabled = false
 
 [os.symbols]
-Arch = " "
-Debian = " "
-Fedora = " "
-Linux = " "
 Macos = " "
-NixOS = " "
-Ubuntu = " "
-Unknown = " "
-Windows = "󰍲 "
 
 [shell]
 bash_indicator = 'bsh'
@@ -82,27 +57,17 @@ zsh_indicator = 'zsh'
 style = 'cyan bold'
 disabled = false
 
-[aws]
-symbol = "🅰 "
-
 [docker_context]
 detect_extensions = ["Dockerfile"]
-detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+detect_files = [
+  "docker-compose.yml",
+  "docker-compose.yaml",
+  "Dockerfile",
+  "compose.yml",
+]
 format = "[$symbol]($style) $path"
 style = "fg:#06969A"
 symbol = " "
-
-[gcloud]
-format = "on [$symbol$active(($region))]($style) "
-symbol = "🅶 ️"
-
-[python]
-format = "(via [$symbol$pyenv_prefix($version)(($virtualenv))]($style)) "
-symbol = " "
-
-[rust]
-style = "orange"
-symbol = " "
 
 [palettes.catppuccin_macchiato]
 base = "#24273a"
