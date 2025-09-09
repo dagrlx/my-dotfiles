@@ -60,7 +60,6 @@
     tree
     #tree-sitter
     watch
-    wifi-password
     wget
 
     #Plugin para zsh
