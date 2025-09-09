@@ -10,7 +10,7 @@ $env.config.history.file_format = "sqlite"
 # Active mode vim
 $env.config.edit_mode = "vi"
 
-# Show only startup time  
+# Show only startup time
 $env.config.show_banner = "short"
 
 # use_kitty_protocol (bool):
@@ -59,7 +59,7 @@ alias sgc = sudo nix-collect-garbage -d
 # Proxy ssh sabaext
 alias sshp = ssh -o ProxyJump=sabaext
 
-# Proxy ssh saba xterm-256color 
+# Proxy ssh saba xterm-256color
 alias sshtp = env TERM=xterm-256color ssh -o ProxyJump=sabaext
 
 # Para equipos que no tienen xterm-ghostty
@@ -85,7 +85,7 @@ alias fzn = do {fzf --preview '''bat --style=numbers --color=always {}''' | xarg
 alias trivy = do {docker run --rm -v trivy-cache:/root/.cache/ -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest}
 
 # Actualización plugin de Yazi
-alias yu-nu = ya pack --upgrade
+alias yu-nu = ya pkg --upgrade
 
 # Kubernete
 alias k = kubectl
@@ -158,7 +158,7 @@ $env.config.menus ++= [
                         { value: ($abbreviations | get $abbr_match.0) }
                     }
                 } else {
-                    $alias_match | each { |it| 
+                    $alias_match | each { |it|
                         let expansion = $it.expansion
                         if ($expansion | str starts-with 'do {') {
                             { value: ($expansion | str replace -r '^do\s*\{\s*(.*?)\s*\}$' '$1') }
@@ -229,7 +229,7 @@ def --env --wrapped z [...rest: string@"nu-complete zoxide path"] {
 ##########################################################
 
 
-# scripts for unzip 
+# scripts for unzip
 use scripts/extractor.nu extract
 
 $env.NU_PLUGIN_PATH = [
@@ -243,4 +243,3 @@ mkdir ($nu.default-config-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.default-config-dir | path join "vendor/autoload/starship.nu")
 
 $env.STARSHIP_CONFIG = "/Users/dgarciar/.config/starship/starship.toml"
-
