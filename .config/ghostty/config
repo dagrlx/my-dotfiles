@@ -75,7 +75,7 @@ confirm-close-surface = always
 # will be treated as *Alt* regardless of this setting. (i.e. `alt+ctrl+a`).
 macos-option-as-alt = right
 
-shell-integration-features = cursor,sudo,title
+shell-integration-features = cursor,sudo,title,ssh-env,ssh-terminfo
 
 #command = /Users/dgarciar/.dotfiles/rio/start_nushell.sh
 
