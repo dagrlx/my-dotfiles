@@ -1,5 +1,5 @@
 return {
-	"echasnovski/mini.nvim",
+	"nvim-mini/mini.nvim",
 	version = false,
 	-- dependencies = {
 	-- 	"JoosepAlviste/nvim-ts-context-commentstring",

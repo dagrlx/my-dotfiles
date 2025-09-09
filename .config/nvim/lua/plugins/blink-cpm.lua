@@ -45,7 +45,7 @@ return {
 					-- 3. En cualquier otro caso → usar todos los proveedores
 					else
 						return {
-							--"lazydev",
+							"lazydev",
 							"lsp",
 							"path",
 							"snippets",
@@ -58,12 +58,12 @@ return {
 				end,
 
 				providers = {
-					-- lazydev = {
-					-- 	name = "LazyDev",
-					-- 	module = "lazydev.integrations.blink",
-					-- 	-- make lazydev completions top priority (see `:h blink.cmp`)
-					-- 	score_offset = 100,
-					-- },
+					lazydev = {
+						name = "LazyDev",
+						module = "lazydev.integrations.blink",
+						-- make lazydev completions top priority (see `:h blink.cmp`)
+						score_offset = 100,
+					},
 					lsp = {
 						min_keyword_length = 2, -- Number of characters to trigger provider
 						score_offset = 0, -- Boost/penalize the score of the items
