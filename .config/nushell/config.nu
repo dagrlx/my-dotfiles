@@ -82,6 +82,8 @@ alias ff = do {aerospace list-windows --all | fzf --bind 'enter:execute(bash -c 
 alias fzn = do {fzf --preview '''bat --style=numbers --color=always {}''' | xargs -n1 nvim
 }
 
+alias trivy = do {docker run --rm -v trivy-cache:/root/.cache/ -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest}
+
 # Actualización plugin de Yazi
 alias yu-nu = ya pack --upgrade
 
@@ -89,6 +91,11 @@ alias yu-nu = ya pack --upgrade
 alias k = kubectl
 
 alias devpod = zsh -ci "open -n /Applications/DevPod.app"
+
+alias v = nvim
+
+# Neovim nightly
+alias vn = do {NVIM_APPNAME=nvim-dev bob run nightly}
 
 # Expande alias o elementos en abbreviations presionando ç o enter
 # https://github.com/nushell/nushell/issues/5552#issuecomment-2113935091
