@@ -34,7 +34,7 @@ $env.NIX_PROFILES = "/nix/var/nix/profiles/default /run/current-system/sw"
 $env.NIX_PATH = "darwin-config=$HOME/.nix-darwin darwin=flake:nix-darwin"
 
 # LS_COLORS (si usas bat, ls con colores)
-$env.LS_COLORS = (fetch https://raw.githubusercontent.com/trapd00r/LS_COLORS/master/LS_COLORS | str from)
+#$env.LS_COLORS = (fetch https://raw.githubusercontent.com/trapd00r/LS_COLORS/master/LS_COLORS | str from)
 
 # ────────────────────────────────────────────────
 # ⚙️ CONFIGURACIÓN DE NUSHELL (`$env.config`)
@@ -58,8 +58,15 @@ $env.config.use_kitty_protocol = true
 # Completados
 # algorithm (string): Either "prefix" or "fuzzy"
 $env.config.completions.algorithm = "fuzzy"
-$env.config.completions.case_sensitive = false
-$env.config.completions.sort = false
+
+# Definir abreviaciones (zsh-abbr style)
+# Expande alias o elementos en abbreviations presionando ç o enter
+# https://github.com/nushell/nushell/issues/5552#issuecomment-2113935091
+let abbreviations = {
+    "cd..": 'cd ..'
+    sau: 'sudo apt update; sudo apt upgrade'
+    #bwu: 'brew update; brew upgrade; sketchybar --trigger brew_update'
+}
 
 # Menú de abreviaciones (para zsh-abbr style)
 $env.config.menus = [
@@ -140,38 +147,28 @@ $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 # 🔌 INTEGRACIONES EXTERNAS (autoload)
 # ────────────────────────────────────────────────
 
-source ~/.config/nu/integrations/starship.nu
-source ~/.config/nu/integrations/atuin-init.nu
-source ~/.config/nu/integrations/carapace/carapace-init.nu
-source ~/.config/nu/integrations/direnv.nu
-source ~/.config/nu/integrations/broot_shell.nu
-source ~/.config/nu/integrations/aichat_shell.nu
-source ~/.config/nu/integrations/zoxide.nu
+source ~/.config/nushell/integrations/starship.nu
+source ~/.config/nushell/integrations/atuin-init.nu
+source ~/.config/nushell/integrations/carapace/carapace-init.nu
+source ~/.config/nushell/integrations/direnv.nu
+source ~/.config/nushell/integrations/broot_shell.nu
+source ~/.config/nushell/integrations/aichat_shell.nu
+source ~/.config/nushell/integrations/zoxide.nu
 
 # Completados adicionales
-source ~/.config/nu/completions/zoxide-cmp.nu
-source ~/.config/nu/completions/aichat-cmp.nu
-source ~/.config/nu/completions/atuin-cmp.nu
+source ~/.config/nushell/completions/zoxide-cmp.nu
+source ~/.config/nushell/completions/aichat-cmp.nu
+source ~/.config/nushell/completions/atuin-cmp.nu
 
 # ────────────────────────────────────────────────
 # 📦 FUNCIONES PERSONALIZADAS
 # ────────────────────────────────────────────────
 
-source ~/.config/nu/functions/j.nu
-source ~/.config/nu/functions/extras.nu
+source ~/.config/nushell/functions/extras.nu
 
 # ────────────────────────────────────────────────
 # 🧩 ALIASES GLOBALES
 # ────────────────────────────────────────────────
-
-# Definir abreviaciones (zsh-abbr style)
-# Expande alias o elementos en abbreviations presionando ç o enter
-# https://github.com/nushell/nushell/issues/5552#issuecomment-2113935091
-let-env abbreviations = {
-  "cd..": 'cd ..'
-  sau: 'sudo apt update; sudo apt upgrade'
-  # bwu: 'brew update; brew upgrade; sketchybar --trigger brew_update'
-}
 
 # Aliases simples
 # alias la =  ls -la | select name type mode user group size modified | update modified {format date "%Y-%m-%d %H:%M:%S"}
@@ -180,7 +177,7 @@ alias la = do { ls -la | select name type mode user group size modified | update
 # Lista archivos y directorios en formato árbol con detalles
 alias lt = eza --tree --level=2 --long --icons --git
 
-alias cat = bat
+alias j = just --justfile ~/.config/nix-darwin/Justfile
 alias cat = bat
 alias v = nvim
 alias vn = do { NVIM_APPNAME=nvim-dev bob run nightly }
@@ -197,11 +194,7 @@ alias trivy = docker run --rm -v trivy-cache:/root/.cache/ -v /var/run/docker.so
 alias zsh-nuoff = do { NO_NU=1 zsh }
 
 # Alias para fzf + nvim
-alias fzn = do {
-  fzf --read0 --print0 --preview 'bat --style=numbers --color=always {}' \
-    | split row '\x00' \
-    | each { |file| if ($file | path exists) { nvim $file } }
-}
+alias fzn = do {fzf --preview '''bat --style=numbers --color=always {}''' | xargs -n1 nvim}
 
 # Abrir tmux limpio
 alias tmux-nu = do { tmux kill-server | complete; tmux }
