@@ -1,23 +1,11 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
-    #nixVersions.latest
-
-    #nnn # terminal file manager
-
-    #python3Full
-    #unstable-nixpkgs.python311Packages.gssapi
-
     # archives
     zip
     xz
     unzip
     p7zip
     unar
-
-    #Fonts
-    #nerdfonts
 
     # utils
     mc
@@ -58,18 +46,17 @@
     tmux-xpanes
     sesh # manager for tmux session
     tree
-    #tree-sitter
     watch
     wget
 
     #Plugin para zsh
-    zsh-fzf-history-search
-    zsh-fzf-tab
-    zsh-syntax-highlighting
-    zsh-autosuggestions
-    zsh-autosuggestions-abbreviations-strategy
-    zsh-autocomplete
-    zsh-you-should-use
+    # zsh-fzf-history-search
+    # zsh-fzf-tab
+    # zsh-syntax-highlighting
+    # zsh-autosuggestions
+    # zsh-autosuggestions-abbreviations-strategy
+    # zsh-autocomplete
+    # zsh-you-should-use
 
     # misc
     cowsay
@@ -83,12 +70,11 @@
     caddy
     gnupg
     cacert # Equivalente en hombrew de ca-certificates
-    #zsh-powerlevel10k
     nodejs
     #pm2
-    #ansible
-    sqls  # LSP sql
-    #nixfmt-classic # Formateador para nix
+    sqls # LSP sql
+    nixfmt  # Nix code formatter
+    nixpkgs-fmt # Nix code formatter for nixpkgs
 
     # productivity
     glow # markdown previewer in terminal
@@ -123,7 +109,7 @@
 
     gpg.enable = true;
 
-    lazygit = { enable = true; };
+    lazygit = {enable = true;};
 
     dircolors = {
       enable = true;
@@ -132,7 +118,7 @@
 
     tealdeer = {
       enable = true;
-      settings = { updates = { auto_update = true; }; };
+      settings = {updates = {auto_update = true;};};
     };
 
     lf = {
@@ -176,13 +162,13 @@
 
     ripgrep = {
       enable = true;
-      arguments = [ "--max-columns-preview" "--colors=line:style:bold" ];
+      arguments = ["--max-columns-preview" "--colors=line:style:bold"];
     };
 
     fzf = {
       enable = true;
       enableZshIntegration = true;
-      defaultOptions = [ "--height 50%" "--border" ];
+      defaultOptions = ["--height 50%" "--border"];
       tmux.enableShellIntegration = true;
     };
 
@@ -192,8 +178,7 @@
       enable = true;
       #  enableBashIntegration = true;
       enableZshIntegration = true;
-      defaultOptions = [ "--height 50%" "--prompt >" ];
-
+      defaultOptions = ["--height 50%" "--prompt >"];
     };
 
     zoxide = {
@@ -220,7 +205,6 @@
       enable = true;
       enableZshIntegration = true;
       nix-direnv.enable = true;
-
     };
 
     # multi-shell multi-command argument completer
@@ -237,19 +221,17 @@
       enableZshIntegration = true;
       enableNushellIntegration = true;
       package = pkgs.atuin;
-      flags = [ "--disable-up-arrow" ];
+      flags = ["--disable-up-arrow"];
       settings = {
         auto_sync = true;
         sync.records = true; # Enable sync v2 by Default
-        sync_frequency =
-          "5m"; # For example, 10s, 20m, 1h, etc. If set to 0, Atuin will sync after every command
+        sync_frequency = "5m"; # For example, 10s, 20m, 1h, etc. If set to 0, Atuin will sync after every command
         sync_address = "https://api.atuin.sh";
-        search_mode =
-          "fuzzy"; # Atuin supports “prefix”, “fulltext”, “fuzzy”, and “skim” search modes (Default fuzzy)
+        search_mode = "fuzzy"; # Atuin supports “prefix”, “fulltext”, “fuzzy”, and “skim” search modes (Default fuzzy)
         enter_accept = false; # always inserts the selected command for editing
         #style = "auto"; # Possible values: auto, full and compact.
         #inline_height = 0; # height of the search window (Default 0)
-        history_filter = [ "^clear" "^exit" ];
+        history_filter = ["^clear" "^exit"];
       };
     };
   };

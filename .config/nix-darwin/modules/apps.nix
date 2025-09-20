@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   ##########################################################################
   #
   #  Install all apps and packages here.
@@ -29,301 +29,295 @@
   # But on macOS, homebrew has a much larger selection of apps than nixpkgs, especially for GUI apps!
   homebrew = {
     brewPrefix = "/opt/homebrew/bin";
-        enable = true;
-        #macOS pone en cuarentena las aplicaciones descargadas de internet para mayor seguridad.
-        caskArgs.no_quarantine = false;
+    enable = true;
+    #macOS pone en cuarentena las aplicaciones descargadas de internet para mayor seguridad.
+    caskArgs.no_quarantine = true;
 
     onActivation = {
-        # Controla si Homebrew se auto-actualiza a sí mismo y a todas las fórmulas durante la activación del sistema
-        # Nix-darwin
-        autoUpdate = true;
-        # Controla si se deben actualizar las fórmulas de Homebrew durante la activación del sistema Nix-darwin.
-        upgrade = true;
-        # 'zap': uninstalls all formulae(and related files) not listed here
-        cleanup = "zap";
+      # Controla si Homebrew se auto-actualiza a sí mismo y a todas las fórmulas durante la activación del sistema
+      # Nix-darwin
+      autoUpdate = true;
+      # Controla si se deben actualizar las fórmulas de Homebrew durante la activación del sistema Nix-darwin.
+      upgrade = true;
+      # 'zap': uninstalls all formulae(and related files) not listed here
+      cleanup = "zap";
     };
 
-        # Applications to install from Mac App Store using mas.
-        # You need to install all these Apps manually first so that your apple account have records for them.
-        # otherwise Apple Store will refuse to install them.
-        # For details, see https://github.com/mas-cli/mas
-        #masApps = {
-        # TODO Feel free to add your favorite apps here.
+    # Applications to install from Mac App Store using mas.
+    # You need to install all these Apps manually first so that your apple account have records for them.
+    # otherwise Apple Store will refuse to install them.
+    # For details, see https://github.com/mas-cli/mas
+    #masApps = {
+    # TODO Feel free to add your favorite apps here.
 
-        #Xcode = 497799835;
-        #"WireGuard" = 1451685025;
-        #"Tomito" = 1526042937;
-        #"Windows App" = 1295203466;
-        #"CotEditor" = 1024640650;
-        #"MegaIPTVmacOS" = 1494386779;
-        #"Airmail" = 918858936;
-        #"Magnet" = 441258766;
-        #"ScreenBrush" = 1233965871;
-        #"Amphetamine" = 937984704;
-        #"The Unarchiver" = 425424353;
-        #"You Search" = 1641136636;
+    #Xcode = 497799835;
+    #"WireGuard" = 1451685025;
+    #"Tomito" = 1526042937;
+    #"Windows App" = 1295203466;
+    #"CotEditor" = 1024640650;
+    #"MegaIPTVmacOS" = 1494386779;
+    #"Airmail" = 918858936;
+    #"Magnet" = 441258766;
+    #"ScreenBrush" = 1233965871;
+    #"Amphetamine" = 937984704;
+    #"The Unarchiver" = 425424353;
+    #"You Search" = 1641136636;
     #};
 
     taps = [
-        "jzelinskie/duckdns"
-        "koekeishiya/formulae"
-        "FelixKratz/formulae"
-        "gromgit/fuse"
-        "nikitabobko/tap"
-        "netbirdio/tap"
-        "olets/tap"
-        "lihaoyun6/tap"
-        "TheZoraiz/ascii-image-converter"
-        "alienator88/cask"
-        "pkgxdev/made"
-        "mhaeuser/mhaeuser"  # battery-toolkit
+      "jzelinskie/duckdns"
+      "koekeishiya/formulae"
+      "FelixKratz/formulae"
+      "gromgit/fuse"
+      "nikitabobko/tap"
+      "netbirdio/tap"
+      "olets/tap"
+      "lihaoyun6/tap"
+      "TheZoraiz/ascii-image-converter"
+      "alienator88/cask"
+      "pkgxdev/made"
+      "mhaeuser/mhaeuser" # battery-toolkit
     ];
 
     # `brew install`
     # TODO Feel free to add your favorite apps here.
     brews = [
-        "wget" # download tool
-        "curl" # no not install curl via nixpkgs, it's not working well on macOS!
-        "aria2" # download tool
-        "httpie" # http client
-        "duckdns"
-        "iproute2mac"
+      # UTILIDADES
+      "wget" # download tool
+      "curl" # no not install curl via nixpkgs, it's not working well on macOS!
+      "aria2" # download tool
+      "httpie" # http client
+      "duckdns"
+      "iproute2mac"
+      "coreutils"
+      "ansible"
+      "scrcpy"
+      "fastfetch" # Reemplazo neofecht
+      "thefuck" # magnificent app that corrects your previous console command
+      "tabiew" # Lector de archvio csv con consultas sql"
 
-        "coreutils"
-        "ansible"
+      "btop" # monitoreo de recursos
+      "sshs" # List and connect to hosts using ~/.ssh/config.
+      "the_silver_searcher" # A code searching tool similar to ack, with a focus on speed.
 
-        "scrcpy"
+      # CONTAINERS Y VM
+      "podman"
+      "podlet"
+      "lima"
 
-        "podman"
-        "podlet"
-        "lima"
+      "zellij"
 
-        "zellij"
+      # PLUGINS ZSH
+      "zsh-abbr"
+      "zsh-autocomplete"
+      "zsh-syntax-highlighting"
+      "zsh-autosuggestions"
+      "zsh-autosuggestions-abbreviations-strategy"
 
-        #"sesh" # session manager for tmux
+      # EDITORES
+      "nano"
+      "nanorc"
+      "neovim"
+      "bob" #  Neovim version manager
 
-        #"zsh-autocomplete"
-        #"zsh-autosuggestions"
-        "zsh-autosuggestions-abbreviations-strategy"
+      # FILEMANAGER
+      "superfile"
+      #"broot"
+      "yazi" # file manager
+      "poppler" # para PDF preview en yazi
+      # "rich-cli" # for yazi plugin rich-preview
+      "imagemagick"
+      "ascii-image-converter"
 
-        "nano"
-        "nanorc"
+      # COMPLEMENTOS PARA NEOVIM
+      "lua"
+      "luacheck"
+      #"luarocks"
+      #"lua-language-server"
+      "ghostscript"
+      "tree-sitter"
+      "tree-sitter-cli"
+      "go"
+      "rust"
 
-        "neovim"
-        # "luacheck"
-        "bob"  #  Neovim version manager
+      "sketchybar"
+      "switchaudio-osx"
+      "nowplaying-cli"
+      "borders"
 
-        "superfile"
-        #"broot"
-            
-        "yazi" # file manager
-        "poppler" # para PDF preview en yazi
-        # "rich-cli" # for yazi plugin rich-preview
-        "imagemagick"
+      "nushell"
 
-        "ascii-image-converter"
+      #CONTROL VERSIONES - DOTFILES
+      #"chezmoi"
+      "jj" # jujutsu
+      #"yadm"
+      "age" # Is a simple, modern and secure file encryption tool, format, and Go library.
+      #"atuin" # Shell history with SQLite
+      "gh" # github cli. Se usa en pluing git sketchybar
 
-        ##Tiling windows manager
-        #"yabai"
-        #"skhd"
-        "sketchybar"
+      "talosctl"
+      #"ntfs-3g-mac"
 
-        "lua" # Lenguaje para config sketchybar, aerospace
-        #"luarocks"
-        #"lua-language-server"
-        "ghostscript"
-        "tree-sitter"
-        "tree-sitter-cli"
-        "go"
-        "rust"
-        "switchaudio-osx"
-        "nowplaying-cli"
-        "borders"
-        "fastfetch" # Reemplazo neofecht
+      # AGENTES, CHAT PARA LLM
+      "aichat" # all-in-one LLM CLI tool featuring Shell Assistant, CMD & REPL Mode, RAG, AI Tools & Agents, and More.
+      "gemini-cli"
+      "sst/tap/opencode"
 
-        #"starship"
+      "pam-reattach" # PAM module for reattaching to the user's GUI session (touchID)
 
-        "nushell"
-        "the_silver_searcher" # A code searching tool similar to ack, with a focus on speed.
-         #"jq" # Se usa en yabai - Lightweight and flexible command-line JSON processor
-        "gh" # github cli. Se usa en pluing git sketchybar
-        "btop" # monitoreo de recursos
-        "sshs" # List and connect to hosts using ~/.ssh/config.
+      "pkgxdev/made/pkgx" # Alternativa a hombrew
+      "pkgxdev/made/pkgm" # package manager of pkgx
 
-        #control versiones dotfiles
-        #"chezmoi"
-        "jj"  # jujutsu
-        #"yadm"
-        "age" # Is a simple, modern and secure file encryption tool, format, and Go library.
-        #"atuin" # Shell history with SQLite
+      "kanata" # Excelente mapeador de teclado
 
-        "talosctl"
-        #"ntfs-3g-mac"
-        
-        "thefuck" # magnificent app that corrects your previous console command
-
-        "tabiew" # Lector de archvio csv con consultas sql"
-        "aichat"  # all-in-one LLM CLI tool featuring Shell Assistant, CMD & REPL Mode, RAG, AI Tools & Agents, and More.
-        "gemini-cli"
-        "opencode"
-
-        "pam-reattach" # PAM module for reattaching to the user's GUI session (touchID)
-
-        "pkgxdev/made/pkgx" # Alternativa a hombrew
-        "pkgxdev/made/pkgm" # package manager of pkgx
-
-        "kanata" # Excelente mapeador de teclado
-
-        "pipx"  # Install and Run Python Applications in Isolated Environments
-        "uv"  # An extremely fast Python package and project manager, written in Rust.
-
+      "pipx" # Install and Run Python Applications in Isolated Environments
+      "uv" # An extremely fast Python package and project manager, written in Rust.
     ];
 
     # `brew install --cask`
     # TODO Feel free to add your favorite apps here.
     casks = [
-
-        "firefox"
-        "zen"  # zen-browser
-        #"google-chrome"
-        #"brave-browser"
-        #{
-        #  name = "microsoft-edge";
-        #  greedy = true;
-        #}
-        # always upgrade auto-updated or unversioned cask to latest version even if already installed
-        #{
-        #  name = "opera";
-        #  greedy = true;
-        #}
-        {
+      "firefox"
+      "zen" # zen-browser
+      #"google-chrome"
+      #"brave-browser"
+      #{
+      #  name = "microsoft-edge";
+      #  greedy = true;
+      #}
+      # always upgrade auto-updated or unversioned cask to latest version even if already installed
+      #{
+      #  name = "opera";
+      #  greedy = true;
+      #}
+      {
         name = "deepl";
         greedy = true;
       }
 
-        "vivaldi"
-        
-        # Desarrollo y scripts    
-        #"visual-studio-code"
-        "zed"
-        "devpod"
+      "vivaldi"
 
-        "microsoft-teams"
-        "microsoft-auto-update"
-        "windows-app" # new app for RDP
-        #"syncthing" # file sync
-        "raycast" # (HotKey: alt/option + space)search, caculate and run scripts(with many plugins)
-        #"iglance" # beautiful system monitor
-        "macfuse"
-        "mounty"
-     
-        "vnc-viewer"
+      # Desarrollo y scripts
+      #"visual-studio-code"
+      "zed"
+      "devpod"
 
-        #VPN
-        "zerotier-one"
-        # "tailscale"
-        # "netbird-ui"
+      "microsoft-teams"
+      "microsoft-auto-update"
+      "windows-app" # new app for RDP
+      #"syncthing" # file sync
+      "raycast" # (HotKey: alt/option + space)search, caculate and run scripts(with many plugins)
+      #"iglance" # beautiful system monitor
+      "macfuse"
+      "mounty"
 
-        # Utilities
-        "localsend"
-        "landrop"
-        "keka"
-        "KnockKnock"
-        #"kopiaui"
-        #"kubecontext"
-        "maintenance"
-        "onyx"
-        "deeper"
-        #"tyke" # App para tomar notas rapidas temporal
-        #"applite" # App grafica homebrew - https://www.thriftmac.com
-        "google-drive"
-        "battery-toolkit"
-        "imageoptim" # optimizer image
+      "vnc-viewer"
 
-        "brilliant" 
+      #VPN
+      "zerotier-one"
+      # "tailscale"
+      # "netbird-ui"
 
-        "colemak-dh"  # latout colemak mod DH
+      # Utilities
+      "localsend"
+      "landrop"
+      "keka"
+      "KnockKnock"
+      #"kopiaui"
+      #"kubecontext"
+      "maintenance"
+      "onyx"
+      "deeper"
+      #"tyke" # App para tomar notas rapidas temporal
+      #"applite" # App grafica homebrew - https://www.thriftmac.com
+      "google-drive"
+      "battery-toolkit"
+      "imageoptim" # optimizer image
+      "macupdater"
 
-        "aerospace" # Tiling manager basado en i3wm
-        "MonitorControl"
-        "pearcleaner" # mac app cleaner
-        "sentinel-app" # A GUI for controlling Gatekeeper
-        #"ubersicht"
+      "brilliant"
 
-        #Terminales
-        "wezterm"
-        #"warp" # terminal con AI y wrapper
-        #"wave" # terminal con AI alternativa a warp y es software libre
-        #"ghostty" # Ghostty is a terminal emulator that differentiates itself by being fast, feature-rich, and native.
-        "kitty"
-        #"rio"
+      #"colemak-dh" # latout colemak mod DH
 
-        "keepassxc"
-        "podman-desktop"
-        #"slack"
-        "teamviewer"
-        "anydesk"
-        "orbstack" # Docker y MV
-        "appcleaner"
-        #"diffusionbee" # Create Amazing Images Using AI
-        #"authy"
-        #"utm"
-        "numi" # calculadora
-        #"stats"
-        #"neovide"
-        #"amazon-chime"
-        "qbittorrent"
-        #"send-anywhere"
-        #"remote-desktop-manager"
+      "aerospace" # Tiling managerbasado en i3wm
+      "MonitorControl"
+      "pearcleaner" # mac app cleaner
+      "sentinel-app" # A GUI for controlling Gatekeeper
+      #"ubersicht"
 
-        "telegram"
-        "whatsapp"
-        "zoom"
+      #Terminales
+      "wezterm"
+      #"warp" # terminal con AI y wrapper
+      #"wave" # terminal con AI alternativa a warp y es software libre
+      "ghostty" # Ghostty is a terminal emulator that differentiates itself by being fast, feature-rich, and native.
+      "kitty"
+      #"rio"
 
-        #"wireshark" # network analyzer
-        "grandperspective" # Muestra de forma grafica el uso del disco
-        "keycastr" # Muestra la pulsación de las teclas en pantalla
-        "hyperkey"
-        "karabiner-elements" # Permite modificar/crear teclado y combinaciones de teclas
-        "vlc"
-        "keyclu" # Muestra la lista de shortcut de las aplicaciones que se seleccione
-        "cleanupbuddy" # Bloque teclado y mouse para poder hacer limpieza a la mac
-        "displaylink"
-        "obsidian"
-        #"jordanbaird-ice" # Menu bar - Equivalente a bartender
-        "tomatobar"
-        #"kap"
-        #"cap"
-        #"spaceman"
-        #"raspberry-pi-imager"
-        "quickrecorder" # record screen
-        "shottr"
-        "shortcat" # Permite navegar iterfaz GUI con atajos
+      "keepassxc"
+      "podman-desktop"
+      #"slack"
+      "teamviewer"
+      "anydesk"
+      "orbstack" # Docker y MV
+      "appcleaner"
+      #"diffusionbee" # Create Amazing Images Using AI
+      #"authy"
+      #"utm"
+      "numi" # calculadora
+      #"stats"
+      #"neovide"
+      #"amazon-chime"
+      "qbittorrent"
+      #"send-anywhere"
+      #"remote-desktop-manager"
 
-        #Fonts for sketchybar, wezterm  
+      "telegram"
+      "whatsapp"
+      "zoom"
 
-        "font-sketchybar-app-font" # apps icons   
-        "font-hack-nerd-font" # Font for sketchybar
-        "font-sf-pro" # Simbolos
-        "sf-symbols" # iconos
-        "font-sf-mono"
-        "font-blex-mono-nerd-font"
-        "font-symbols-only-nerd-font"
+      #"wireshark" # network analyzer
+      "grandperspective" # Muestra de forma grafica el uso del disco
+      "keycastr" # Muestra la pulsación de las teclas en pantalla
+      "hyperkey"
+      "karabiner-elements" # Permite modificar/crear teclado y combinaciones de teclas
+      "vlc"
+      "keyclu" # Muestra la lista de shortcut de las aplicaciones que se seleccione
+      "cleanupbuddy" # Bloque teclado y mouse para poder hacer limpieza a la mac
+      "displaylink"
+      "obsidian"
+      #"jordanbaird-ice" # Menu bar - Equivalente a bartender
+      "tomatobar"
+      #"kap"
+      #"cap"
+      #"spaceman"
+      #"raspberry-pi-imager"
+      "quickrecorder" # record screen
+      "shottr"
+      "shortcat" # Permite navegar iterfaz GUI con atajos
 
+      #Fonts for sketchybar, wezterm
 
-         ##### AI tool
-        "lm-studio"  # App for testing llms models
-        "gpt4all"
+      "font-sketchybar-app-font" # apps icons
+      "font-hack-nerd-font" # Font for sketchybar
+      "font-sf-pro" # Simbolos
+      "sf-symbols" # iconos
+      "font-sf-mono"
+      "font-blex-mono-nerd-font"
+      "font-symbols-only-nerd-font"
 
-        "lulu" # firewwall for macOS
-        "freelens" # for managing Kubernetes clusters
-        
-        #"fly" # Command line interface to Concourse CLI
+      ##### AI tool
+      "lm-studio" # App for testing llms models
+      "gpt4all"
 
-        # OBS (Open Broadcaster Software)
-        "obs"
-        "obs-advanced-scene-switcher"
-        "obs-backgroundremoval"
+      "lulu" # firewwall for macOS
+      "freelens" # for managing Kubernetes clusters
+
+      #"fly" # Command line interface to Concourse CLI
+
+      # OBS (Open Broadcaster Software)
+      "obs"
+      "obs-advanced-scene-switcher"
+      "obs-backgroundremoval"
     ];
   };
 }

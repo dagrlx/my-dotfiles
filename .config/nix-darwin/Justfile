@@ -1,107 +1,50 @@
-# just is a command runner, Justfile is very similar to Makefile, but simpler.
+# Nombre del host (debe coincidir con el definido en tu flake Nix)
+hostname := "enocm1"
 
-# TODO update hostname here!
-hostname := your-hostname
+## Muestra todas las recetas disponibles
+default:
+  @just --list
 
-############################################################################
-#
-#  Darwin related commands
-#
-############################################################################
-
-#  TODO Feel free to remove this target if you don't need a proxy to speed up the build process
-darwin-set-proxy:
-  sudo python3 scripts/darwin_set_proxy.py
-
-darwin: darwin-set-proxy
+## Aplica la configuración Nix declarativa al sistema macOS
+darwin:
   nix build .#darwinConfigurations.{{hostname}}.system \
     --extra-experimental-features 'nix-command flakes'
+  sudo -E ./result/sw/bin/darwin-rebuild switch --flake .#{{hostname}}
 
-  ./result/sw/bin/darwin-rebuild switch --flake .#{{hostname}}
-
-darwin-debug: darwin-set-proxy
-  nix build .#darwinConfigurations.{{hostname}}.system --show-trace --verbose \
+## Igual que `darwin`, pero con trazas y salida detallada para depuración
+darwin-debug:
+  nix build .#darwinConfigurations.{{hostname}}.system \
+    --show-trace --verbose \
     --extra-experimental-features 'nix-command flakes'
+  sudo -E ./result/sw/bin/darwin-rebuild switch --flake .#{{hostname}} \
+    --show-trace --verbose
 
-  ./result/sw/bin/darwin-rebuild switch --flake .#{{hostname}} --show-trace --verbose
-
-############################################################################
-#
-#  nix related commands
-#
-############################################################################
-
-
-update:
+## Actualiza todos los inputs del flake Nix (nixpkgs, overlays, etc.)
+up:
   nix flake update
 
+## Actualiza un input específico del flake
+## Uso: just upp nixpkgs
+upp input:
+  nix flake update {{input}}
+
+## Muestra el historial de generaciones del perfil del sistema
 history:
   nix profile history --profile /nix/var/nix/profiles/system
 
+## Elimina generaciones del sistema más antiguas de 7 días
+clean:
+  sudo nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 7d
+
+## Ejecuta recolección de basura en el almacén Nix (usuario y sistema)
 gc:
-  # remove all generations older than 7 days
-  sudo nix profile wipe-history --profile /nix/var/nix/profiles/system  --older-than 7d
-# just is a command runner, Justfile is very similar to Makefile, but simpler.
+  sudo nix-collect-garbage --delete-older-than 7d
+  nix-collect-garbage --delete-older-than 7d
 
-# TODO update hostname here!
-hostname := your-hostname
-
-############################################################################
-#
-#  Darwin related commands
-#
-############################################################################
-
-#  TODO Feel free to remove this target if you don't need a proxy to speed up the build process
-darwin-set-proxy:
-  sudo python3 scripts/darwin_set_proxy.py
-
-darwin: darwin-set-proxy
-  nix build .#darwinConfigurations.{{hostname}}.system \
-    --extra-experimental-features 'nix-command flakes'
-
-  ./result/sw/bin/darwin-rebuild switch --flake .#{{hostname}}
-
-darwin-debug: darwin-set-proxy
-  nix build .#darwinConfigurations.{{hostname}}.system --show-trace --verbose \
-    --extra-experimental-features 'nix-command flakes'
-
-  ./result/sw/bin/darwin-rebuild switch --flake .#{{hostname}} --show-trace --verbose
-
-############################################################################
-#
-#  nix related commands
-#
-############################################################################
-
-
-update:
-  nix flake update
-
-history:
-  nix profile history --profile /nix/var/nix/profiles/system
-
-gc:
-  # remove all generations older than 7 days
-  sudo nix profile wipe-history --profile /nix/var/nix/profiles/system  --older-than 7d
-
-  # garbage collect all unused nix store entries
-  sudo nix store gc --debug
-
-
+## Formatea todos los archivos .nix del proyecto usando el formateador nativo
 fmt:
-  # format the nix files in this repo
   nix fmt
 
-clean:
-  rm -rf result
-  # garbage collect all unused nix store entries
-  sudo nix store gc --debug
-
-
-fmt:
-  # format the nix files in this repo
-  nix fmt
-
-clean:
-  rm -rf result
+## Muestra los enlaces de raíces de GC automáticos en el almacén Nix
+gcroot:
+  ls -al /nix/var/nix/gcroots/auto/

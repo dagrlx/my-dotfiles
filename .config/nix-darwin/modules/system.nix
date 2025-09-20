@@ -12,15 +12,13 @@
 ###################################################################################
 {
   system = {
-    stateVersion = 5;
+    stateVersion = 6;
     # activationScripts are executed every time you boot the system or run `nixos-rebuild` / `darwin-rebuild`.
     # activationScripts.postUserActivation.text = ''
     #   # activateSettings -u will reload the settings from the database and apply them to the current session,
     #   # so we do not need to logout and login again to make the changes take effect.
     #   /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
     # '';
-
-    primaryUser = "dgarciar";
 
     defaults = {
       menuExtraClock.Show24Hour = true; # show 24 hour clock
@@ -91,7 +89,7 @@
           true; # enable moving window by holding anywhere on it like on Linux
         NSAutomaticWindowAnimationsEnabled =
           false; # Whether to animate opening and closing of windows and popovers
-        "com.apple.keyboard.fnState" = false;  #Use F1, F2, etc. keys as standard function keys.
+        "com.apple.keyboard.fnState" = false; #Use F1, F2, etc. keys as standard function keys.
       };
 
       # Customize settings that not supported by nix-darwin directly
@@ -156,20 +154,20 @@
 
   # Add ability to used TouchID for sudo authentication
   security.pam.services.sudo_local.touchIdAuth = true;
-  
+
   # This fixes Touch ID for sudo not working inside tmux and screen.
   security.pam.services.sudo_local.reattach = true;
 
   # Create /etc/zshrc that loads the nix-darwin environment.
   # this is required if you want to use darwin's default shell - zsh
-  # programs.zsh.enable = true;
-  # environment.shells = [ pkgs.zsh ];
-  # # Exportar SHELL variable 
+  programs.zsh.enable = true;
+  environment.shells = [ pkgs.zsh ];
+  # # Exportar SHELL variable
   # programs.zsh.interactiveShellInit = ''
-  #    export SHELL=${pkgs.zsh}/bin/zsh
-  #  '';
+  #   export SHELL=${pkgs.zsh}/bin/zsh
+  # '';
 
-  environment.shells = [ "/opt/homebrew/bin/nu" ]; # O pkgs.nushell si usas la versión de Nix
+  #environment.shells = [ "/opt/homebrew/bin/nu" ]; # O pkgs.nushell si usas la versión de Nix
 
   # Set your time zone.
   time.timeZone = "America/Santiago";

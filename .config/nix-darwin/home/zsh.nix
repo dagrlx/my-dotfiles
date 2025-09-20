@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.zsh = {
     enable = true;
     autocd = true;
@@ -6,16 +6,15 @@
     autosuggestion.highlight = "fg=#f8f8f2,bg=#272822,bold";
     #autosuggestion.highlight = "fg=#c79267,bg=#282a36,bold,italic";
     syntaxHighlighting.enable = true; # Habilita el resaltado de sintaxis
-    syntaxHighlighting.highlighters =
-      [ "brackets" "pattern" "regexp" "cursor" "root" ];
+    syntaxHighlighting.highlighters = ["brackets" "pattern" "regexp" "cursor" "root"];
 
     # Añadimos los patrones para abbr
-    syntaxHighlighting.patterns = { "abbr *" = "fg=blue,bold"; };
+    syntaxHighlighting.patterns = {"abbr *" = "fg=blue,bold";};
 
     enableCompletion = true;
     #completionInit = "autoload -U compinit && compinit"; # Si se habilita este #deshabilita la caracteristicas de zsh-autocompletion
     autosuggestion.enable = true; # Habilita las sugerencias de autocompletado
-    autosuggestion.strategy = [ "history" "completion" ];
+    autosuggestion.strategy = ["history" "completion"];
 
     historySubstringSearch.enable = true; # Enable history substring search.
     sessionVariables = {
@@ -41,7 +40,7 @@
       #bindkey "^ " abbr-expand-and-insert
 
       export PATH=/run/current-system/sw/bin:$HOME/.nix-profile/bin:$PATH
-      if [ -e '/nix/var/nix/profiles/default/etc/profi:WEZTERM_PANEle.d/nix-daemon.sh' ]; then
+      if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
         . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
       fi
 
@@ -63,7 +62,7 @@
 
       export XDG_CONFIG_HOME="/Users/dgarciar/.config"
 
-      export SHELL=${pkgs.zsh}/bin/zsh
+      #export SHELL=${pkgs.zsh}/bin/zsh
 
       export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
       zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
@@ -90,22 +89,17 @@
     zsh-abbr = {
       enable = true;
       abbreviations = {
-        ufd = "darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/ --verbose";
-        ufn = "nix flake update --flake ~/.dotfiles/nix-darwin --verbose";
-        ff =
-          "aerospace list-windows --all | fzf --bind 'enter:execute(bash -c \"aerospace focus --window-id {1}\")+abort'";
-        flushdns =
-          "sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder";
-        allow_app =
-          "codesign --sign - --force --deep @$ && xattr -d com.apple.quarantine @$"; # Para de-quarantine un app de MacOS
-        open_fzn =
-          "nvim $(fzf -m --preview='bat --style=numbers --color=always {}')";
+        ufd = "sudo darwin-rebuild switch --flake ~/.config/nix-darwin/ --verbose";
+        ufn = "nix flake update --flake ~/.config/nix-darwin --verbose";
+        ff = "aerospace list-windows --all | fzf --bind 'enter:execute(bash -c \"aerospace focus --window-id {1}\")+abort'";
+        flushdns = "sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder";
+        allow_app = "codesign --sign - --force --deep @$ && xattr -d com.apple.quarantine @$"; # Para de-quarantine un app de MacOS
+        open_fzn = "nvim $(fzf -m --preview='bat --style=numbers --color=always {}')";
       };
     };
 
     shellAliases = {
-      rustscan =
-      "docker run -it --rm --name rustscan --platform linux/amd64 rustscan/rustscan";
+      rustscan = "docker run -it --rm --name rustscan --platform linux/amd64 rustscan/rustscan";
       "..." = "cd ../..";
       #ufd = "darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/";
       #ufn = "nix flake update --flake ~/.dotfiles/nix-darwin";
@@ -114,11 +108,11 @@
       ngc = "nix-collect-garbage -d";
       # You can remove all but the current generation with
       # Or all generations older than a specific period (e.g. 30 days)
-      # sudo nix-collect-garbage --delete-older-than 30d      
+      # sudo nix-collect-garbage --delete-older-than 30d
       sgc = "sudo nix-collect-garbage -d";
       dlg = "darwin-rebuild --list-generations";
       bcp0 = "brew cleanup --prune=0";
-      brew-up ="brew update && brew upgrade && brew upgrade --cask --greedy"; 
+      brew-up = "brew update && brew upgrade && brew upgrade --cask --greedy";
       #flushdns = "sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder";
       #allow_app = "codesign --sign - --force --deep @$ && xattr -d com.apple.quarantine @$"; # Para de-quarantine un app de MacOS
       n = "nano -clS";
@@ -130,8 +124,7 @@
       chd = "chezmoi destroy";
       gp = "git push origin main";
 
-      fzn =
-        "fzf --preview 'bat --style=numbers --color=always {}' | xargs -n1 nvim";
+      fzn = "fzf --preview 'bat --style=numbers --color=always {}' | xargs -n1 nvim";
       skn = ''
         sk --preview 'bat --style=numbers --color=always {}' | xargs -n1
               nvim'';
@@ -140,13 +133,16 @@
       ssht = "TERM=xterm-256color ssh";
       c = "clear";
 
-      urldecode =
-        "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
-      urlencode =
-        "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
+      urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
+      urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
 
       #ff = "aerospace list-windows --all | fzf --bind 'enter:execute(bash -c \"aerospace focus --window-id {1}\")+abort'";
 
+      v = "nvim";
+      vn = "NVIM_APPNAME=nvim-dev bob run nightly";
+
+      # Actualización plugin de Yazi
+      yu = "ya pkg upgrade";
     };
 
     history = {
@@ -169,7 +165,5 @@
     # };
 
     #    initExtra = "eval \"\$(zoxide init zsh)\"";
-
   };
 }
-

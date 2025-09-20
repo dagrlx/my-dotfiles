@@ -1,7 +1,6 @@
-{
-  username,
-  hostname,
-  ...
+{ username
+, hostname
+, ...
 } @ args:
 #############################################################
 #
@@ -17,10 +16,12 @@
   users.users."${username}" = {
     home = "/Users/${username}";
     description = username;
-    shell = "/opt/homebrew/bin/nu";
+    #shell = "/opt/homebrew/bin/nu";
   };
-  
+
+  system.primaryUser = username;
+
   # Lista de usuarios que están autorizados a conectarse al daemon de Nix.
   # Se puede asignar grupo ejemplo nix.settings.trusted-users = [ "@wheel" ];
-  nix.settings.trusted-users = [username];
+  nix.settings.trusted-users = [ username ];
 }

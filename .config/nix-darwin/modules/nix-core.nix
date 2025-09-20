@@ -4,6 +4,9 @@
   # enable flakes globally
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Nix necesita saber dónde está el bundle
+  nix.settings.ssl-cert-file = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -13,7 +16,7 @@
   # https://nix-darwin.github.io/nix-darwin/manual/index.html#opt-nix.enable
   # defautl is true
   #nix.enable = true;
- 
+
   nix.package = pkgs.nixVersions.latest;
   #nix.package = pkgs.nixVersions.nix_2_21;
 
@@ -35,15 +38,15 @@
   # (see https://github.com/NixOS/nix/issues/7273#issuecomment-2295429401)
   # Tip This option only applies to new files, so we recommend manually optimising your nix store when first setting this option.
   nix.optimise = {
-        automatic = true;
-        interval = [ 
-            {
-                Hour = 9;
-                Minute = 30;
-                Weekday = 0; # 0 is monday, 7 is sunday
-            }
-        ];
-    };
+    automatic = true;
+    interval = [
+      {
+        Hour = 9;
+        Minute = 30;
+        Weekday = 0; # 0 is monday, 7 is sunday
+      }
+    ];
+  };
 
   # The store can be optimised during every build.
   # If true, this may slow down builds, as discussedc here https://github.com/NixOS/nix/issues/6033

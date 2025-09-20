@@ -16,14 +16,14 @@
 
     # Configuración de cachés binarias
     substituters = [
-      "https://cache.nixos.org/"                # Caché oficial de NixOS
-      "https://nix-community.cachix.org/"       # Caché de nix-community (útil para Home Manager)
-      "https://nix-darwin.cachix.org/"          # Caché de Nix-Darwin
-      #"https://python.cachix.org/"              # Caché específica para Python"
+      "https://cache.nixos.org/"          # Caché oficial de NixOS
+      "https://nix-community.cachix.org/" # Caché de nix-community (útil para Home Manager)
+      "https://nix-darwin.cachix.org/"    # Caché de Nix-Darwin
+      # "https://python.cachix.org/"      # Caché específica para Python"
     ];
 
     trusted-public-keys = [
-      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="  # Clave para cache.nixos.org
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" # Clave para cache.nixos.org
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       "nix-darwin.cachix.org-1:LxMyKzQk7Uqkc1Pfq5uhm9GSn07xkERpy+7cpwc006A="
       #"python.cachix.org-1:K94G3Q5J4yvIeRlLX0t0Qw=="
@@ -75,7 +75,8 @@
       hostname = config.hostname;
 
       specialArgs = inputs // { inherit username useremail hostname; };
-    in {
+    in
+    {
       darwinConfigurations."${hostname}" = darwin.lib.darwinSystem {
         inherit system specialArgs;
         modules = [
