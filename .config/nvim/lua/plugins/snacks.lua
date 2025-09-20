@@ -16,7 +16,7 @@ return {
 					{ section = "startup" },
 					{
 						section = "terminal",
-						cmd = "ascii-image-converter ~/tmp/dagrlx-color.png -C -c -b --dither; sleep 100ms", -- en zsh usar sleep .1
+						cmd = "ascii-image-converter ~/tmp/dagrlx-color.png -C -c -b --dither; sleep .1", -- en zsh usar sleep .1, en nushell 100ms
 						--cmd = "chafa /Users/dgarciar/tmp/dagrlx-color.png --format symbols --symbols vhalf --passthrough auto --size 60x20 --stretch; sleep .1",
 						random = 10,
 						pane = 2,

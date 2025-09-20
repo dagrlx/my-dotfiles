@@ -1,13 +1,14 @@
 -- ~/.config/nvim/init.lua
 
--- Cargar autocomandos
-require("autocmds")
+-- Protección para vim.print (Neovim ≥ 0.11.2)
+if vim.print == nil then
+	vim.print = print
+end
 
--- Cargar opciones
-require("options")
-
--- Cargar mapeos de teclas
-require("mappings")
+-- Cargar módulos personalizados con pcall
+pcall(require, "autocmds")
+pcall(require, "options")
+pcall(require, "mappings")
 
 -- Configurar lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -24,9 +25,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	-- Importa la configuración de plugins desde la carpeta "plugins" y "lsp"
 	{ import = "plugins" },
-	--{ import = "plugins.lsp" },
 }, {
 	checker = {
 		enabled = true,
@@ -34,5 +33,19 @@ require("lazy").setup({
 	},
 	change_detection = {
 		notify = false,
+	},
+	performance = {
+		rtp = {
+			disabled_plugins = {
+				"gzip",
+				"matchit",
+				"matchparen",
+				"netrwPlugin",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
+			},
+		},
 	},
 })
