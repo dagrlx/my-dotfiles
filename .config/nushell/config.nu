@@ -146,71 +146,69 @@ $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 # ────────────────────────────────────────────────
 # 🔌 INTEGRACIONES EXTERNAS (autoload)
 # ────────────────────────────────────────────────
-
-source ~/.config/nushell/integrations/starship.nu
-source ~/.config/nushell/integrations/atuin-init.nu
-source ~/.config/nushell/integrations/carapace/carapace-init.nu
+# Carga primero los módulos funcionales que definen comandos y hooks
+source ~/.config/nushell/integrations/zoxide.nu
 source ~/.config/nushell/integrations/direnv.nu
 source ~/.config/nushell/integrations/broot_shell.nu
 source ~/.config/nushell/integrations/aichat_shell.nu
-source ~/.config/nushell/integrations/zoxide.nu
+# Luego los que afectan el prompt o historial
+source ~/.config/nushell/integrations/starship.nu
+source ~/.config/nushell/integrations/atuin-init.nu
+# Finalmente los que afectan completado externo
+source ~/.config/nushell/integrations/carapace/carapace-init.nu
 
 # Completados adicionales
+# # Completadores para comandos externos
 source ~/.config/nushell/completions/zoxide-cmp.nu
-source ~/.config/nushell/completions/aichat-cmp.nu
-source ~/.config/nushell/completions/atuin-cmp.nu
+# Completadores para funciones internas (cd, cdi)
+source ~/.config/nushell/completions/zoxide-complete.nu
 
 # ────────────────────────────────────────────────
 # 📦 FUNCIONES PERSONALIZADAS
 # ────────────────────────────────────────────────
-
 source ~/.config/nushell/functions/extras.nu
 
 # ────────────────────────────────────────────────
 # 🧩 ALIASES GLOBALES
 # ────────────────────────────────────────────────
 
-# Aliases simples
+# ─── 🧩 ALIASES: SISTEMA ─────────────────────────────
 # alias la =  ls -la | select name type mode user group size modified | update modified {format date "%Y-%m-%d %H:%M:%S"}
 alias la = do { ls -la | select name type mode user group size modified | update modified {format date "%Y-%m-%d %H:%M:%S"} }
-
 # Lista archivos y directorios en formato árbol con detalles
 alias lt = eza --tree --level=2 --long --icons --git
-
-alias j = just --justfile ~/.config/nix-darwin/Justfile
-alias cat = bat
-alias v = nvim
-alias vn = do { NVIM_APPNAME=nvim-dev bob run nightly }
-alias urldecode = python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'
-alias urlencode = python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'
 alias bcp0 = brew cleanup --prune=0
 alias ngc = nix-collect-garbage -d
 alias sgc = sudo nix-collect-garbage -d
 alias dlg = darwin-rebuild --list-generations
-alias devpod = zsh -ci "open -n /Applications/DevPod.app"
-alias k = kubectl
 alias yu = ya pkg upgrade
-alias trivy = docker run --rm -v trivy-cache:/root/.cache/ -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest
 alias zsh-nuoff = do { NO_NU=1 zsh }
-
-# Alias para fzf + nvim
-alias fzn = do {fzf --preview '''bat --style=numbers --color=always {}''' | xargs -n1 nvim}
-
-# Abrir tmux limpio
-alias tmux-nu = do { tmux kill-server | complete; tmux }
-
 # Fuzzy finder de ventanas (Aerospace)
 alias ff = do {
   aerospace list-windows --all \
     | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
 }
+# ─── 🧩 ALIASES: DESARROLLO ──────────────────────────
+alias j = just -f ~/.config/nix-darwin/Justfile -d ~/.config/nix-darwin/
+alias cat = bat
+alias v = nvim
+alias vn = do { NVIM_APPNAME=nvim-dev bob run nightly }
+alias urldecode = python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'
+alias urlencode = python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'
+alias devpod = zsh -ci "open -n /Applications/DevPod.app"
+alias k = kubectl
+alias trivy = docker run --rm -v trivy-cache:/root/.cache/ -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest
+# Abrir tmux limpio
+alias tmux-nu = do { tmux kill-server | complete; tmux }
+# Alias para fzf + nvim
+alias fzn = do {fzf --preview '''bat --style=numbers --color=always {}''' | xargs -n1 nvim}
 
-# Proxy SSH
+# ─── 🧩 ALIASES: RED/SSH ─────────────────────────────
 alias sshp = ssh -o ProxyJump=sabaext
 alias sshtp = env TERM=xterm-256color ssh -o ProxyJump=sabaext
 alias ssht = env TERM=xterm-256color ssh
 
-# Git
+# ─── 🧩 ALIASES: GIT ─────────────────────────────────
 alias gp = git push origin main
 alias dots = ^git --git-dir ($nu.home-path | path join ".my-dotfiles") --work-tree $nu.home-path
 

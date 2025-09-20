@@ -1,23 +1,14 @@
-# ~/.config/nu/integrations/direnv.nu
-def env_direnv [] {
-  ^direnv export json | from json
-}
+$env.config = {
+  hooks: {
+    pre_prompt: [{ ||
+      if (which direnv | is-empty) {
+        return
+      }
 
-def post_execution_hook [
-  engine-state: engine-state
-  stack: stack
-] {
-  if ($stack.has-env-var 'PWD') {
-    let pwd = ($stack.get-env-var 'PWD').value
-    let new_pwd = (pwd | path expand)
-    if not ($new_pwd == $env.PWD) {
-      $env = ($env | merge (env_direnv))
-      $env.PWD = $new_pwd
-    }
-  } {  # caso donde no existe PWD
-    $env = ($env | merge (env_direnv))
-    $env.PWD = (pwd | path expand)
+      direnv export json | from json | default {} | load-env
+      if 'ENV_CONVERSIONS' in $env and 'PATH' in $env.ENV_CONVERSIONS {
+        $env.PATH = do $env.ENV_CONVERSIONS.PATH.from_string $env.PATH
+      }
+    }]
   }
 }
-
-$env.config.hooks.post_execution_hook = {|e, s| post_execution_hook $e $s}
