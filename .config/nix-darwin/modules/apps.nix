@@ -95,6 +95,7 @@
       "fastfetch" # Reemplazo neofecht
       "thefuck" # magnificent app that corrects your previous console command
       "tabiew" # Lector de archvio csv con consultas sql"
+      "duckdb"
 
       "btop" # monitoreo de recursos
       "sshs" # List and connect to hosts using ~/.ssh/config.
@@ -172,6 +173,8 @@
 
       "pipx" # Install and Run Python Applications in Isolated Environments
       "uv" # An extremely fast Python package and project manager, written in Rust.
+
+      "ffmpeg"
     ];
 
     # `brew install --cask`
@@ -249,7 +252,7 @@
       "wezterm"
       #"warp" # terminal con AI y wrapper
       #"wave" # terminal con AI alternativa a warp y es software libre
-      "ghostty" # Ghostty is a terminal emulator that differentiates itself by being fast, feature-rich, and native.
+      #"ghostty" # Ghostty is a terminal emulator that differentiates itself by being fast, feature-rich, and native.
       "kitty"
       #"rio"
 
@@ -318,6 +321,8 @@
       "obs"
       "obs-advanced-scene-switcher"
       "obs-backgroundremoval"
+
+      "audacity"
     ];
   };
 }
