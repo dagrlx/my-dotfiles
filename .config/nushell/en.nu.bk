@@ -16,7 +16,7 @@ zoxide init --cmd cd nushell | save -f ~/.config/nushell/zoxide.nu
 
 ### Carapace config
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
-#mkdir ~/.cache/carapace
-#mkdir ~/.config/nushell/carapace
+mkdir ~/.cache/carapace
+mkdir ~/.config/nushell/integrations/carapace
 #carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
-#carapace _carapace nushell | save --force ~/.config/nushell/carapace/carapace.nu
+carapace _carapace nushell | save --force ~/.config/nushell/integrations/carapace/carapace-init.nu
