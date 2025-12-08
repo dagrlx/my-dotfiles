@@ -4,7 +4,7 @@
   ...
 }: let
   homeDirectory = "/Users/${username}";
-  dotfilesPath = "${homeDirectory}/.dotfiles-bk";
+  # dotfilesPath = "${homeDirectory}/.dotfiles-bk";
 in {
   # import sub modules
   imports = [
@@ -42,11 +42,11 @@ in {
   #".config/tmux".source = config.lib.file.mkOutOfStoreSymlink "/Users/dgarciar/.config/nix-darwin/home/dotfiles/tmux";
   #};
 
-  xdg.configFile = {
-    "skhd" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/skhd";
-      recursive = true;
-    };
+  # xdg.configFile = {
+  #   "skhd" = {
+  #     source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/skhd";
+  #     recursive = true;
+  #   };
 
     #   "aerospace" = {
     #     source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/aerospace";
@@ -112,7 +112,7 @@ in {
     #     source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/rio";
     #     recursive = true;
     #   };
-  };
+  # };
   #
   # home.sessionVariables = {
   #   XDG_CONFIG_HOME = "$HOME/.config";

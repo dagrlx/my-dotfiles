@@ -28,7 +28,7 @@
     coreutils-full
     curl
     duf
-    du-dust
+    dust
     has
     aria2 # A lightweight multi-protocol & multi-source command-line download utility
     socat # replacement of openbsd-netcat
@@ -232,6 +232,7 @@
         #style = "auto"; # Possible values: auto, full and compact.
         #inline_height = 0; # height of the search window (Default 0)
         history_filter = ["^clear" "^exit"];
+        filter_mode = "host";
       };
     };
   };

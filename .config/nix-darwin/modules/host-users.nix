@@ -16,7 +16,6 @@
   users.users."${username}" = {
     home = "/Users/${username}";
     description = username;
-    #shell = "/opt/homebrew/bin/nu";
   };
 
   system.primaryUser = username;

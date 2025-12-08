@@ -7,6 +7,11 @@
   # Nix necesita saber dónde está el bundle
   nix.settings.ssl-cert-file = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
 
+  # Buffer 10MB for download packages
+  nix.settings = {
+    download-buffer-size = 10485760;
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -53,6 +58,4 @@
   # Depreciate option `nix.settings.auto-optimise-store` is known to corrupt the Nix Store, please use `nix.optimise.automatic` instead.
   nix.settings = { auto-optimise-store = false; };
 
-  # Turn off NIX_PATH warnings now that we're using flakes
-  #system.checks.verifyNixPath = false;
 }

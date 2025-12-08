@@ -9,13 +9,15 @@
 # 🌐 VARIABLES DE ENTORNO (Best Practice: aquí, no en env.nu)
 # ────────────────────────────────────────────────
 
-# Directorios estándar XDG
-$env.XDG_CONFIG_HOME = ($nu.home-path | path join ".config")
-$env.XDG_DATA_HOME = ($nu.home-path | path join ".local/share")
-$env.XDG_CACHE_HOME = ($nu.home-path | path join ".cache")
+### Carapace config
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
+mkdir ~/.cache/carapace
+mkdir ~/.config/nushell/integrations/carapace
+#carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+carapace _carapace nushell | save --force ~/.config/nushell/integrations/carapace/carapace-init.nu
 
-# Primero carga las variables de Nix
-#source ~/.config/nushell/nix-env.nu
+# Variables para el entorno nix
+#nix-env.nu
 
 # PATH: Añadir Homebrew y binarios locales sin duplicados
 $env.PATH = ($env.PATH | split row (char esep)) ++ [
@@ -136,13 +138,6 @@ $env.config.keybindings = [
 # Prompt minimalista
 $env.config.show_banner = "short"
 
-### Carapace config
-$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
-#mkdir ~/.cache/carapace
-#mkdir ~/.config/nushell/integrations/carapace
-#carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
-#carapace _carapace nushell | save --force ~/.config/nushell/integrations/carapace/carapace-init.nu
-
 # ────────────────────────────────────────────────
 # 🔌 INTEGRACIONES EXTERNAS (autoload)
 # ────────────────────────────────────────────────
@@ -158,10 +153,10 @@ source ~/.config/nushell/integrations/atuin-init.nu
 source ~/.config/nushell/integrations/carapace/carapace-init.nu
 
 # Completados adicionales
-# # Completadores para comandos externos
+# # Completadores para comandos externos
 source ~/.config/nushell/completions/zoxide-cmp.nu
 # Completadores para funciones internas (cd, cdi)
-source ~/.config/nushell/completions/zoxide-complete.nu
+source ~/.config/nushell/completions/zoxide-complete2.nu
 
 # ────────────────────────────────────────────────
 # 📦 FUNCIONES PERSONALIZADAS
@@ -171,6 +166,9 @@ source ~/.config/nushell/functions/extras.nu
 # ────────────────────────────────────────────────
 # 🧩 ALIASES GLOBALES
 # ────────────────────────────────────────────────
+alias pipreset = do {jq '.vivaldi.pip_placement.left = 0 | .vivaldi.pip_placement.top = 0' $"($env.HOME)/Library/Application Support/Vivaldi/Default/Preferences"
+  | save --force $"($env.HOME)/Library/Application Support/Vivaldi/Default/Preferences"}
+
 
 # ─── 🧩 ALIASES: SISTEMA ─────────────────────────────
 # alias la =  ls -la | select name type mode user group size modified | update modified {format date "%Y-%m-%d %H:%M:%S"}
@@ -211,6 +209,8 @@ alias ssht = env TERM=xterm-256color ssh
 # ─── 🧩 ALIASES: GIT ─────────────────────────────────
 alias gp = git push origin main
 alias dots = ^git --git-dir ($nu.home-path | path join ".my-dotfiles") --work-tree $nu.home-path
+
+
 
 # scripts for unzip
 use scripts/extractor.nu extract

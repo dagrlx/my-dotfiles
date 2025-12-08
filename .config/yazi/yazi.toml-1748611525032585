@@ -2,7 +2,7 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
-[mgr]
+[manager]
 ratio = [1, 4, 3]
 sort_by = "natural"
 sort_sensitive = false
@@ -170,29 +170,12 @@ previewers = [
 ]
 
 prepend_previewers = [
-  # { name = "*.csv", run = "rich-preview" },   # for csv files
+  { name = "*.csv", run = "rich-preview" },   # for csv files
   { name = "*.md", run = "rich-preview" },    # for markdown (.md) files
   { name = "*.rst", run = "rich-preview" },   # for restructured text (.rst) files
   { name = "*.ipynb", run = "rich-preview" }, # for jupyter notebooks (.ipynb)
-  # { name = "*.json", run = "rich-preview" },  # for json (.json) files
+  { name = "*.json", run = "rich-preview" },  # for json (.json) files
   #    { name = "*.lang_type", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
-  { name = "*.csv", run = "duckdb" },
-  { name = "*.tsv", run = "duckdb" },
-  { name = "*.json", run = "duckdb" },
-  { name = "*.parquet", run = "duckdb" },
-  { name = "*.txt", run = "duckdb" },
-  { name = "*.xlsx", run = "duckdb" },
-  { name = "*.db", run = "duckdb" },
-  { name = "*.duckdb", run = "duckdb" },
-]
-
-prepend_preloaders = [
-  { name = "*.csv", run = "duckdb", multi = false },
-  { name = "*.tsv", run = "duckdb", multi = false },
-  { name = "*.json", run = "duckdb", multi = false },
-  { name = "*.parquet", run = "duckdb", multi = false },
-  { name = "*.txt", run = "duckdb", multi = false },
-  { name = "*.xlsx", run = "duckdb", multi = false },
 ]
 
 [input]

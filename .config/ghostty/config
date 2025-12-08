@@ -35,6 +35,14 @@ theme = catppuccin mocha
 #tokyonight
 #theme = tokyonight_night
 
+# Bell features to enable if bell support is available in your runtime. Not all features are available on all runtimes. 
+# The format of this is a list of features to enable separated by commas. 
+# If you prefix a feature with no- then it is disabled. If you omit a feature, its default value is used.
+# https://ghostty.org/docs/config/reference#bell-features
+# no-attention
+
+bell-features = title
+
 # The colorspace to use for the terminal window. The default is `srgb` but
 # this can also be set to `display-p3` to use the Display P3 colorspace.
 # 
@@ -79,6 +87,8 @@ window-width = 130
 
 #window-position-x = 460
 #window-position-y = 140
+
+window-padding-color = extend-always
 
 # Confirms that a surface should be closed before closing it.
 # 

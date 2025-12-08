@@ -1,5 +1,7 @@
 require("items.apple")
-require("items.aero_icons")
+require("items.rift27")
+-- require("items.aero_icons")
+-- require("items.hyprspace_icons")
 --require("items.spaces")
 require("items.menus")
 require("items.front_app")

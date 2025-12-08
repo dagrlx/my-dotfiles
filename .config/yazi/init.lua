@@ -76,3 +76,9 @@ require("zoxide"):setup({
 })
 
 --print(jit and "Usando LuaJIT" or "Usando Lua estándar")
+
+-- DuckDB plugin configuration
+require("duckdb"):setup({
+	mode = "summarized",
+	row_id = "dynamic",
+})

@@ -70,6 +70,7 @@
       "FelixKratz/formulae"
       "gromgit/fuse"
       "nikitabobko/tap"
+      "BarutSRB/tap"   #fork of aerospace
       "netbirdio/tap"
       "olets/tap"
       "lihaoyun6/tap"
@@ -145,6 +146,7 @@
       "switchaudio-osx"
       "nowplaying-cli"
       "borders"
+      "acsandmann/tap/rift"
 
       "nushell"
 
@@ -181,7 +183,7 @@
     # TODO Feel free to add your favorite apps here.
     casks = [
       "firefox"
-      "zen" # zen-browser
+      #"zen" # zen-browser
       #"google-chrome"
       #"brave-browser"
       #{
@@ -242,7 +244,9 @@
 
       #"colemak-dh" # latout colemak mod DH
 
-      "aerospace" # Tiling managerbasado en i3wm
+      "aerospace" # Tiling manageri basado en i3wm
+      # "hyprspace" # Fork de aerospace
+      
       "MonitorControl"
       "pearcleaner" # mac app cleaner
       "sentinel-app" # A GUI for controlling Gatekeeper
@@ -270,12 +274,12 @@
       #"stats"
       #"neovide"
       #"amazon-chime"
-      "qbittorrent"
+      #"qbittorrent"
       #"send-anywhere"
       #"remote-desktop-manager"
 
       "telegram"
-      "whatsapp"
+      #"whatsapp"
       "zoom"
 
       #"wireshark" # network analyzer

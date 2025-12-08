@@ -593,6 +593,23 @@ config.key_tables = {
 
 --require("events")
 
+local quick_select_patterns = {
+	-- Nushell error paths (like ╭─[/path/to/file.nu:1946:63])
+	"─\\[(.*\\:\\d+\\:\\d+)\\]",
+
+	-- Table patterns
+	-- $env.config.table.mode = "default"
+	-- $env.config.table.header_on_separator = true
+	-- $env.config.footer_mode = "always"
+	"(?<=─|╭|┬)([a-zA-Z0-9 _%.-]+?)(?=─|╮|┬)", -- Headers
+	"(?<=│ )([a-zA-Z0-9 _.-]+?)(?= │)", -- Column values
+
+	-- File paths (stops at ~, allows dots in path but stops before dot+space)
+	"/[^/\\s│~]+(?:/[^/\\s│~]+)*(?:\\.(?!\\s)[a-zA-Z0-9]+)?",
+}
+
+config.quick_select_patterns = quick_select_patterns
+
 return config
 
 -- Ideas tomadas de:
