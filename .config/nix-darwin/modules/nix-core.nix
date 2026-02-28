@@ -9,8 +9,8 @@
 
   # Buffer 10MB for download packages
   nix.settings = {
-    download-buffer-size = 10485760;
-  };
+    download-buffer-size =41943040; # 40 MB  
+    };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

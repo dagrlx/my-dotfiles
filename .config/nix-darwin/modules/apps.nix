@@ -28,7 +28,7 @@
   # The apps installed by homebrew are not managed by nix, and not reproducible!
   # But on macOS, homebrew has a much larger selection of apps than nixpkgs, especially for GUI apps!
   homebrew = {
-    brewPrefix = "/opt/homebrew/bin";
+    prefix = "/opt/homebrew";
     enable = true;
     #macOS pone en cuarentena las aplicaciones descargadas de internet para mayor seguridad.
     caskArgs.no_quarantine = true;
@@ -78,6 +78,7 @@
       "alienator88/cask"
       "pkgxdev/made"
       "mhaeuser/mhaeuser" # battery-toolkit
+      "sinelaw/fresh"  # Fresh editor
     ];
 
     # `brew install`
@@ -97,6 +98,10 @@
       "thefuck" # magnificent app that corrects your previous console command
       "tabiew" # Lector de archvio csv con consultas sql"
       "duckdb"
+      "tw93/tap/mole"
+      "awscli"
+      "minio-cli"
+      "stu"   # TUI explorer for S3
 
       "btop" # monitoreo de recursos
       "sshs" # List and connect to hosts using ~/.ssh/config.
@@ -121,6 +126,7 @@
       "nanorc"
       "neovim"
       "bob" #  Neovim version manager
+      "fresh-editor"
 
       # FILEMANAGER
       "superfile"
@@ -177,6 +183,7 @@
       "uv" # An extremely fast Python package and project manager, written in Rust.
 
       "ffmpeg"
+      "cloudflared"
     ];
 
     # `brew install --cask`
@@ -210,7 +217,7 @@
       "microsoft-teams"
       "microsoft-auto-update"
       "windows-app" # new app for RDP
-      #"syncthing" # file sync
+      "syncthing-app" # file sync
       "raycast" # (HotKey: alt/option + space)search, caculate and run scripts(with many plugins)
       #"iglance" # beautiful system monitor
       "macfuse"
@@ -246,7 +253,7 @@
 
       "aerospace" # Tiling manageri basado en i3wm
       # "hyprspace" # Fork de aerospace
-      
+
       "MonitorControl"
       "pearcleaner" # mac app cleaner
       "sentinel-app" # A GUI for controlling Gatekeeper

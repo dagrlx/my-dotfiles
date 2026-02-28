@@ -132,7 +132,7 @@ local public_ip = sbar.add("item", {
 	icon = {
 		align = "left",
 		string = "Public IP:",
-		width = popup_width / 2,
+		width = popup_width,
 	},
 	label = {
 		string = "???.???.???.???",

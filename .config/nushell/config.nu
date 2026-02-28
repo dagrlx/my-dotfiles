@@ -1,6 +1,6 @@
 # ~/.config/nu/config.nu
 #
-# ✅ Configuración modular de Nushell (v0.105+)
+# ✅ Configuración modular de Nushell (v0.110+)
 # Basado en mejores prácticas: https://www.nushell.sh/book/configuration.html
 #
 # Esta es la única entrada. Todo lo demás se carga desde subdirectorios.
@@ -23,12 +23,12 @@ carapace _carapace nushell | save --force ~/.config/nushell/integrations/carapac
 $env.PATH = ($env.PATH | split row (char esep)) ++ [
   "/opt/homebrew/bin"
   "/opt/homebrew/sbin"
-  ($nu.home-path | path join ".local/bin")
+  ($nu.home-dir | path join ".local/bin")
 ] | uniq
 
 # Variables específicas
-$env.STARSHIP_CONFIG = ($nu.home-path | path join ".config/starship/starship.toml")
-$env.GHOSTTY_CONFIG = ($nu.home-path | path join ".config/ghostty/config")
+$env.STARSHIP_CONFIG = ($nu.home-dir | path join ".config/starship/starship.toml")
+$env.GHOSTTY_CONFIG = ($nu.home-dir | path join ".config/ghostty/config")
 $env._ZO_ECHO = 1
 
 # Nix-related (opcional)
@@ -61,82 +61,12 @@ $env.config.use_kitty_protocol = true
 # algorithm (string): Either "prefix" or "fuzzy"
 $env.config.completions.algorithm = "fuzzy"
 
-# Definir abreviaciones (zsh-abbr style)
-# Expande alias o elementos en abbreviations presionando ç o enter
-# https://github.com/nushell/nushell/issues/5552#issuecomment-2113935091
-let abbreviations = {
-    "cd..": 'cd ..'
-    sau: 'sudo apt update; sudo apt upgrade'
-    #bwu: 'brew update; brew upgrade; sketchybar --trigger brew_update'
-}
-
-# Menú de abreviaciones (para zsh-abbr style)
-$env.config.menus = [
-  {
-    name: "abbreviations_menu"
-    only_buffer_difference: false
-    marker: "💡 "
-    type: {
-      layout: columnar
-      columns: 1
-      col_width: 20
-      col_padding: 2
-    }
-    style: {
-      text: green
-      selected_text: green_reverse
-      description_text: yellow
-    }
-    source: {|buffer, position|
-      let alias_match = (scope aliases | where name == $buffer)
-
-      if ($alias_match | is-empty) {
-        let abbr_match = $abbreviations | columns | where $it == $buffer
-        if ($abbr_match | is-empty) {
-          []
-        } else {
-          [{ value: ($abbreviations | get $abbr_match.0) }]
-        }
-      } else {
-        $alias_match | each { |it|
-          let expansion = $it.expansion
-          if ($expansion | str starts-with 'do {') {
-            { value: ($expansion | str replace -r '^do\s*\{\s*(.*?)\s*\}$' '$1') }
-          } else {
-            { value: $expansion }
-          }
-        }
-      }
-    }
-  }
-]
-
-# Keybindings para activar el menú de abreviaciones
-$env.config.keybindings = [
-  {
-    name: abbreviations_menu
-    modifier: none
-    keycode: enter
-    mode: [emacs, vi_normal, vi_insert]
-    event: [
-      { send: menu name: abbreviations_menu }
-      { send: enter }
-    ]
-  }
-  {
-    name: abbreviations_menu
-    modifier: none
-    keycode: char_ç
-    mode: [emacs, vi_normal, vi_insert]
-    event: [
-      { send: menu name: abbreviations_menu }
-      { edit: insertchar value: ' ' }
-    ]
-  }
-]
-
 # Prompt minimalista
 $env.config.show_banner = "short"
+
+# Definimos los keybindings PRIMERO.
+# Usamos empty list para asegurar que la variable existe.
+$env.config.keybindings = []
 
 # ────────────────────────────────────────────────
 # 🔌 INTEGRACIONES EXTERNAS (autoload)
@@ -148,7 +78,6 @@ source ~/.config/nushell/integrations/broot_shell.nu
 source ~/.config/nushell/integrations/aichat_shell.nu
 # Luego los que afectan el prompt o historial
 source ~/.config/nushell/integrations/starship.nu
-source ~/.config/nushell/integrations/atuin-init.nu
 # Finalmente los que afectan completado externo
 source ~/.config/nushell/integrations/carapace/carapace-init.nu
 
@@ -157,6 +86,20 @@ source ~/.config/nushell/integrations/carapace/carapace-init.nu
 source ~/.config/nushell/completions/zoxide-cmp.nu
 # Completadores para funciones internas (cd, cdi)
 source ~/.config/nushell/completions/zoxide-complete2.nu
+
+# ────────────────────────────────────────────────
+# ⌨️ KEYBINDINGS PERSONALIZADOS
+# ────────────────────────────────────────────────
+# Usamos ++ para NO borrar los bindings de las integraciones
+$env.config.keybindings = ($env.config.keybindings ++ [
+  {
+    name: delete_one_word_backward
+    modifier: control
+    keycode: backspace
+    mode: [emacs, vi_insert]
+    event: { edit: backspaceword }
+  }
+])
 
 # ────────────────────────────────────────────────
 # 📦 FUNCIONES PERSONALIZADAS
@@ -208,9 +151,14 @@ alias ssht = env TERM=xterm-256color ssh
 
 # ─── 🧩 ALIASES: GIT ─────────────────────────────────
 alias gp = git push origin main
-alias dots = ^git --git-dir ($nu.home-path | path join ".my-dotfiles") --work-tree $nu.home-path
+alias dots = ^git --git-dir ($nu.home-dir | path join ".my-dotfiles") --work-tree $nu.home-dir
 
-
+# ────────────────────────────────────────────────
+# 🚀 ATUIN (DEBE IR AL FINAL)
+# ────────────────────────────────────────────────
+# Al ponerlo al final, Atuin detecta tus keybindings y
+# añade el suyo de Ctrl+R sin ser sobreescrito.
+source ~/.config/nushell/integrations/atuin-init.nu
 
 # scripts for unzip
 use scripts/extractor.nu extract

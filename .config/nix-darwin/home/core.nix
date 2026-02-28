@@ -15,7 +15,7 @@
     jq # A lightweight and flexible command-line JSON processor - Instalado con brew
     yq-go # yaml processer https://github.com/mikefarah/yq
     fzf # A command-line fuzzy finder
-    fzf-zsh
+    # fzf-zsh  # se ha eliminado porque ha sido sustituido por su equivalente integrado 16-01-2026
     zsh-fzf-tab # Replace zsh's default completion selection menu with fzf
     #nix-index
 
