@@ -3,7 +3,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = true
-command_timeout = 1000       # Default 1000 
+command_timeout = 1500       # Default 1000 
 palette = "catppuccin_mocha"
 
 [directory]

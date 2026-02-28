@@ -274,6 +274,7 @@ return {
 	["superProductivity"] = ":superproductivity:",
 	["Tana"] = ":tana:",
 	["TeamSpeak 3"] = ":team_speak:",
+	["TeamViewer"] = ":teamviewer:",
 	["Telegram"] = ":telegram:",
 	["Terminal"] = ":terminal:",
 	["TextEdit"] = ":textedit:",
