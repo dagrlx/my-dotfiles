@@ -5,21 +5,11 @@
 # Animations
 # - animate: master switch for all window animations
 # - animation_duration: seconds per animation (>= 0.0, typical 0.15–0.35)
-# - animation_fps: frames per second (> 0.0). 60–120 recommended.
-# - animation_easing: easing curve. One of:
-#   linear,
-#   ease_in_out,
-#   ease_in_sine, ease_out_sine, ease_in_out_sine,
-#   ease_in_quad, ease_out_quad, ease_in_out_quad,
-#   ease_in_cubic, ease_out_cubic, ease_in_out_cubic,
-#   ease_in_quart, ease_out_quart, ease_in_out_quart,
-#   ease_in_quint, ease_out_quint, ease_in_out_quint,
-#   ease_in_expo, ease_out_expo, ease_in_out_expo,
+# - animation_fps: frames per second (0.0 = display refresh rate). 60–120 recommended.
 #   ease_in_circ, ease_out_circ, ease_in_out_circ
 animate = false
 animation_duration = 0.3
 animation_fps = 100.0
-animation_easing = "ease_in_out"
 
 # Space activation behavior
 # - If true, spaces start inactive (rift does not manage windows there)
@@ -32,7 +22,7 @@ default_disable = false
 # - focus_follows_mouse: moving the mouse into a window focuses it
 # - mouse_follows_focus: when focus changes, move the mouse to the focused window
 # - mouse_hides_on_focus: hide the mouse cursor after focusing a window
-focus_follows_mouse = false
+focus_follows_mouse = true
 mouse_follows_focus = true
 mouse_hides_on_focus = false
 # focus_follows_mouse_disable_hotkey temporarily suspends focus-follows-mouse while held
@@ -91,6 +81,10 @@ hot_reload = true
 #	- "bsp" (binary space partitioning),
 #   - "master_stack" (master area + stack area)
 # defaults to "traditional" if omitted
+#
+# This is the default layout mode if there is nothing else configured
+# in the `workspace_rules` section below.
+# You can set different layouts per workspace using `workspace_rules`.
 mode = "traditional"
 
 # these settings only apply when layout mode == "master_stack"
@@ -117,10 +111,10 @@ alignment = "center"
 # - "niri": reveal columns only when needed based on navigation direction
 # 			(disrespects alignment setting above)
 # - "anchored": always align focused column according to `alignment`
-focus_navigation_style = "anchored"
+focus_navigation_style = "niri"
 # the scrolling layout tends to function better without animations,
 # so you can disable them if you like
-animate = true
+animate = false
 
 [settings.layout.scrolling.gestures]
 # Enable horizontal scroll gestures to switch columns
